@@ -29,16 +29,16 @@ const Header = () => {
         <ul className="flex flex-col my-[2vw] items-start list-none">
         {[
   { path: "/", label: "Dashboard", icon: "Dashboard.png" },
-  { path: "/HRM", label: "HRM", icon: "HRM.png", subItems: [
-    { path: "/HRM/Employees", label: "Employees", icon: "src/images/HRM/Employee.png" },
-    { path: "/HRM/ManageSalary", label: "Manage Salary", icon: "src/images/HRM/Employee.png"},
-    { path: "/HRM/ManageLeave", label: "Manage Leave", icon: "src/images/HRM/Employee.png" },
-    { path: "/HRM/CoreHr", label: "CoreHr" , icon: "src/images/HRM/Employee.png"},
-    { path: "/HRM/Performance", label: "Performance", icon: "src/images/HRM/Employee.png" },
-    { path: "/HRM/Hrreport", label: "HRM report" , icon: "src/images/HRM/Employee.png"},
-    { path: "/HRM/HrSetting", label: "HRM Setting" , icon: "src/images/HRM/Employee.png"},
-    { path: "/HRM/HrRequest", label: "HRM Request" , icon: "src/images/HRM/Employee.png"},
-    { path: "/HRM/HRMTutorial", label: "HRM Tutorial" , icon: "src/images/HRM/Employee.png"},
+  { path: "/HRM", label: "HRM", icon: "/HRM.png", subItems: [
+    { path: "/HRM/Employees", label: "Employees" },
+    { path: "/HRM/ManageSalary", label: "Manage Salary"},
+    { path: "/HRM/ManageLeave", label: "Manage Leave" },
+    { path: "/HRM/CoreHr", label: "CoreHr" },
+    { path: "/HRM/Performance", label: "Performance" },
+    { path: "/HRM/Hrreport", label: "HRM report" },
+    { path: "/HRM/HrSetting", label: "HRM Setting"},
+    { path: "/HRM/HrRequest", label: "HRM Request"},
+    { path: "/HRM/HRMTutorial", label: "HRM Tutorial"},
   ] },
   { path: "/CRM", label: "CRM", icon: "CRM.png" , subItems: [
     { path: "/CRM/PreLeads", label: "PreLeads" },
@@ -64,19 +64,26 @@ const Header = () => {
     { path: "/Assessment/SiteVisitRequest", label: "Site Visit Request" },
   ] },
   { path: "/Inventory", label: "Inventory", icon: "Inventory.png" , subItems: [
-    { path: "/Inventory/Employees", label: "Employees" },
-    { path: "/Inventory/Payroll", label: "Payroll" },
-    { path: "/Inventory/Reports", label: "Reports" }
+    { path: "/Inventory/Wherehouse", label: "Wherehouse" },
+    { path: "/Inventory/ProductSetting", label: "ProductSetting" },
+    { path: "/Inventory/Products", label: "Products" },
+    { path: "/Inventory/Supplier", label: "Supplier" },
+    { path: "/Inventory/InventoryReport", label: "InventoryReport" }
   ] },
   { path: "/Production", label: "Production", icon: "Production.png" , subItems: [
-    { path: "/Production/Employees", label: "Employees" },
-    { path: "/Production/Payroll", label: "Payroll" },
-    { path: "/Production/Reports", label: "Reports" }
+    { path: "/Production/ProjectStatus", label: "ProjectStatus" },
+    { path: "/Production/InstallizationProcess", label: "InstallizationProcess" },
+    { path: "/Production/Warranty", label: "Warranty" }
   ] },
   { path: "/Account", label: "Account", icon: "Account.png" , subItems: [
-    { path: "/Account/Employees", label: "Employees" },
-    { path: "/Account/Payroll", label: "Payroll" },
-    { path: "/Account/Reports", label: "Reports" }
+    { path: "/Account/Finance", label: "Finance" },
+    { path: "/Account/Accounting", label: "Accounting" },
+    { path: "/Account/CheckManagement", label: "CheckManagement" },
+    { path: "/Account/ManageCurrency", label: "ManageCurrency" },
+    { path: "/Account/AccountReport", label: "AccountReport" },
+    { path: "/Account/TaxManagement", label: "TaxManagement" },
+    { path: "/Account/DuePayment", label: "DuePayment" },
+    { path: "/Account/AssestManagement", label: "AssestManagement" },
   ] },
   { path: "/Invoices", label: "Invoices", icon: "Invoices.png" , subItems: [
     { path: "/Invoices/Employees", label: "Employees" },

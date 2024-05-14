@@ -246,6 +246,40 @@ const Sales = () => {
       },
     },
   };
+
+    // Sample data for role distribution (you can replace it with your actual data)
+    const roleDistribution1Data = {
+      labels: [
+        "Collected",
+        "Due",
+      ],
+      data: [20, 45], // Sample percentages for each role
+      backgroundColors: [
+        "#009BDF", // Blue
+        "#CA0000", // Yellow
+      ],
+    };
+    // Pie chart data
+    const depart1Data = {
+      labels: roleDistribution1Data.labels,
+      datasets: [
+        {
+          data: roleDistribution1Data.data,
+          backgroundColor: roleDistribution1Data.backgroundColors,
+          borderWidth: 1,
+        },
+      ],
+    };
+  
+    // Pie chart options
+    const depart1Options = {
+      plugins: {
+        legend: {
+          position: "bottom", // Position legend at the bottom
+        },
+      },
+    };
+  
   return (
     <div className="absolute top-[4vw] bg-slate-100 h-screen w-[82vw] overflow-y-auto right-0 ">
       <div className="flex flex-row  gap-[1vw] my-[2vw]  justify-center">
@@ -255,34 +289,34 @@ const Sales = () => {
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
-            <h1 className="text-[1vw]">TOTAL CUSTOMER</h1>{" "}
+            <h1 className="text-[1vw]">Total Sales this Month</h1>
           </div>
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/dashboard-image/closeContract.png" alt="" />
+            <img src="public/Sales/Cart.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
-            <h1 className="text-[1vw]">TOTAL PRODUCT</h1>{" "}
+            <h1 className="text-[1vw]">New Customers This Month</h1>{" "}
           </div>
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/dashboard-image/RudeCustomer.png" alt="" />
+            <img src="public/Sales/Collected.png" alt="" />
           </div>
           <div>
-            <h1 className="font-semibold text-[1.7vw]">0</h1>
-            <h1 className="text-[1vw]">TOTAL SUPPLIER</h1>{" "}
+            <h1 className="font-semibold text-[1.7vw]">0.00K</h1>
+            <h1 className="text-[1vw]">Collected This Month</h1>{" "}
           </div>
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/dashboard-image/CustomerComplained.png" alt="" />
+            <img src="public/Sales/Ratio.png" alt="" />
           </div>
           <div>
-            <h1 className="font-semibold text-[1.7vw]">0</h1>
-            <h1 className="text-[1vw]">TOTAL SALE</h1>{" "}
+            <h1 className="font-semibold text-[1.7vw]">Conversion Ratio</h1>
+            <h1 className="text-[1vw]">29 Conversions</h1>{" "}
           </div>
         </div>
       </div>
@@ -300,7 +334,7 @@ const Sales = () => {
           </button>
         </div>
         <div>
-          <div className="company-summary-chart w-[34vw]">
+          <div className="company-summary-chart w-[35vw]">
             <div className="chart-container">
               <Bar data={chartData} options={chartOptions} />
             </div>
@@ -308,32 +342,35 @@ const Sales = () => {
         </div>
         </div>
 
-        <div className="box flex flex-col w-[42vw] mt-[2vw] gap-[0.31vw] h-[25vw] border rounded-md shadow-lg mx-[2vw] bg-gray-100">
+        <div className="box flex flex-col w-[46vw] mt-[2vw] gap-[0.31vw] h-[25vw] border rounded-md shadow-lg mx-[2vw] bg-gray-100">
               <div className="bg-white h-[4vw]  flex flex-row items-center justify-between px-[1vw]">
-                <h1 className="text-[#e9278e] text-[1vw]">Collected vs Due</h1>
+                <h1 className="text-[#e9278e] text-[1vw]">Statistics By Project Status</h1>
                 <button
                   className="border-[0.12vw] border-black px-[2vw] rounded-md"
                   onClick={toggleBar}
                 >
-                  Year
+                  Monthly
                 </button>
               </div>
               <div>
-                <div className="employee-age-bar-chart p-[1vw]">
-                  <div className="chart-container w-[34vw]">
-                    <Bar data={ageData} options={ageOptions} />
+              <div className="company-summary-line-chart flex flex-row items-center justify-center p-[1vw]">
+                  <div className="chart-container  w-[17vw]">
+                  <Pie data={depart1Data} options={depart1Options} />
                   </div>
                 </div>
               </div>
             </div>
       </div>
       <div className="bg-gray-200 m-[1.8vw]  shadow-lg p-[1vw] rounded-md">
-        <h1 className="text-[1.6vw] ">Employee Summary</h1>
         <div className="flex flex-row ">
           <div className="flex flex-row ">
             <div className="box flex flex-col w-[25vw] mt-[2vw] gap-[0.31vw] h-[20vw] border rounded-md shadow-lg mx-[2vw] bg-gray-100">
               <div className="bg-white h-[4vw]  flex flex-row items-center justify-between px-[1vw]">
-                <h1 className="text-[#e9278e] text-[1vw]">Leads Overview</h1>
+                <h1 className="text-[#e9278e] text-[1vw]">Sales Performance
+                <p className="text-[#e9278e] text-[0.8vw]">
+                Monthly
+                </p>
+                </h1>
                 <button
                   className="border-[0.12vw] border-black px-[2vw] rounded-md"
                   onClick={toggleBar}
