@@ -63,6 +63,18 @@ import AccountReport from './pages/Account/pages/AccountReport';
 import TaxManagement from './pages/Account/pages/TaxManagement';
 import DuePayment from './pages/Account/pages/DuePayment';
 import AssestManagement from './pages/Account/pages/AssestManagement';
+import Purchase from './pages/Invoices/pages/Purchase';
+import SalesInvoice from './pages/Invoices/pages/SalesInvoice';
+import WherehouseInvoice from './pages/Invoices/pages/WherehouseInvoice';
+import StockManagement from './pages/Invoices/pages/StockManagement';
+import InvoiceReport from './pages/Invoices/pages/InvoiceReport';
+import InvoiceTypes from './pages/Invoices/pages/InvoiceTypes';
+import BreakdownProcess from './pages/Hierarchy/pages/BreakdownProcess';
+import BreakdownPricing from './pages/Hierarchy/pages/BreakdownPricing';
+import BreakdownSetting from './pages/Hierarchy/pages/BreakdownSetting';
+import ProductionApproval from './pages/Hierarchy/pages/ProductionApproval';
+import BreakdownTutorial from './pages/Hierarchy/pages/BreakdownTutorial';
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -313,7 +325,50 @@ function App() {
       path: "/Account/AssestManagement",
       element: <><Header /><AssestManagement /></>  ,
     },
-    
+    {
+      path: "/Invoice/Purchase",
+      element: <><Header /><Purchase /></>  ,
+    },
+    {
+      path: "/Invoice/SalesInvoice",
+      element: <><Header /><SalesInvoice /></>  ,
+    },
+    {
+      path: "/Invoice/WherehouseInvoice",
+      element: <><Header /><WherehouseInvoice /></>  ,
+    },
+    {
+      path: "/Invoice/StockManagement",
+      element: <><Header /><StockManagement /></>  ,
+    },
+    {
+      path: "/Invoice/InvoiceReport",
+      element: <><Header /><InvoiceReport /></>  ,
+    },
+    {
+      path: "/Invoice/InvoiceTypes",
+      element: <><Header /><InvoiceTypes /></>  ,
+    },
+    {
+      path: "/Hierarchy/BreakdownProcess",
+      element: <><Header /><BreakdownProcess /></>  ,
+    },
+    {
+      path: "/Hierarchy/BreakdownPricing",
+      element: <><Header /><BreakdownPricing /></>  ,
+    },
+    {
+      path: "/Hierarchy/BreakdownSetting",
+      element: <><Header /><BreakdownSetting /></>  ,
+    },
+    {
+      path: "/Hierarchy/ProductionApproval",
+      element: <><Header /><ProductionApproval /></>  ,
+    },
+    {
+      path: "/Hierarchy/BreakdownTutorial",
+      element: <><Header /><BreakdownTutorial /></>  ,
+    },
   ])
 
   return (

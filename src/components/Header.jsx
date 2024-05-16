@@ -86,14 +86,19 @@ const Header = () => {
     { path: "/Account/AssestManagement", label: "AssestManagement" },
   ] },
   { path: "/Invoices", label: "Invoices", icon: "Invoices.png" , subItems: [
-    { path: "/Invoices/Employees", label: "Employees" },
-    { path: "/Invoices/Payroll", label: "Payroll" },
-    { path: "/Invoices/Reports", label: "Reports" }
+    { path: "/Invoice/Purchase", label: "Purchase" },
+    { path: "/Invoice/SalesInvoice", label: "Sales Invoice" },
+    { path: "/Invoice/WherehouseInvoice", label: "Warehouse Invoice" },
+    { path: "/Invoice/StockManagement", label: "Stock Management" },
+    { path: "/Invoice/InvoiceReport", label: "Invoice Report" },
+    { path: "/Invoice/InvoiceTypes", label: "Invoice Types" },
   ] },
   { path: "/Hierarchy", label: "Hierarchy", icon: "Hierarchy.png" , subItems: [
-    { path: "/Hierarchy/Employees", label: "Employees" },
-    { path: "/Hierarchy/Payroll", label: "Payroll" },
-    { path: "/Hierarchy/Reports", label: "Reports" }
+    { path: "/Hierarchy/BreakdownProcess", label: "Breakdown Process" },
+    { path: "/Hierarchy/BreakdownPricing", label: "Breakdown Pricing" },
+    { path: "/Hierarchy/BreakdownSetting", label: "Breakdown Setting" },
+    { path: "/Hierarchy/ProductionApproval", label: "Production Approval" },
+    { path: "/Hierarchy/BreakdownTutorial", label: "Breakdown Tutorial" },
   ] },
   { path: "/Setting", label: "Setting", icon: "setting.png" }
 ].map((navItem) => (
