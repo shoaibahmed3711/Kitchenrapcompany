@@ -8,13 +8,11 @@ const StockManagement = () => {
       : {
           Added: '',
           ReferenceNo: '',
-          InvoiceNo: '',
-          InvoiceDate: '',
-          Customer: '',
+          Warehouse: '',
+          Voucherno: '',
+          VoucherDate: '',
           TotalVat: '',
-          GrandTotal: '',
-          DueDate: '',
-          PayStatus: '',
+          EditApprovalStatus: '',
         };
   });
 
@@ -76,14 +74,12 @@ const StockManagement = () => {
 
     setFormData({
       Added: '',
-      ReferenceNo: '',
-      InvoiceNo: '',
-      InvoiceDate: '',
-      Customer: '',
-      TotalVat: '',
-      GrandTotal: '',
-      DueDate: '',
-      PayStatus: '',
+          ReferenceNo: '',
+          Warehouse: '',
+          Voucherno: '',
+          VoucherDate: '',
+          TotalVat: '',
+          EditApprovalStatus: '',
     });
 
     setFormVisible(false);
@@ -186,15 +182,11 @@ const StockManagement = () => {
           <tr className="w-[80vw]">
             <th className="border p-[0.5vw] text-[1vw]">Sr no</th>
             <th className="border p-[0.5vw] text-[1vw]">Date Added</th>
-            <th className="border p-[0.5vw] text-[1vw]">Reference No.</th>
-            <th className="border p-[0.5vw] text-[1vw]">Invoice No.</th>
-            <th className="border p-[0.5vw] text-[1vw]">Invoice Date</th>
-            <th className="border p-[0.5vw] text-[1vw]">Customer</th>
+            <th className="border p-[0.5vw] text-[1vw]">Warehouse</th>
+            <th className="border p-[0.5vw] text-[1vw]">Voucher no</th>
+            <th className="border p-[0.5vw] text-[1vw]">Voucher Date</th>
             <th className="border p-[0.5vw] text-[1vw]">Total Vat</th>
-            <th className="border p-[0.5vw] text-[1vw]">Grand Total</th>
-            <th className="border p-[0.5vw] text-[1vw]">Paid Amount</th>
-            <th className="border p-[0.5vw] text-[1vw]">Due Date</th>
-            <th className="border p-[0.5vw] text-[1vw]">Pay Status</th>
+            <th className="border p-[0.5vw] text-[1vw]">Edit Approval Status</th>
             <th className="border p-[0.5vw] text-[1vw]">Actions</th>
           </tr>
         </thead>
@@ -203,14 +195,11 @@ const StockManagement = () => {
             <tr key={index}>
               <td>{index + 1}</td>
               <td>{row.Added}</td>
-              <td>// Reference no will be shown</td>
-              <td>// Invoice No will be shown</td>
-              <td>{row.Invoice}</td>
-              <td>// Customer name will be shown</td>
+              <td>// Warehouse will be shown</td>
+              <td>// Voucher No will be shown</td>
+              <td>{row.Voucher}</td>
               <td>// Total Vat will be shown</td>
-              <td>// Grand Total will be shown</td>
-              <td>{row.DueDate}</td>
-              <td>// Pay Status will be shown</td>
+              <td>// Edit Approval will be shown</td>
               <td className="p-[0.1vw]">
                 <button
                   className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
@@ -261,48 +250,23 @@ const StockManagement = () => {
             />
           </div>
           <div className="mb-[0.3vw]">
-            // reference no will entered
+            // Warehouse will entered
           </div>
           <div className="mb-[0.3vw]">
-            // Invoice No will entered
+            // Voucher No will entered
           </div>
           <div className="mb-[0.3vw]">
-            <h1>Invoice Date:</h1>
+            <h1>Voucher Date:</h1>
             <input
               type="date"
-              name="InvoiceDate"
-              value={formData.InvoiceDate}
+              name="VoucherDate"
+              value={formData.VoucherDate}
               onChange={handleChange}
               className="p-[0.3vw] rounded-md"
             />
-          <div className="mb-[0.3vw]">
-            
-          </div>
-          </div>
-          <div className="mb-[0.3vw]">
-            // Customer name will entered
           </div>
           <div className="mb-[0.3vw]">
             // Total Vat will entered
-          </div>
-          <div className="mb-[0.3vw]">
-            // Grand Total will entered
-          </div>
-          <div className="mb-[0.3vw]">
-            <h1>Due Date:</h1>
-            <input
-              type="date"
-              name="DueDate"
-              value={formData.DueDate}
-              onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
-            />
-          </div>
-          <div className="mb-[0.3vw]">
-            // Pay stauts will selected from these option
-            1. Complete
-            2. Pending
-            3. Delete
           </div>
           <button
             type="submit"

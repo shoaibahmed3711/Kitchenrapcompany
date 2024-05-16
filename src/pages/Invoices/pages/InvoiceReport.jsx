@@ -6,15 +6,15 @@ const InvoiceReport = () => {
     return savedData
       ? JSON.parse(savedData)
       : {
-          Added: '',
-          ReferenceNo: '',
-          InvoiceNo: '',
-          InvoiceDate: '',
-          Customer: '',
-          TotalVat: '',
-          GrandTotal: '',
-          DueDate: '',
-          PayStatus: '',
+        InvoiceDate: '',
+        CustomerSupplier: '',
+        InvoiceType: '',
+        InvoiceNo: '',
+        RefNo: '',
+        GrossTotal: '',
+        TotalDiscounts: '',
+        TotalVAT: '',
+        GrandTotal: '',
         };
   });
 
@@ -75,15 +75,15 @@ const InvoiceReport = () => {
     }
 
     setFormData({
-      Added: '',
-      ReferenceNo: '',
-      InvoiceNo: '',
       InvoiceDate: '',
-      Customer: '',
-      TotalVat: '',
-      GrandTotal: '',
-      DueDate: '',
-      PayStatus: '',
+        CustomerSupplier: '',
+        InvoiceType: '',
+        InvoiceNo: '',
+        RefNo: '',
+        GrossTotal: '',
+        TotalDiscounts: '',
+        TotalVAT: '',
+        GrandTotal: '',
     });
 
     setFormVisible(false);
@@ -185,16 +185,15 @@ const InvoiceReport = () => {
         <thead className="bg-gray-300 w-[80vw]">
           <tr className="w-[80vw]">
             <th className="border p-[0.5vw] text-[1vw]">Sr no</th>
-            <th className="border p-[0.5vw] text-[1vw]">Date Added</th>
-            <th className="border p-[0.5vw] text-[1vw]">Reference No.</th>
-            <th className="border p-[0.5vw] text-[1vw]">Invoice No.</th>
             <th className="border p-[0.5vw] text-[1vw]">Invoice Date</th>
-            <th className="border p-[0.5vw] text-[1vw]">Customer</th>
-            <th className="border p-[0.5vw] text-[1vw]">Total Vat</th>
+            <th className="border p-[0.5vw] text-[1vw]">Customer/Supplier</th>
+            <th className="border p-[0.5vw] text-[1vw]">Invoice Type</th>
+            <th className="border p-[0.5vw] text-[1vw]">Invoice No.</th>
+            <th className="border p-[0.5vw] text-[1vw]">Ref No.</th>
+            <th className="border p-[0.5vw] text-[1vw]">Gross Total</th>
+            <th className="border p-[0.5vw] text-[1vw]">Total Discounts</th>
+            <th className="border p-[0.5vw] text-[1vw]">Total VAT</th>
             <th className="border p-[0.5vw] text-[1vw]">Grand Total</th>
-            <th className="border p-[0.5vw] text-[1vw]">Paid Amount</th>
-            <th className="border p-[0.5vw] text-[1vw]">Due Date</th>
-            <th className="border p-[0.5vw] text-[1vw]">Pay Status</th>
             <th className="border p-[0.5vw] text-[1vw]">Actions</th>
           </tr>
         </thead>
@@ -202,15 +201,16 @@ const InvoiceReport = () => {
           {filteredRows.map((row, index) => (
             <tr key={index}>
               <td>{index + 1}</td>
-              <td>{row.Added}</td>
-              <td>// Reference no will be shown</td>
-              <td>// Invoice No will be shown</td>
               <td>{row.Invoice}</td>
-              <td>// Customer name will be shown</td>
-              <td>// Total Vat will be shown</td>
+              <td>// Reference no will be shown</td>
+              <td>// Customer/Supplier will be shown</td>
+              <td>// Invoice Type will be shown</td>
+              <td>// Invoice No will be shown</td>
+              <td>// Ref No will be shown</td>
+              <td>// Gross Total will be shown</td>
+              <td>// Total Discounts will be shown</td>
+              <td>// Total VAT will be shown</td>
               <td>// Grand Total will be shown</td>
-              <td>{row.DueDate}</td>
-              <td>// Pay Status will be shown</td>
               <td className="p-[0.1vw]">
                 <button
                   className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
@@ -251,22 +251,6 @@ const InvoiceReport = () => {
         </div>
         <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
           <div className="mb-[0.3vw]">
-            <h1>Added Date:</h1>
-            <input
-              type="date"
-              name="AddedDate"
-              value={formData.AddedDate}
-              onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
-            />
-          </div>
-          <div className="mb-[0.3vw]">
-            // reference no will entered
-          </div>
-          <div className="mb-[0.3vw]">
-            // Invoice No will entered
-          </div>
-          <div className="mb-[0.3vw]">
             <h1>Invoice Date:</h1>
             <input
               type="date"
@@ -275,34 +259,30 @@ const InvoiceReport = () => {
               onChange={handleChange}
               className="p-[0.3vw] rounded-md"
             />
-          <div className="mb-[0.3vw]">
-            
-          </div>
           </div>
           <div className="mb-[0.3vw]">
-            // Customer name will entered
+            // Customer/Supplier no will entered
           </div>
           <div className="mb-[0.3vw]">
-            // Total Vat will entered
+            // Invoice Type will entered
           </div>
           <div className="mb-[0.3vw]">
-            // Grand Total will entered
+            // Invoice no will entered
           </div>
           <div className="mb-[0.3vw]">
-            <h1>Due Date:</h1>
-            <input
-              type="date"
-              name="DueDate"
-              value={formData.DueDate}
-              onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
-            />
+            // Ref no will entered
           </div>
           <div className="mb-[0.3vw]">
-            // Pay stauts will selected from these option
-            1. Complete
-            2. Pending
-            3. Delete
+            // Gross total will entered
+          </div>
+          <div className="mb-[0.3vw]">
+            // Total Discounts will entered
+          </div>
+          <div className="mb-[0.3vw]">
+            // Total VAt will entered
+          </div>
+          <div className="mb-[0.3vw]">
+            // Grand total will entered
           </div>
           <button
             type="submit"

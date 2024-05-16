@@ -256,45 +256,29 @@ const WherehouseInvoice = () => {
             />
           </div>
           <div className="mb-[0.3vw]">
-            // reference no will entered
+            // Warehouse will entered
           </div>
           <div className="mb-[0.3vw]">
-            // Invoice No will entered
+            // Voucher no will entered
           </div>
           <div className="mb-[0.3vw]">
-            <h1>Invoice Date:</h1>
+            <h1>Voucher Date:</h1>
             <input
               type="date"
-              name="InvoiceDate"
-              value={formData.InvoiceDate}
-              onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
-            />
-          <div className="mb-[0.3vw]">
-            
-          </div>
-          </div>
-          <div className="mb-[0.3vw]">
-            // Customer name will entered
-          </div>
-          <div className="mb-[0.3vw]">
-            // Total Vat will entered
-          </div>
-          <div className="mb-[0.3vw]">
-            // Grand Total will entered
-          </div>
-          <div className="mb-[0.3vw]">
-            <h1>Due Date:</h1>
-            <input
-              type="date"
-              name="DueDate"
-              value={formData.DueDate}
+              name="VoucherDate"
+              value={formData.VoucherDate}
               onChange={handleChange}
               className="p-[0.3vw] rounded-md"
             />
           </div>
           <div className="mb-[0.3vw]">
-            // Pay stauts will selected from these option
+            // Source will entered
+          </div>
+          <div className="mb-[0.3vw]">
+            // Total qty will entered
+          </div>
+          <div className="mb-[0.3vw]">
+            // Edit Approval stauts will selected from these option
             1. Complete
             2. Pending
             3. Delete
