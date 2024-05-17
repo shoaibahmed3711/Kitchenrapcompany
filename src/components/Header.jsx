@@ -8,12 +8,12 @@ const Header = () => {
   return (
     <div className='flex flex-row '>
     <div className='bg-white overflow-y-auto rounded-r-sm border-r-[0.11vw] border-[#E9278E] w-[18vw] h-[100vh]'>
-        <div>
-          <div className='mx-auto pt-[2vw] w-[12vw]'><img src="public/Logo/Kitchen-white.jpg" alt="" /></div>
+      <div>
+        <div className='mx-auto pt-[2vw] w-[12vw]'><img src="public/Logo/Kitchen-white.jpg" alt="" /></div>
         </div>
-        <ul className="flex flex-col my-[2vw] items-start list-none">
+    <ul className="flex flex-col my-[2vw] items-start list-none">
         {[
-  { path: "/", label: "Dashboard", icon: "Dashboard.png" },
+  { path: "/", label: "Dashboard", icon: "src/images/Dashboard.png" },
   { path: "/HRM", label: "HRM", icon: "/HRM.png", subItems: [
     { path: "/HRM/Employees", label: "Employees" },
     { path: "/HRM/ManageSalary", label: "Manage Salary"},
@@ -91,7 +91,7 @@ const Header = () => {
     <Link to={navItem.path} className={`text-[#e9278e] font-roboto text-[1vw] flex flex-row items-center justify-between`}>
       <div className='flex flex-row items-center bg-red'>
         <img 
-          src={`src/images/${navItem.icon}`} 
+          src={`${navItem.icon}`} 
           className="w-[1.5vw] mr-[0.8vw] transition duration-500" 
           alt={navItem.label} 
         />
