@@ -200,17 +200,16 @@ const InvoiceReport = () => {
         <tbody className="rounded-lg bg-gray-100 w-[80vw] text-center">
           {filteredRows.map((row, index) => (
             <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{row.Invoice}</td>
-              <td>// Reference no will be shown</td>
-              <td>// Customer/Supplier will be shown</td>
-              <td>// Invoice Type will be shown</td>
-              <td>// Invoice No will be shown</td>
-              <td>// Ref No will be shown</td>
-              <td>// Gross Total will be shown</td>
-              <td>// Total Discounts will be shown</td>
-              <td>// Total VAT will be shown</td>
-              <td>// Grand Total will be shown</td>
+             <td>{index + 1}</td>
+              <td>{row.InvoiceDate}</td>
+              <td>{row.CustomerSupplier}</td>
+              <td>{row.InvoiceType}</td>
+              <td>{row.InvoiceNo}</td>
+              <td>{row.RefNo}</td>
+              <td>{row.GrossTotal}</td>
+              <td>{row.TotalDiscounts}</td>
+              <td>{row.TotalVAT}</td>
+              <td>{row.GrandTotal}</td>
               <td className="p-[0.1vw]">
                 <button
                   className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
@@ -261,28 +260,84 @@ const InvoiceReport = () => {
             />
           </div>
           <div className="mb-[0.3vw]">
-            // Customer/Supplier no will entered
+            <h1>Customer/Supplier:</h1>
+            <input
+              type="text"
+              name="CustomerSupplier"
+              value={formData.CustomerSupplier}
+              onChange={handleChange}
+              className="p-[0.3vw] rounded-md"
+            />
           </div>
           <div className="mb-[0.3vw]">
-            // Invoice Type will entered
+            <h1>Invoice Type:</h1>
+            <input
+              type="text"
+              name="InvoiceType"
+              value={formData.InvoiceType}
+              onChange={handleChange}
+              className="p-[0.3vw] rounded-md"
+            />
           </div>
           <div className="mb-[0.3vw]">
-            // Invoice no will entered
+            <h1>Invoice No.:</h1>
+            <input
+              type="text"
+              name="InvoiceNo"
+              value={formData.InvoiceNo}
+              onChange={handleChange}
+              className="p-[0.3vw] rounded-md"
+            />
           </div>
           <div className="mb-[0.3vw]">
-            // Ref no will entered
+            <h1>Ref No.:</h1>
+            <input
+              type="text"
+              name="RefNo"
+              value={formData.RefNo}
+              onChange={handleChange}
+              className="p-[0.3vw] rounded-md"
+            />
           </div>
           <div className="mb-[0.3vw]">
-            // Gross total will entered
+            <h1>Gross Total:</h1>
+            <input
+              type="text"
+              name="GrossTotal"
+              value={formData.GrossTotal}
+              onChange={handleChange}
+              className="p-[0.3vw] rounded-md"
+            />
           </div>
           <div className="mb-[0.3vw]">
-            // Total Discounts will entered
+            <h1>Total Discounts:</h1>
+            <input
+              type="text"
+              name="TotalDiscounts"
+              value={formData.TotalDiscounts}
+              onChange={handleChange}
+              className="p-[0.3vw] rounded-md"
+            />
           </div>
           <div className="mb-[0.3vw]">
-            // Total VAt will entered
+            <h1>Total VAT:</h1>
+            <input
+              type="text"
+              name="TotalVAT"
+              value={formData.TotalVAT}
+              onChange={handleChange}
+              className="p-[0.3vw] rounded-md"
+            />
           </div>
           <div className="mb-[0.3vw]">
-            // Grand total will entered
+            <h1>Grand Total:</h1>
+            <input
+              type="text"
+              name="GrandTotal"
+              value={formData.GrandTotal}
+              onChange={handleChange}
+              className="p-[0.3vw] rounded-md"
+            />
           </div>
           <button
             type="submit"
@@ -294,7 +349,6 @@ const InvoiceReport = () => {
       </div>
     )}
   </div>
-  )
-}
-
-export default InvoiceReport
+);
+    }
+export default InvoiceReport;

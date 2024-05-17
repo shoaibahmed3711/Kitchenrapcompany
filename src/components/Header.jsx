@@ -95,9 +95,9 @@ const Header = () => {
   ] },
   { path: "/Hierarchy", label: "Hierarchy", icon: "Hierarchy.png" , subItems: [
     { path: "/Hierarchy/BreakdownProcess", label: "Breakdown Process" },
+    { path: "/Hierarchy/ProductionApproval", label: "Production Approval" },
     { path: "/Hierarchy/BreakdownPricing", label: "Breakdown Pricing" },
     { path: "/Hierarchy/BreakdownSetting", label: "Breakdown Setting" },
-    { path: "/Hierarchy/ProductionApproval", label: "Production Approval" },
     { path: "/Hierarchy/BreakdownTutorial", label: "Breakdown Tutorial" },
   ] },
   { path: "/Setting", label: "Setting", icon: "setting.png" }

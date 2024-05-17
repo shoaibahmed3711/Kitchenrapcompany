@@ -6,10 +6,9 @@ const StockManagement = () => {
     return savedData
       ? JSON.parse(savedData)
       : {
-          Added: '',
-          ReferenceNo: '',
+          AddedDate: '',
           Warehouse: '',
-          Voucherno: '',
+          VoucherNo: '',
           VoucherDate: '',
           TotalVat: '',
           EditApprovalStatus: '',
@@ -73,13 +72,12 @@ const StockManagement = () => {
     }
 
     setFormData({
-      Added: '',
-          ReferenceNo: '',
-          Warehouse: '',
-          Voucherno: '',
-          VoucherDate: '',
-          TotalVat: '',
-          EditApprovalStatus: '',
+      AddedDate: '',
+      Warehouse: '',
+      VoucherNo: '',
+      VoucherDate: '',
+      TotalVat: '',
+      EditApprovalStatus: '',
     });
 
     setFormVisible(false);
@@ -191,94 +189,115 @@ const StockManagement = () => {
           </tr>
         </thead>
         <tbody className="rounded-lg bg-gray-100 w-[80vw] text-center">
-          {filteredRows.map((row, index) => (
-            <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{row.Added}</td>
-              <td>// Warehouse will be shown</td>
-              <td>// Voucher No will be shown</td>
-              <td>{row.Voucher}</td>
-              <td>// Total Vat will be shown</td>
-              <td>// Edit Approval will be shown</td>
-              <td className="p-[0.1vw]">
-                <button
-                  className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
-                  onClick={() => handleEdit(index)}
-                >
-                  <img src="/HRM/edit.png" className="w-[1.4vw]" alt="" />
-                </button>
-                <button
-                  className="hover:bg-red-500 p-2 rounded-full"
-                  onClick={() => handleDelete(index)}
-                >
-                  <img src="/HRM/Trash.png" className="w-[1.4vw]" alt="" />
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-
-    {!isFormVisible && (
-      <div className="absolute bottom-[1vw] left-[1vw]">
-        <button className="p-[1vw]  rounded" onClick={toggleFormVisibility}>
-          <img src="/HRM/form.png" className="w-[3vw]" alt="" />
-        </button>
+        {filteredRows.map((row, index) => (
+              <tr key={index}>
+                <td>{index + 1}</td>
+                <td>{row.AddedDate}</td>
+                <td>{row.Warehouse}</td>
+                <td>{row.VoucherNo}</td>
+                <td>{row.VoucherDate}</td>
+                <td>{row.TotalVat}</td>
+                <td>{row.EditApprovalStatus}</td>
+                <td className="p-[0.1vw]">
+                  <button
+                    className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
+                    onClick={() => handleEdit(index)}
+                  >
+                    <img src="/HRM/edit.png" className="w-[1.4vw]" alt="" />
+                  </button>
+                  <button
+                    className="hover:bg-red-500 p-2 rounded-full"
+                    onClick={() => handleDelete(index)}
+                  >
+                    <img src="/HRM/Trash.png" className="w-[1.4vw]" alt="" />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-    )}
 
-    {isFormVisible && (
-      <div className="w-[26vw] bg-white shadow-2xl absolute right-0 z-10 top-[0vw] overflow-y-auto rounded-lg ml-4 h-[32vw]">
-        <div className="flex justify-between p-4">
-          <button
-            className="hover:bg-red-500  shadow-lg rounded-md text-white p-[0.3vw]"
-            onClick={toggleFormVisibility}
-          >
-            <img src="/HRM/close.png" className="w-[2vw]" alt="" />
+      {!isFormVisible && (
+        <div className="absolute bottom-[1vw] left-[1vw]">
+          <button className="p-[1vw]  rounded" onClick={toggleFormVisibility}>
+            <img src="/HRM/form.png" className="w-[3vw]" alt="" />
           </button>
         </div>
-        <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
-          <div className="mb-[0.3vw]">
-            <h1>Added Date:</h1>
-            <input
-              type="date"
-              name="AddedDate"
-              value={formData.AddedDate}
-              onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
-            />
-          </div>
-          <div className="mb-[0.3vw]">
-            // Warehouse will entered
-          </div>
-          <div className="mb-[0.3vw]">
-            // Voucher No will entered
-          </div>
-          <div className="mb-[0.3vw]">
-            <h1>Voucher Date:</h1>
-            <input
-              type="date"
-              name="VoucherDate"
-              value={formData.VoucherDate}
-              onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
-            />
-          </div>
-          <div className="mb-[0.3vw]">
-            // Total Vat will entered
-          </div>
-          <button
-            type="submit"
-            className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
-          >
-            {editIndex !== null ? 'Edit' : 'Add'}
-          </button>
-        </form>
-      </div>
-    )}
-  </div>
-  )
-}
+      )}
 
-export default StockManagement
+      {isFormVisible && (
+        <div className="w-[26vw] bg-white shadow-2xl absolute right-0 z-10 top-[0vw] overflow-y-auto rounded-lg ml-4 h-[32vw]">
+          <div className="flex justify-between p-4">
+            <button
+              className="hover:bg-red-500  shadow-lg rounded-md text-white p-[0.3vw]"
+              onClick={toggleFormVisibility}
+            >
+              <img src="/HRM/close.png" className="w-[2vw]" alt="" />
+            </button>
+          </div>
+          <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
+            <div className="mb-[0.3vw]">
+              <h1>Added Date:</h1>
+              <input
+                type="date"
+                name="AddedDate"
+                value={formData.AddedDate}
+                onChange={handleChange}
+                className="p-[0.3vw] rounded-md"
+              />
+            </div>
+            <div className="mb-[0.3vw]">
+              <h1>Warehouse:</h1>
+              <input
+                type="text"
+                name="Warehouse"
+                value={formData.Warehouse}
+                onChange={handleChange}
+                className="p-[0.3vw] rounded-md"
+              />
+            </div>
+            <div className="mb-[0.3vw]">
+              <h1>Voucher No:</h1>
+              <input
+                type="text"
+                name="VoucherNo"
+                value={formData.VoucherNo}
+                onChange={handleChange}
+                className="p-[0.3vw] rounded-md"
+              />
+            </div>
+            <div className="mb-[0.3vw]">
+              <h1>Voucher Date:</h1>
+              <input
+                type="date"
+                name="VoucherDate"
+                value={formData.VoucherDate}
+                onChange={handleChange}
+                className="p-[0.3vw] rounded-md"
+              />
+            </div>
+            <div className="mb-[0.3vw]">
+              <h1>Total Vat:</h1>
+              <input
+                type="text"
+                name="TotalVat"
+                value={formData.TotalVat}
+                onChange={handleChange}
+                className="p-[0.3vw] rounded-md"
+              />
+            </div>
+            <button
+              type="submit"
+              className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
+            >
+              {editIndex !== null ? 'Edit' : 'Add'}
+            </button>
+          </form>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default StockManagement;
