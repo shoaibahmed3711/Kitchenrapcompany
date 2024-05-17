@@ -4,19 +4,21 @@ import { jsPDF } from 'jspdf';
 const BreakdownProcess = () => {
   const [formData, setFormData] = useState(() => {
     const savedData = localStorage.getItem('formData');
-    return savedData ? JSON.parse(savedData) : {
-      BranchName: '',
-      ContractDate: "",
-      ProductionDate: "",
-      InstallationDate: "",
-      Contractno: '',
-      Customer: '',
-      Project: '',
-      Designer: '',
-      ProductionOrder: '',
-      ProductionOrdereredby: '',
-      status: '',
-    };
+    return savedData
+      ? JSON.parse(savedData)
+      : {
+          BranchName: '',
+          ContractDate: '',
+          ProductionDate: '',
+          InstallationDate: '',
+          Contractno: '',
+          Customer: '',
+          Project: '',
+          Designer: '',
+          ProductionOrder: '',
+          ProductionOrdereredby: '',
+          status: '',
+        };
   });
 
   const [isFormVisible, setFormVisible] = useState(false);
@@ -47,7 +49,17 @@ const BreakdownProcess = () => {
   const addEmployee = () => {
     const newEmployee = {
       id: srNo,
-      name: `Employee ${srNo}`,
+      BranchName: formData.BranchName,
+      ContractDate: formData.ContractDate,
+      ProductionDate: formData.ProductionDate,
+      InstallationDate: formData.InstallationDate,
+      Contractno: formData.Contractno,
+      Customer: formData.Customer,
+      Project: formData.Project,
+      Designer: formData.Designer,
+      ProductionOrder: formData.ProductionOrder,
+      ProductionOrdereredby: formData.ProductionOrdereredby,
+      status: formData.status,
     };
     setRows([...rows, newEmployee]);
     setSrNo(srNo + 1);
@@ -72,14 +84,14 @@ const BreakdownProcess = () => {
       });
       setEditIndex(null);
     } else {
-      setRows((prevRows) => [...prevRows, formData]);
+      addEmployee();
     }
 
     setFormData({
       BranchName: '',
-      ContractDate: "",
-      ProductionDate: "",
-      InstallationDate: "",
+      ContractDate: '',
+      ProductionDate: '',
+      InstallationDate: '',
       Contractno: '',
       Customer: '',
       Project: '',
@@ -122,8 +134,12 @@ const BreakdownProcess = () => {
   const handleExport = () => {
     const doc = new jsPDF();
     rows.forEach((row, index) => {
-      const yPos = 10 + (index * 10);
-      doc.text(`${row.name} - ${row.code}`, 10, yPos);
+      const yPos = 10 + index * 10;
+      doc.text(
+        `${row.BranchName} - ${row.ContractDate} - ${row.ProductionDate} - ${row.InstallationDate} - ${row.Contractno} - ${row.Customer} - ${row.Project} - ${row.Designer} - ${row.ProductionOrder} - ${row.ProductionOrdereredby} - ${row.status}`,
+        10,
+        yPos
+      );
     });
     doc.save('employee_table.pdf');
   };
@@ -133,9 +149,9 @@ const BreakdownProcess = () => {
   };
 
   const filteredRows = rows.filter((row) => {
-    const name = row.name ? row.name.toLowerCase() : '';
+    const name = row.BranchName ? row.BranchName.toLowerCase() : '';
     const status = row.status ? row.status.toLowerCase() : '';
-  
+
     if (filter === 'All') {
       return name.includes(searchTerm.toLowerCase());
     } else {
@@ -149,7 +165,7 @@ const BreakdownProcess = () => {
   return (
     <div className="absolute shadow-xl right-[1vw] rounded-md top-[4vw] h-[42vw]">
       <div className="h-[50vw]">
-        <div className="bg-gray-400 w-[80vw] h-[3vw] flex flex-row px-[2vw] items-center"> 
+        <div className="bg-gray-400 w-[80vw] h-[3vw] flex flex-row px-[2vw] items-center">
           <input
             className="p-[0.3vw] w-[18vw] text-[1vw] rounded-md mx-[1vw]"
             type="text"
@@ -166,13 +182,22 @@ const BreakdownProcess = () => {
             <option value="Active">Active</option>
             <option value="Inactive">Inactive</option>
           </select>
-          <button className="w-[2vw] bg-orange-500 mx-[0.5vw] rounded-md" onClick={handleRefresh}>
+          <button
+            className="w-[2vw] bg-orange-500 mx-[0.5vw] rounded-md"
+            onClick={handleRefresh}
+          >
             <img src="public/HRM/refresh.png" alt="" />
           </button>
-          <button className="w-[2vw] bg-red-500 mx-[0.5vw] rounded-md" onClick={handleFilter}>
+          <button
+            className="w-[2vw] bg-red-500 mx-[0.5vw] rounded-md"
+            onClick={handleFilter}
+          >
             <img src="public/HRM/filter.png" alt="" />
           </button>
-          <button className="w-[2vw] bg-sky-500 mx-[0.5vw] rounded-md" onClick={handleExport}>
+          <button
+            className="w-[2vw] bg-sky-500 mx-[0.5vw] rounded-md"
+            onClick={handleExport}
+          >
             <img src="public/HRM/export.png" alt="" />
           </button>
         </div>
@@ -189,7 +214,7 @@ const BreakdownProcess = () => {
               <th className="border p-[0.5vw] text-[1vw]">Project</th>
               <th className="border p-[0.5vw] text-[1vw]">Designer</th>
               <th className="border p-[0.5vw] text-[1vw]">Production Order</th>
-              <th className="border p-[0.5vw] text-[1vw]">Production Orderered by</th>
+              <th className="border p-[0.5vw] text-[1vw]">Production Ordered by</th>
               <th className="border p-[0.5vw] text-[1vw]">Status</th>
               <th className="border p-[0.5vw] text-[1vw]">Actions</th>
             </tr>
@@ -198,21 +223,22 @@ const BreakdownProcess = () => {
             {filteredRows.map((row, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
-                <td> // Branch Name will be shown</td>
+                <td>{row.BranchName}</td>
                 <td>{row.ContractDate}</td>
                 <td>{row.ProductionDate}</td>
                 <td>{row.InstallationDate}</td>
-                <td> // Contract no will be shown</td>
-                <td> // Customer will be shown</td>
-                <td> // Project will be shown</td>
-                <td> // Designer will be shown</td>
-                <td> // Production Order will be shown</td>
-                <td> // Production Orderered by will be shown</td>
-                <td> // Status will be shown</td>
+                <td>{row.Contractno}</td>
+                <td>{row.Customer}</td>
+                <td>{row.Project}</td>
+                <td>{row.Designer}</td>
+                <td>{row.ProductionOrder}</td>
+                <td>{row.ProductionOrdereredby}</td>
+                <td>{row.status}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
-                    onClick={() => handleEdit(index)}>
+                    onClick={() => handleEdit(index)}
+                  >
                     <img src="/HRM/edit.png" className="w-[1.4vw]" alt="" />
                   </button>
                   <button
@@ -230,8 +256,8 @@ const BreakdownProcess = () => {
 
       {!isFormVisible && (
         <div className="absolute bottom-[1vw] left-[1vw]">
-          <button className="p-[1vw]  rounded" onClick={toggleFormVisibility}>
-            <img src="/HRM/form.png" className='w-[3vw]' alt="" />
+          <button className="p-[1vw] rounded" onClick={toggleFormVisibility}>
+            <img src="/HRM/form.png" className="w-[3vw]" alt="" />
           </button>
         </div>
       )}
@@ -243,11 +269,11 @@ const BreakdownProcess = () => {
               className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white p-[0.3vw]"
               onClick={toggleFormVisibility}
             >
-              <img src="/HRM/close.png" className='w-[2vw]' alt="" />
+              <img src="/HRM/close.png" className="w-[2vw]" alt="" />
             </button>
           </div>
-          <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
-          <div className="mb-[0.3vw]">
+          <form onSubmit={handleSubmit} className="overflow-y-auto p-[1vw]">
+            <div className="mb-[0.3vw]">
               <input
                 type="text"
                 name="BranchName"
@@ -259,65 +285,117 @@ const BreakdownProcess = () => {
             </div>
             <div className="mb-[0.3vw]">
               <input
-                type="Contract date"
+                type="date"
                 name="ContractDate"
                 value={formData.ContractDate}
                 onChange={handleChange}
                 className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Contract Date"
               />
             </div>
             <div className="mb-[0.3vw]">
               <input
-                type="Production Date"
+                type="date"
                 name="ProductionDate"
                 value={formData.ProductionDate}
                 onChange={handleChange}
                 className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Production Date"
               />
             </div>
             <div className="mb-[0.3vw]">
               <input
-                type="Installation Date"
+                type="date"
                 name="InstallationDate"
                 value={formData.InstallationDate}
                 onChange={handleChange}
                 className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Installation Date"
               />
             </div>
             <div className="mb-[0.3vw]">
-              // Contract no will entered
+              <input
+                type="text"
+                name="Contractno"
+                value={formData.Contractno}
+                onChange={handleChange}
+                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Contract Number"
+              />
             </div>
             <div className="mb-[0.3vw]">
-              // Customer will entered
+              <input
+                type="text"
+                name="Customer"
+                value={formData.Customer}
+                onChange={handleChange}
+                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Customer"
+              />
             </div>
             <div className="mb-[0.3vw]">
-              // Project no will entered
+              <input
+                type="text"
+                name="Project"
+                value={formData.Project}
+                onChange={handleChange}
+                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Project"
+              />
             </div>
             <div className="mb-[0.3vw]">
-              // Designer name will entered
+              <input
+                type="text"
+                name="Designer"
+                value={formData.Designer}
+                onChange={handleChange}
+                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Designer"
+              />
             </div>
             <div className="mb-[0.3vw]">
-              // Production Order will entered
+              <input
+                type="text"
+                name="ProductionOrder"
+                value={formData.ProductionOrder}
+                onChange={handleChange}
+                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Production Order"
+              />
             </div>
             <div className="mb-[0.3vw]">
-              // Production Orderered by will entered
+              <input
+                type="text"
+                name="ProductionOrdereredby"
+                value={formData.ProductionOrdereredby}
+                onChange={handleChange}
+                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Production Ordered by"
+              />
             </div>
             <div className="mb-[0.3vw]">
-              // Status will be selected with 2 options
-              1. Active
-              2. Inactive
+              <select
+                name="status"
+                value={formData.status}
+                onChange={handleChange}
+                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+              >
+                <option value="">Select Status</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
             </div>
             <button
               type="submit"
               className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
             >
-              {editIndex !== null ? "Edit Employee" : "Add Employee"}
+              {editIndex !== null ? 'Edit Employee' : 'Add Employee'}
             </button>
           </form>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default BreakdownProcess;

@@ -67,12 +67,13 @@ const Contract = () => {
     setFormData({ ...formData, expiryDate: e.target.value });
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: name === "code" ? value.toUpperCase().replace(/[^A-Z-]/g, "") : value,
-    }));
+  const handleChange = (e, day, index) => {
+    const { value } = e.target;
+    setRows((prevRows) =>
+      prevRows.map((row, i) =>
+        i === index ? { ...row, [`${day}Time`]: value } : row
+      )
+    );
   };
 
   const handleFileChange = (e) => {
@@ -98,12 +99,14 @@ const Contract = () => {
 
     setFormData({
       profilePic: null,
-      name: "",
-      job: "",
-      code: "",
-      shift: "",
-      department: "",
-      status: "",
+          name: "",
+          job: "",
+          code: "",
+          issueDate: "",
+          expiryDate: "",
+          shift: "",
+          department: "",
+          status: "",
     });
 
     setFormVisible(false);
@@ -152,15 +155,16 @@ const Contract = () => {
   };
 
   const filteredRows = rows.filter((row) => {
-    if (filter === "All") {
-      return row.name.toLowerCase().includes(searchTerm.toLowerCase());
+    if (filter === 'All') {
+      return row.name?.toLowerCase().includes(searchTerm.toLowerCase());
     } else {
       return (
         row.status === filter &&
-        row.name.toLowerCase().includes(searchTerm.toLowerCase())
+        row.name?.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
   });
+  
   return (
     <div className="absolute shadow-xl right-[1vw]  rounded-md top-[12vw] h-[33vw]">
       <div className="h-[50vw]">

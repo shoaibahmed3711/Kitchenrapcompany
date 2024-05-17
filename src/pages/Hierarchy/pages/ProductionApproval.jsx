@@ -5,16 +5,14 @@ const ProductionApproval = () => {
   const [formData, setFormData] = useState(() => {
     const savedData = localStorage.getItem('formData');
     return savedData ? JSON.parse(savedData) : {
+      RequestType: '',
+      EntryDate: '',
       BranchName: '',
-      ContractDate: "",
-      ProductionDate: "",
-      InstallationDate: "",
-      Contractno: '',
-      Customer: '',
+      ApprovalType: '',
       Project: '',
-      Designer: '',
-      ProductionOrder: '',
-      ProductionOrdereredby: '',
+      Reason: '',
+      Remark: '',
+      ActionDate: '',
       status: '',
     };
   });
@@ -44,15 +42,6 @@ const ProductionApproval = () => {
     localStorage.setItem('srNo', srNo.toString());
   }, [srNo]);
 
-  const addEmployee = () => {
-    const newEmployee = {
-      id: srNo,
-      name: `Employee ${srNo}`,
-    };
-    setRows([...rows, newEmployee]);
-    setSrNo(srNo + 1);
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -67,25 +56,24 @@ const ProductionApproval = () => {
     if (editIndex !== null) {
       setRows((prevRows) => {
         const updatedRows = [...prevRows];
-        updatedRows[editIndex] = formData;
+        updatedRows[editIndex] = { ...formData, id: updatedRows[editIndex].id };
         return updatedRows;
       });
       setEditIndex(null);
     } else {
-      setRows((prevRows) => [...prevRows, formData]);
+      setRows((prevRows) => [...prevRows, { ...formData, id: srNo }]);
+      setSrNo(srNo + 1);
     }
 
     setFormData({
+      RequestType: '',
+      EntryDate: '',
       BranchName: '',
-      ContractDate: "",
-      ProductionDate: "",
-      InstallationDate: "",
-      Contractno: '',
-      Customer: '',
+      ApprovalType: '',
       Project: '',
-      Designer: '',
-      ProductionOrder: '',
-      ProductionOrdereredby: '',
+      Reason: '',
+      Remark: '',
+      ActionDate: '',
       status: '',
     });
 
@@ -112,18 +100,14 @@ const ProductionApproval = () => {
   };
 
   const handleFilter = () => {
-    if (filter === 'Active') {
-      setRows((prevRows) => prevRows.filter((row) => row.status === 'Active'));
-    } else if (filter === 'Inactive') {
-      setRows((prevRows) => prevRows.filter((row) => row.status === 'Inactive'));
-    }
+    // This function will filter the rows based on their status
   };
 
   const handleExport = () => {
     const doc = new jsPDF();
     rows.forEach((row, index) => {
       const yPos = 10 + (index * 10);
-      doc.text(`${row.name} - ${row.code}`, 10, yPos);
+      doc.text(`ID: ${row.id}, Request Type: ${row.RequestType}, Branch: ${row.BranchName}, Status: ${row.status}`, 10, yPos);
     });
     doc.save('employee_table.pdf');
   };
@@ -180,46 +164,40 @@ const ProductionApproval = () => {
           <thead className="bg-gray-300 w-[80vw]">
             <tr className="w-[80vw]">
               <th className="border p-[0.5vw] text-[1vw]">Sr no</th>
-              <th className="border p-[0.5vw] text-[1vw]">Branch Name</th>
-              <th className="border p-[0.5vw] text-[1vw]">Contract Date</th>
-              <th className="border p-[0.5vw] text-[1vw]">Production Date</th>
-              <th className="border p-[0.5vw] text-[1vw]">Installation Date</th>
-              <th className="border p-[0.5vw] text-[1vw]">Contract no</th>
-              <th className="border p-[0.5vw] text-[1vw]">Customer</th>
+              <th className="border p-[0.5vw] text-[1vw]">Request Type</th>
+              <th className="border p-[0.5vw] text-[1vw]">Entry Date</th>
+              <th className="border p-[0.5vw] text-[1vw]">Branch</th>
+              <th className="border p-[0.5vw] text-[1vw]">Approval Type</th>
               <th className="border p-[0.5vw] text-[1vw]">Project</th>
-              <th className="border p-[0.5vw] text-[1vw]">Designer</th>
-              <th className="border p-[0.5vw] text-[1vw]">Production Order</th>
-              <th className="border p-[0.5vw] text-[1vw]">Production Orderered by</th>
-              <th className="border p-[0.5vw] text-[1vw]">Status</th>
+              <th className="border p-[0.5vw] text-[1vw]">Reason</th>
+              <th className="border p-[0.5vw] text-[1vw]">Remark</th>
+              <th className="border p-[0.5vw] text-[1vw]">Action Date</th>
               <th className="border p-[0.5vw] text-[1vw]">Actions</th>
             </tr>
           </thead>
           <tbody className="rounded-lg bg-gray-100 w-[80vw] text-center">
             {filteredRows.map((row, index) => (
               <tr key={index}>
-                <td>{index + 1}</td>
-                <td> // Branch Name will be shown</td>
-                <td>{row.ContractDate}</td>
-                <td>{row.ProductionDate}</td>
-                <td>{row.InstallationDate}</td>
-                <td> // Contract no will be shown</td>
-                <td> // Customer will be shown</td>
-                <td> // Project will be shown</td>
-                <td> // Designer will be shown</td>
-                <td> // Production Order will be shown</td>
-                <td> // Production Orderered by will be shown</td>
-                <td> // Status will be shown</td>
+                <td>{row.id}</td>
+                <td>{row.RequestType}</td>
+                <td>{row.EntryDate}</td>
+                <td>{row.BranchName}</td>
+                <td>{row.ApprovalType}</td>
+                <td>{row.Project}</td>
+                <td>{row.Reason}</td>
+                <td>{row.Remark}</td>
+                <td>{row.ActionDate}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
                     onClick={() => handleEdit(index)}>
-                    <img src="/HRM/edit.png" className="w-[1.4vw]" alt="" />
+                    <img src="/HRM/edit.png" className="w-[1.4vw]" alt="edit" />
                   </button>
                   <button
                     className="hover:bg-red-500 p-2 rounded-full"
                     onClick={() => handleDelete(index)}
                   >
-                    <img src="/HRM/Trash.png" className="w-[1.4vw]" alt="" />
+                    <img src="/HRM/Trash.png" className="w-[1.4vw]" alt="delete" />
                   </button>
                 </td>
               </tr>
@@ -231,7 +209,7 @@ const ProductionApproval = () => {
       {!isFormVisible && (
         <div className="absolute bottom-[1vw] left-[1vw]">
           <button className="p-[1vw]  rounded" onClick={toggleFormVisibility}>
-            <img src="/HRM/form.png" className='w-[3vw]' alt="" />
+            <img src="/HRM/form.png" className='w-[3vw]' alt="form" />
           </button>
         </div>
       )}
@@ -243,11 +221,30 @@ const ProductionApproval = () => {
               className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white p-[0.3vw]"
               onClick={toggleFormVisibility}
             >
-              <img src="/HRM/close.png" className='w-[2vw]' alt="" />
+              <img src="/HRM/close.png" className='w-[2vw]' alt="close" />
             </button>
           </div>
           <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
-          <div className="mb-[0.3vw]">
+            <div className="mb-[0.3vw]">
+              <input
+                type="text"
+                name="RequestType"
+                value={formData.RequestType}
+                onChange={handleChange}
+                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Request Type"
+              />
+            </div>
+            <div className="mb-[0.3vw]">
+              <input
+                type="date"
+                name="EntryDate"
+                value={formData.EntryDate}
+                onChange={handleChange}
+                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+              />
+            </div>
+            <div className="mb-[0.3vw]">
               <input
                 type="text"
                 name="BranchName"
@@ -259,65 +256,64 @@ const ProductionApproval = () => {
             </div>
             <div className="mb-[0.3vw]">
               <input
-                type="Contract date"
-                name="ContractDate"
-                value={formData.ContractDate}
+                type="text"
+                name="ApprovalType"
+                value={formData.ApprovalType}
                 onChange={handleChange}
                 className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Approval Type"
               />
             </div>
             <div className="mb-[0.3vw]">
               <input
-                type="Production Date"
-                name="ProductionDate"
-                value={formData.ProductionDate}
+                type="text"
+                name="Project"
+                value={formData.Project}
                 onChange={handleChange}
                 className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Project"
               />
             </div>
             <div className="mb-[0.3vw]">
               <input
-                type="Installation Date"
-                name="InstallationDate"
-                value={formData.InstallationDate}
+                type="text"
+                name="Reason"
+                value={formData.Reason}
                 onChange={handleChange}
                 className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Reason"
               />
             </div>
             <div className="mb-[0.3vw]">
-              // Contract no will entered
+              <input
+                type="text"
+                name="Remark"
+                value={formData.Remark}
+                onChange={handleChange}
+                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                placeholder="Remark"
+              />
             </div>
             <div className="mb-[0.3vw]">
-              // Customer will entered
-            </div>
-            <div className="mb-[0.3vw]">
-              // Project no will entered
-            </div>
-            <div className="mb-[0.3vw]">
-              // Designer name will entered
-            </div>
-            <div className="mb-[0.3vw]">
-              // Production Order will entered
-            </div>
-            <div className="mb-[0.3vw]">
-              // Production Orderered by will entered
-            </div>
-            <div className="mb-[0.3vw]">
-              // Status will be selected with 2 options
-              1. Active
-              2. Inactive
+              <input
+                type="date"
+                name="ActionDate"
+                value={formData.ActionDate}
+                onChange={handleChange}
+                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+              />
             </div>
             <button
               type="submit"
               className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
             >
-              {editIndex !== null ? "Edit Employee" : "Add Employee"}
+              {editIndex !== null ? "Edit" : "Add"}
             </button>
           </form>
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default ProductionApproval;
