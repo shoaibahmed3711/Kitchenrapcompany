@@ -14,7 +14,7 @@ const Header = () => {
     <ul className="flex flex-col my-[2vw] items-start list-none">
         {[
   { path: "/", label: "Dashboard", icon: "src/images/Dashboard.png" },
-  { path: "/HRM", label: "HRM", icon: "/HRM.png", subItems: [
+  { path: "/HRM", label: "HRM", icon: "src/images/HRM.png", subItems: [
     { path: "/HRM/Employees", label: "Employees" },
     { path: "/HRM/ManageSalary", label: "Manage Salary"},
     { path: "/HRM/ManageLeave", label: "Manage Leave" },
@@ -25,7 +25,7 @@ const Header = () => {
     { path: "/HRM/HrRequest", label: "HRM Request"},
     { path: "/HRM/HRMTutorial", label: "HRM Tutorial"},
   ] },
-  { path: "/CRM", label: "CRM", icon: "CRM.png" , subItems: [
+  { path: "/CRM", label: "CRM", icon: "src/images/CRM.png" , subItems: [
     { path: "/CRM/PreLeads", label: "PreLeads" },
     { path: "/CRM/Leads", label: "Leads" },
     { path: "/CRM/Estimates", label: "Estimates" },
@@ -34,7 +34,7 @@ const Header = () => {
     { path: "/CRM/AfterSales", label: "After Sales" },
     { path: "/CRM/CRMTutorial", label: "CRM Tutorial" },
   ] },
-  { path: "/Sales", label: "Sales", icon: "salesManagement.png", subItems: [
+  { path: "/Sales", label: "Sales", icon: "src/images/salesManagement.png", subItems: [
     { path: "/Sales/CallandMeeting", label: "Call and Meeting" },
     { path: "/Sales/DesignerActivities", label: "Designer Activities" },
     { path: "/Sales/InstallationSchedule", label: "Installation Schedule" },
@@ -44,23 +44,23 @@ const Header = () => {
     { path: "/Sales/SalesPriceList", label: "Sales Price List" },
     { path: "/Sales/SalesTutorial", label: "Sales Tutorial" },
   ] },
-  { path: "/Assessment", label: "Assessment", icon: "Technical.png" , subItems: [
+  { path: "/Assessment", label: "Assessment", icon: "src/images/Technical.png" , subItems: [
     { path: "/Assessment/Technicalreview", label: "Technical review" },
     { path: "/Assessment/SiteVisitRequest", label: "Site Visit Request" },
   ] },
-  { path: "/Inventory", label: "Inventory", icon: "Inventory.png" , subItems: [
+  { path: "/Inventory", label: "Inventory", icon: "src/images/Inventory.png" , subItems: [
     { path: "/Inventory/Wherehouse", label: "Wherehouse" },
     { path: "/Inventory/ProductSetting", label: "ProductSetting" },
     { path: "/Inventory/Products", label: "Products" },
     { path: "/Inventory/Supplier", label: "Supplier" },
     { path: "/Inventory/InventoryReport", label: "InventoryReport" }
   ] },
-  { path: "/Production", label: "Production", icon: "Production.png" , subItems: [
+  { path: "/Production", label: "Production", icon: "src/images/Production.png" , subItems: [
     { path: "/Production/ProjectStatus", label: "ProjectStatus" },
     { path: "/Production/InstallizationProcess", label: "InstallizationProcess" },
     { path: "/Production/Warranty", label: "Warranty" }
   ] },
-  { path: "/Account", label: "Account", icon: "Account.png" , subItems: [
+  { path: "/Account", label: "Account", icon: "src/images/Account.png" , subItems: [
     { path: "/Account/Finance", label: "Finance" },
     { path: "/Account/Accounting", label: "Accounting" },
     { path: "/Account/CheckManagement", label: "CheckManagement" },
@@ -70,7 +70,7 @@ const Header = () => {
     { path: "/Account/DuePayment", label: "DuePayment" },
     { path: "/Account/AssestManagement", label: "AssestManagement" },
   ] },
-  { path: "/Invoices", label: "Invoices", icon: "Invoices.png" , subItems: [
+  { path: "/Invoices", label: "Invoices", icon: "src/images/Invoices.png" , subItems: [
     { path: "/Invoice/Purchase", label: "Purchase" },
     { path: "/Invoice/SalesInvoice", label: "Sales Invoice" },
     { path: "/Invoice/WherehouseInvoice", label: "Warehouse Invoice" },
@@ -78,14 +78,14 @@ const Header = () => {
     { path: "/Invoice/InvoiceReport", label: "Invoice Report" },
     { path: "/Invoice/InvoiceTypes", label: "Invoice Types" },
   ] },
-  { path: "/Hierarchy", label: "Hierarchy", icon: "Hierarchy.png" , subItems: [
+  { path: "/Hierarchy", label: "Hierarchy", icon: "src/images/Hierarchy.png" , subItems: [
     { path: "/Hierarchy/BreakdownProcess", label: "Breakdown Process" },
     { path: "/Hierarchy/ProductionApproval", label: "Production Approval" },
     { path: "/Hierarchy/BreakdownPricing", label: "Breakdown Pricing" },
     { path: "/Hierarchy/BreakdownSetting", label: "Breakdown Setting" },
     { path: "/Hierarchy/BreakdownTutorial", label: "Breakdown Tutorial" },
   ] },
-  { path: "/Setting", label: "Setting", icon: "setting.png" }
+  { path: "/Setting", label: "Setting", icon: "src/images/setting.png" }
 ].map((navItem) => (
   <li key={navItem.label} className={`flex flex-col mx-[3.5vw] my-[0.2vw] hover:bg-gray-200 rounded-sm p-[0.5vw] w-[12vw] ${currentPath === navItem.path ? "bg-gray-300  shadow-lg  rounded-md" : ""}`}>
     <Link to={navItem.path} className={`text-[#e9278e] font-roboto text-[1vw] flex flex-row items-center justify-between`}>
