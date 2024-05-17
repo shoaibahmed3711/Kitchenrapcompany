@@ -4,22 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const Header = () => {
   const location = useLocation();
   const currentPath = location.pathname;
-
-  // Define a mapping of paths to page names
-  const pathToPageName = {
-    "/": "Dashboard",
-    "/HRM": "HRM",
-    "/CRM": "CRM",
-    "/Sales": "Sales",
-    "/Assessment": "Assessment",
-    "/Inventory": "Inventory",
-    "/Production": "Production",
-    "/Account": "Account",
-    "/Invoices": "Invoices",
-    "/Dissolution": "Dissolution",
-    "/Hierarchy": "Hierarchy",
-    "/Setting": "Setting",
-  };
+  
   return (
     <div className='flex flex-row '>
     <div className='bg-white overflow-y-auto rounded-r-sm border-r-[0.11vw] border-[#E9278E] w-[18vw] h-[100vh]'>
