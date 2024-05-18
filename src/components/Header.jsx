@@ -14,7 +14,7 @@ const Header = () => {
   };
 
   const isLinkActive = (link) => {
-    return location.pathname === link ? 'text-[#e9278e] bg-gray-200 border-l-[0.2vw] rounded-[0.1vw] border-[#E9278E] py-[0.5vw] pr-[3vw]' : 'text-[#E9278E]';
+    return location.pathname === link ? 'text-[#e9278e] bg-gray-200 border-l-[0.2vw] rounded-[0.1vw] border-[#E9278E] py-[0.2vw] pr-[1vw]' : 'text-[#E9278E]';
   };
 
   return (
@@ -27,7 +27,7 @@ const Header = () => {
           <div>
             <div className='bg-gray-200 rounded-[0.2vw]'>
               <Link to='/' className='text-[#e9278e] p-[0.4vw] border-l-[0.2vw] border-[#e9278e] flex flex-row items-center gap-[0.4vw] font-roboto text-[1vw]'>
-                <div className='w-[1.5vw]'><img src="src/images/Dashboard.png" alt="" /></div>
+                <div className='w-[1.5vw]'><img src="/images/Dashboard.png" alt="" /></div>
                 <h1>Dashboard</h1>
               </Link>
             </div>
@@ -39,28 +39,28 @@ const Header = () => {
               <div className='flex flex-row items-center justify-between gap-[0.4vw]'>
                 <div className='w-[1.5vw]'><img src="/images/HRM.png" alt="" /></div>
                 <h1>HRM</h1>
-              <div className='w-[1vw] ml-[5vw]'>
+              <div className='w-[1vw] ml-[4vw] mr-[1vw]'>
                 <img src="/HRM/arrow.png" alt="" />
               </div>
               </div>
               </button>
           </div>
-          <div className='flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]' style={{ display: isActive("HRM") }}>
-            <li className='p-[0.3vw]'><Link to='/HRM/Employees' className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive('/HRM/Employees')}`}>Employee</Link></li>
-            <li className='p-[0.3vw]'><Link to='/HRM/ManageSalary' className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive('/HRM/ManageSalary')}`}>Manage Salary</Link></li>
-            <li className='p-[0.3vw]'><Link to='/HRM/ManageLeave' className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive('/HRM/ManageLeave')}`}>Manage Leave</Link></li>
-            <li className='p-[0.3vw]'><Link to='/HRM/CoreHr' className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive('/HRM/CoreHr')}`}>Core HR</Link></li>
-            <li className='p-[0.3vw]'><Link to='/HRM/Performance' className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive('/HRM/Performance')}`}>Performance</Link></li>
-            <li className='p-[0.3vw]'><Link to='/HRM/Hrreport' className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive('/HRM/Hrreport')}`}>HRM Report</Link></li>
-            <li className='p-[0.3vw]'><Link to='/HRM/HrSetting' className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive('/HRM/HrSetting')}`}>HRM Setting</Link></li>
-            <li className='p-[0.3vw]'><Link to='/HRM/HrRequest' className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive('/HRM/HrRequest')}`}>Hr Request</Link></li>
-            <li className='p-[0.3vw]'><Link to='/HRM/HRMTutorial' className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive('/HRM/HRMTutorial')}`}>HRM Tutorial</Link></li>
+          <div className='flex flex-col my-[0.2vw] list-none w-[10vw] rounded-sm p-[0.5vw]' style={{ display: isActive("HRM") }}>
+            <li className='py-[0.3vw] my-[0.2vw]'><Link to='/HRM/Employees' className={` text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive('/HRM/Employees')}`}><img src="/images/HRM/Employee.png" className=' pl-[0.3vw] w-[1.5vw]' alt="" /> <h1>Employee</h1></Link></li>
+            <li className='py-[0.3vw] my-[0.2vw]'><Link to='/HRM/ManageSalary' className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive('/HRM/ManageSalary')}`}><img src="/images/HRM/Salary.png" className=' pl-[0.3vw] w-[1.5vw]' alt="" /> <h1> Manage Salary</h1></Link></li>
+            <li className='py-[0.3vw] my-[0.2vw]'><Link to='/HRM/ManageLeave' className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive('/HRM/ManageLeave')}`}><img src="/images/HRM/Employee.png" className=' pl-[0.3vw] w-[1.5vw]' alt="" /> <h1> Manage Leave</h1></Link></li>
+            <li className='py-[0.3vw] my-[0.2vw]'><Link to='/HRM/CoreHr' className={` text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive('/HRM/CoreHr')}`}><img src="/images/HRM/Core.png" className=' pl-[0.3vw] w-[1.5vw]' alt="" /> <h1>Core HR</h1></Link></li>
+            <li className='py-[0.3vw] my-[0.2vw]'><Link to='/HRM/Performance' className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive('/HRM/Performance')}`}><img src="/images/HRM/Performance.png" className=' pl-[0.3vw] w-[1.5vw]' alt="" /> <h1> Performance</h1></Link></li>
+            <li className='py-[0.3vw] my-[0.2vw]'><Link to='/HRM/Hrreport' className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive('/HRM/Hrreport')}`}><img src="/images/HRM/report.png" className=' pl-[0.3vw] w-[1.5vw]' alt="" /> <h1> HRM Report</h1></Link></li>
+            <li className='py-[0.3vw] my-[0.2vw]'><Link to='/HRM/HrSetting' className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive('/HRM/HrSetting')}`}><img src="/images/HRM/Setting.png" className=' pl-[0.3vw] w-[1.5vw]' alt="" /> <h1> HRM Setting</h1></Link></li>
+            <li className='py-[0.3vw] my-[0.2vw]'><Link to='/HRM/HrRequest' className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive('/HRM/HrRequest')}`}><img src="/images/HRM/Request.png" className=' pl-[0.3vw] w-[1.5vw]' alt="" /> <h1> Hr Request</h1></Link></li>
+            <li className='py-[0.3vw] my-[0.2vw]'><Link to='/HRM/HRMTutorial' className={` text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive('/HRM/HRMTutorial')}`}><img src="/images/HRM/HRMTutorial.png" className=' pl-[0.3vw] w-[1.5vw]' alt="" /> <h1> HRM Tutorial</h1></Link></li>
           </div>
           </div>
           <div>
           <div className='bg-gray-200 rounded-[0.2vw]'>
             <button className=' flex flex-row items-center gap-[0.4vw] text-[#e9278e] p-[0.4vw] font-roboto border-l-[0.2vw] border-[#e9278e] text-[1vw]' onClick={() => toggleList("CRM")}>
-            <div className='w-[1.5vw]'><img src="src/images/CRM.png" alt="" /></div>
+            <div className='w-[1.5vw]'><img src="/images/CRM.png" alt="" /></div>
               <h1>CRM</h1>
               </button>
           </div>
@@ -78,7 +78,7 @@ const Header = () => {
           <div>
           <div className='bg-gray-200 rounded-[0.2vw]'>
             <button className='text-[#e9278e] flex flex-row items-center gap-[0.3vw] p-[0.4vw] font-roboto border-l-[0.2vw] border-[#e9278e] text-[1vw]' onClick={() => toggleList("Sales")}>
-            <div className='w-[1.5vw]'><img src="src/images/salesManagement.png" alt="" /></div>
+            <div className='w-[1.5vw]'><img src="/images/salesManagement.png" alt="" /></div>
               <h1>Sales</h1>
               </button>
           </div>
@@ -97,7 +97,7 @@ const Header = () => {
           <div>
           <div className='bg-gray-200 rounded-[0.2vw]'>
             <button className='text-[#e9278e]  flex flex-row items-center gap-[0.3vw] p-[0.4vw] font-roboto border-l-[0.2vw] border-[#e9278e] text-[1vw]' onClick={() => toggleList("Assessment")}>
-            <div className='w-[1.5vw]'><img src="src/images/Technical.png" alt="" /></div>
+            <div className='w-[1.5vw]'><img src="/images/Technical.png" alt="" /></div>
              <h1>Assessment</h1></button>
           </div>
             <div className='flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]' style={{ display: isActive("Assessment") }}>
@@ -108,7 +108,7 @@ const Header = () => {
           <div>
           <div className='bg-gray-200 rounded-[0.2vw]'>
               <button className='text-[#e9278e]  flex flex-row items-center gap-[0.3vw] p-[0.4vw] font-roboto border-l-[0.2vw] border-[#e9278e] text-[1vw]' onClick={() => toggleList("Inventory")}>
-              <div className='w-[1.5vw]'><img src="src/images/Inventory.png" alt="" /></div>
+              <div className='w-[1.5vw]'><img src="/images/Inventory.png" alt="" /></div>
                 <h1>Inventory</h1></button>
             </div>
             <div className='flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]' style={{ display: isActive("Inventory") }}>
@@ -122,7 +122,7 @@ const Header = () => {
           <div>
             <div className='bg-gray-200 rounded-[0.2vw]'>
               <button className='text-[#e9278e] p-[0.4vw]  flex flex-row items-center gap-[0.3vw]  font-roboto border-l-[0.2vw] border-[#e9278e] text-[1vw]' onClick={() => toggleList("Production")}>
-              <div className='w-[1.5vw]'><img src="src/images/Production.png" alt="" /></div>
+              <div className='w-[1.5vw]'><img src="/images/Production.png" alt="" /></div>
                 <h1>Production</h1></button>
             </div>
             <div className='flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]' style={{ display: isActive("Production") }}>
@@ -134,7 +134,7 @@ const Header = () => {
           <div>
             <div className='bg-gray-200 rounded-[0.2vw]'>
               <button className='text-[#e9278e] flex flex-row items-center gap-[0.3vw]  p-[0.4vw] font-roboto border-l-[0.2vw] border-[#e9278e] text-[1vw]' onClick={() => toggleList("Account")}>
-              <div className='w-[1.5vw]'><img src="src/images/Account.png" alt="" /></div>
+              <div className='w-[1.5vw]'><img src="/images/Account.png" alt="" /></div>
               <h1>Account</h1></button>
             </div>
             <div className='flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]' style={{ display: isActive("Account") }}>
@@ -151,7 +151,7 @@ const Header = () => {
           <div>
             <div className='bg-gray-200 rounded-[0.2vw]'>
               <button className='text-[#e9278e] p-[0.4vw] flex flex-row items-center gap-[0.3vw]  font-roboto border-l-[0.2vw] border-[#e9278e] text-[1vw]' onClick={() => toggleList("Invoices")}>
-              <div className='w-[1.5vw]'><img src="src/images/Invoices.png" alt="" /></div>
+              <div className='w-[1.5vw]'><img src="/images/Invoices.png" alt="" /></div>
                 <h1>Invoices</h1></button>
             </div>
             <div className='flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]' style={{ display: isActive("Invoices") }}>
@@ -166,7 +166,7 @@ const Header = () => {
           <div>
             <div className='bg-gray-200 rounded-[0.2vw]'>
               <button className='text-[#e9278e] p-[0.4vw] flex flex-row items-center gap-[0.3vw]  font-roboto border-l-[0.2vw] border-[#e9278e] text-[1vw]' onClick={() => toggleList("Hierarchy")}>
-              <div className='w-[1.5vw]'><img src="src/images/Hierarchy.png" alt="" /></div>
+              <div className='w-[1.5vw]'><img src="/images/Hierarchy.png" alt="" /></div>
               <h1> Hierarchy</h1></button>
             </div>
             <div className='flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]' style={{ display: isActive("Hierarchy") }}>
@@ -180,7 +180,7 @@ const Header = () => {
           <div>
             <div className='bg-gray-200 rounded-[0.2vw]'>
               <Link to='/Setting' className='text-[#e9278e] flex flex-row items-center gap-[0.3vw]  p-[0.4vw] font-roboto border-l-[0.2vw] border-[#e9278e] text-[1vw]' onClick={() => toggleList("Setting")}>
-              <div className='w-[1.5vw]'><img src="src/images/setting.png" alt="" /></div>
+              <div className='w-[1.5vw]'><img src=" /images/setting.png" alt="" /></div>
               <h1>Setting</h1></Link>
             </div>
           </div>
