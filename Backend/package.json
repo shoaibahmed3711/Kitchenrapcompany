@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "it": "^1.1.1"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "a backend for a Kitchen wrap company",
+  "main": "index.js",
+  "devDependencies": {
+    "coffee-script": "^1.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
+  "author": "Shoaib Ahmed",
+  "license": "ISC"
+}
