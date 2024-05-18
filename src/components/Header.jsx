@@ -35,9 +35,9 @@ const Header = () => {
           </div>
           <div>
           <div className='bg-gray-200 rounded-[0.2vw]'>
-            <button className='text-[#e9278e] p-[0.4vw] font-roboto border-l-[0.2vw] flex flex-row items-center gap-[0.4vw] border-[#e9278e] text-[1vw]' onClick={() => toggleList("HRM")}>
-              <div className='flex flex-row items-center justify-between'>
-                <div className='w-[1.5vw]'><img src="/HRM/HRM.png" alt="" /></div>
+            <button className='text-[#e9278e] p-[0.4vw] font-roboto border-l-[0.2vw] flex flex-row items-center border-[#e9278e] text-[1vw]' onClick={() => toggleList("HRM")}>
+              <div className='flex flex-row items-center justify-between gap-[0.4vw]'>
+                <div className='w-[1.5vw]'><img src="/images/HRM.png" alt="" /></div>
                 <h1>HRM</h1>
               <div className='w-[1vw] ml-[5vw]'>
                 <img src="/HRM/arrow.png" alt="" />
