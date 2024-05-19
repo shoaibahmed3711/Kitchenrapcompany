@@ -31,7 +31,7 @@ const Header = () => {
               <div>
                 <div className="bg-gray-200 rounded-[0.2vw]">
                   <Link
-                    to="/"
+                    to="/Dashboard"
                     className="text-[#e9278e] p-[0.4vw] border-l-[0.2vw] border-[#e9278e] flex flex-row items-center gap-[0.4vw] font-roboto text-[1vw]"
                   >
                     <div className="w-[1.5vw]">
@@ -895,7 +895,7 @@ const Header = () => {
         </button>
         <button className="">
           <Link
-            to="/Login"
+            to="/"
             className="text-white mx-[1vw] rounded-[0.2vw] bg-[#e9278e] flex flex-row items-center gap-[0.3vw] py-[0.5vw] px-[1vw] font-roboto text-[1vw]"
           >
             Login out 

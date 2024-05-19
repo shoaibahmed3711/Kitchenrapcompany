@@ -115,12 +115,12 @@ function App() {
       element: <><Header /><SettingTutorial /></>,
     },
     {
-      path: "/Login",
+      path: "/",
       element: <><Login /></>  ,
     },
     
     {
-      path: "/",
+      path: "/Dashboard",
       element: <><Header /><Dashboard /></>  ,
     },
     {

@@ -15,7 +15,7 @@ const Login = () => {
       console.log(userData); // For demonstration purposes, replace this with actual handling
 
       // Redirect to the homepage
-      navigate("/");
+      navigate("/Dashboard");
     } else {
       alert("Please enter both email and password");
     }
