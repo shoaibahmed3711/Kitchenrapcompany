@@ -12,7 +12,6 @@ import Account from './pages/Account/Account';
 import Invoices from './pages/Invoices/Invoices';
 import Dissolution from './pages/Dissolution/Dissolution';
 import Hierarchy from './pages/Hierarchy/Hierarchy';
-import Setting from './pages/Setting/Setting';
 import Employees from './pages/HRM/HRMpages/Employees';
 import Contract from './pages/HRM/HRMpages/Contract';
 import Manage from './pages/HRM/HRMpages/Manage';
@@ -75,14 +74,51 @@ import BreakdownSetting from './pages/Hierarchy/pages/BreakdownSetting';
 import ProductionApproval from './pages/Hierarchy/pages/ProductionApproval';
 import BreakdownTutorial from './pages/Hierarchy/pages/BreakdownTutorial';
 import Login from './pages/Login/Login';
+import Setting from './pages/Setting/Setting';
+import Localization from './pages/Setting/pages/Localization';
+import Roles from './pages/Setting/pages/Roles';
+import Alert from './pages/Setting/pages/Alert';
+import Prefix from './pages/Setting/pages/Prefix';
+import FileManager from './pages/Setting/pages/FileManager';
+import Announcement from './pages/Setting/pages/Announcement';
+import SettingTutorial from './pages/Sales/SalesPages/SettingTutorial';
 
 function App() {
-  console.log(import.meta.env.VITE_APPWRITE_URL);
+
   const router = createBrowserRouter([
+    {
+      path: "/Setting/Localization",
+      element: <><Header /><Localization /></>,
+    },
+    {
+      path: "/Setting/Roles",
+      element: <><Header /><Roles /></>,
+    },
+    {
+      path: "/Setting/Alert",
+      element: <><Header /><Alert /></>,
+    },
+    {
+      path: "/Setting/Prefix",
+      element: <><Header /><Prefix /></>,
+    },
+    {
+      path: "/Setting/FileManager",
+      element: <><Header /><FileManager /></>,
+    },
+    {
+      path: "/Setting/Announcement",
+      element: <><Header /><Announcement /></>,
+    },
+    {
+      path: "/Setting/SettingTutorial",
+      element: <><Header /><SettingTutorial /></>,
+    },
     {
       path: "/Login",
       element: <><Login /></>  ,
     },
+    
     {
       path: "/",
       element: <><Header /><Dashboard /></>  ,
@@ -380,6 +416,15 @@ function App() {
   return (
     <>
       <RouterProvider router={router} /> 
+      {/* <UserProvider>
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/info" component={Info} />
+          <Route path="/dashboard" component={Dashboard} />
+        </Switch>
+      </Router>
+    </UserProvider> */}
     </>
   )
 }

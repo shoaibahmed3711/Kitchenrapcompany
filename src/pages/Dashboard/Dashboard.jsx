@@ -341,7 +341,7 @@ const Dashboard = () => {
               className="border-[0.12vw] border-black px-[2vw] rounded-md"
               onClick={toggleBar}
             >
-              Year
+              show
             </button>
           </div>
           <div className=" overflow-y-auto">
