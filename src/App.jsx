@@ -82,10 +82,15 @@ import Prefix from './pages/Setting/pages/Prefix';
 import FileManager from './pages/Setting/pages/FileManager';
 import Announcement from './pages/Setting/pages/Announcement';
 import SettingTutorial from './pages/Sales/SalesPages/SettingTutorial';
+import Calendar from './components/Calender';
 
 function App() {
 
   const router = createBrowserRouter([
+    {
+      path: "/Calendar",
+      element: <><Header /><Calendar /></>,
+    },
     {
       path: "/Setting/Localization",
       element: <><Header /><Localization /></>,

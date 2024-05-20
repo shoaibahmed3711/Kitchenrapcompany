@@ -13,6 +13,18 @@ const Header = () => {
     return activeButton === buttonName ? "block" : "none";
   };
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleNotification = () => {
+    setIsVisible(prev => !prev);
+  };
+
+  const [Visible, setVisible] = useState(false)
+  const toggleNotice = () => {
+    setVisible(prev => !prev);
+  };
+
+
   const isLinkActive = (link) => {
     return location.pathname === link
       ? "text-[#e9278e] bg-gray-200 border-l-[0.2vw] rounded-[0.1vw] border-[#E9278E] py-[0.2vw] pr-[1vw]"
@@ -889,21 +901,58 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white w-[85vw] flex flex-row items-center px-[2vw] h-[4vw] border-b-[.1vw] border-[#e9278e]">
-        <button className="text-white mx-[1vw] rounded-[0.2vw] bg-[#e9278e]  py-[0.5vw] px-[1vw] font-roboto text-[1vw]">
-            Add Member
+      <div className="bg-white w-[85vw] flex flex-row justify-between items-center px-[2vw] h-[4vw] border-b-[.1vw] border-[#e9278e]">
+        <div className="flex flex-row items-center">
+        <button className="mx-[0.4vw] bg-gray-300 text-[1vw] rounded-[0.2vw] px-[0.8vw] py-[.4vw]">
+            <h1 className="text-[#e9278e] ">Kitchen Wrap Company</h1>
         </button>
-        <button className="">
+        <button >
           <Link
             to="/"
-            className="text-white mx-[1vw] rounded-[0.2vw] bg-[#e9278e] flex flex-row items-center gap-[0.3vw] py-[0.5vw] px-[1vw] font-roboto text-[1vw]"
+            className="mx-[0.4vw] bg-[#e9278e] text-white rounded-[0.2vw] text-[1vw] px-[0.8vw] py-[.4vw]"
           >
             Login out 
           </Link>
-        </button>
+            </button>
+                <Link to="/Calendar">
+            <button className="mx-[0.4vw] hover:bg-gray-300 p-[0.3vw] rounded-[0.2vw]">
+                <img className="w-[2vw]" src="/Header/calender.png" alt="" />
+
+            </button>
+                </Link>
+        </div>
+          <div className="flex flex-row items-center gap-[1.2vw]">
+            <button onClick={toggleNotice} className=" mx-[0.4vw] hover:bg-gray-300 p-[0.3vw] rounded-[0.2vw]">
+                <img className="w-[2vw]  " src="/Header/notice.png" alt="" />
+            </button>
+            {Visible && (
+              <div
+              className="absolute bg-gray-300 bg-opacity-50 backdrop-blur-md flex justify-center items-center z-[10] top-[4vw] right-[5vw] p-[0.5vw] rounded"
+                style={{ width: '60vw', height: '10vw' }}
+              >
+                <img src="/Header/noticeboard.png" className="w-[8vw]" alt="" />
+              </div>
+            )}
+            <button onClick={toggleNotification} className="mx-[0.4vw] hover:bg-gray-300 p-[0.3vw] rounded-[0.2vw]">
+              <img className="w-[2vw]" src="/Header/notification.png" alt="" />
+            </button>
+            {isVisible && (
+              <div
+              className="absolute bg-gray-300 bg-opacity-50 backdrop-blur-md flex justify-center items-center z-[10] top-[4vw] right-[5vw] p-[0.5vw] rounded"
+                style={{ width: '20vw', height: '20vw' }}
+              >
+                <img src="/Header/bell.png" className="w-[8vw]" alt="" />
+              </div>
+            )}
+            <button className=" mx-[0.4vw] hover:bg-gray-300 p-[0.3vw] rounded-[0.2vw]">
+                <img className="w-[2vw]  " src="/Header/refresh.png" alt="" />
+            </button>
+            <button className="mx-[0.4vw] bg-gray-300 text-[1vw] rounded-[0.2vw] px-[0.8vw] py-[.4vw]">
+                <h1 className="text-[#e9278e]">English</h1>
+            </button>
+        </div>
       </div>
     </div>
   );
 };
-
 export default Header;
