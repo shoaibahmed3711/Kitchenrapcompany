@@ -10,7 +10,6 @@ import Inventory from './pages/Inventory/Inventory';
 import Production from './pages/Production/Production';
 import Account from './pages/Account/Account';
 import Invoices from './pages/Invoices/Invoices';
-import Dissolution from './pages/Dissolution/Dissolution';
 import Hierarchy from './pages/Hierarchy/Hierarchy';
 import Employees from './pages/HRM/HRMpages/Employees';
 import Contract from './pages/HRM/HRMpages/Contract';
@@ -69,8 +68,6 @@ import StockManagement from './pages/Invoices/pages/StockManagement';
 import InvoiceReport from './pages/Invoices/pages/InvoiceReport';
 import InvoiceTypes from './pages/Invoices/pages/InvoiceTypes';
 import BreakdownProcess from './pages/Hierarchy/pages/BreakdownProcess';
-import BreakdownPricing from './pages/Hierarchy/pages/BreakdownPricing';
-import BreakdownSetting from './pages/Hierarchy/pages/BreakdownSetting';
 import ProductionApproval from './pages/Hierarchy/pages/ProductionApproval';
 import BreakdownTutorial from './pages/Hierarchy/pages/BreakdownTutorial';
 import Login from './pages/Login/Login';
@@ -81,7 +78,7 @@ import Alert from './pages/Setting/pages/Alert';
 import Prefix from './pages/Setting/pages/Prefix';
 import FileManager from './pages/Setting/pages/FileManager';
 import Announcement from './pages/Setting/pages/Announcement';
-import SettingTutorial from './pages/Sales/SalesPages/SettingTutorial';
+import SettingTutorial from './pages/Setting/pages/SettingTutorial'
 import Calendar from './components/Calender';
 
 function App() {
@@ -159,10 +156,6 @@ function App() {
     {
       path: "/Invoices",
       element: <><Header /><Invoices /></>,
-    },
-    {
-      path: "/Dissolution",
-      element: <><Header /><Dissolution /></>,
     },
     {
       path: "/Hierarchy",
@@ -399,14 +392,6 @@ function App() {
     {
       path: "/Hierarchy/BreakdownProcess",
       element: <><Header /><BreakdownProcess /></>  ,
-    },
-    {
-      path: "/Hierarchy/BreakdownPricing",
-      element: <><Header /><BreakdownPricing /></>  ,
-    },
-    {
-      path: "/Hierarchy/BreakdownSetting",
-      element: <><Header /><BreakdownSetting /></>  ,
     },
     {
       path: "/Hierarchy/ProductionApproval",

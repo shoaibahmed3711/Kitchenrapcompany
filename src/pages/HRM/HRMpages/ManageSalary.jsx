@@ -144,7 +144,13 @@ localStorage.setItem('srNo', srNo.toString());
   });
 
   return (
-    <div className="absolute shadow-xl right-[1vw] rounded-md top-[4vw] h-[40vw]">
+    <div className="absolute shadow-xl w-[82vw] right-[1vw] rounded-md top-[4vw] h-[40vw]">
+      <div className='flex flex-row m-[1vw] gap-[1vw] items-center image-hover-effect'>
+        <div className='w-[3vw]'>
+        <img src="/images/HRM/Salary.png" className="image-hover-effect" alt="Salary" />
+        </div>
+        <h1 className=' text-[2vw] text-[#E9278E]'>Manage Salary</h1>
+        </div>
       <div className="h-[50vw]">
         <div className="bg-gray-400 w-[80vw] h-[3vw] flex flex-row px-[2vw] items-center"> 
           <input

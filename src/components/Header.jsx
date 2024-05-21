@@ -681,26 +681,7 @@ const Header = () => {
                     Breakdown Process
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Hierarchy/BreakdownPricing"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Hierarchy/BreakdownPricing"
-                    )}`}
-                  >
-                    Breakdown Pricing
-                  </Link>
-                </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Hierarchy/BreakdownSetting"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Hierarchy/BreakdownSetting"
-                    )}`}
-                  >
-                    Breakdown Setting
-                  </Link>
-                </li>
+               
                 <li className="p-[0.3vw]">
                   <Link
                     to="/Hierarchy/ProductionApproval"

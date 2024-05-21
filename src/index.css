@@ -6,3 +6,12 @@
     font-family: roboto;
 }
 
+.image-hover-effect {
+    transition: filter 0.3s ease; /* Smooth transition for the effect */
+}
+
+.image-hover-effect:hover {
+    filter: brightness(0) saturate(100%); /* Turn image black */
+}
+
+
