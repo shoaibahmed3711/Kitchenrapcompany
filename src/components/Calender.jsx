@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import dayjs from 'dayjs';
-import 'dayjs/locale/en'; // Import the locale if needed
+import 'dayjs/locale/en';
 
 const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
@@ -10,6 +10,17 @@ const Calendar = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [eventDetails, setEventDetails] = useState({ time: '', description: '' });
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const storedEvents = JSON.parse(localStorage.getItem('calendarEvents'));
+    if (storedEvents) {
+      setEvents(storedEvents);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('calendarEvents', JSON.stringify(events));
+  }, [events]);
 
   const startDay = currentMonth.startOf('month').startOf('week');
   const endDay = currentMonth.endOf('month').endOf('week');
@@ -56,102 +67,92 @@ const Calendar = () => {
     setEvents(updatedEvents);
   };
 
-  const renderHeader = () => (
-    <div className="flex justify-between items-center p-5 bg-gray-400">
-      <button onClick={() => setCurrentMonth(currentMonth.subtract(1, 'month'))}> <img src="public/calender/left.png" className='w-[2vw]' alt="" /> </button>
-      <h2 className="text-lg font-bold">{currentMonth.format('MMMM YYYY')}</h2>
-      <button onClick={() => setCurrentMonth(currentMonth.add(1, 'month'))}> <img src="public/calender/right.png" className='w-[2vw]' alt="" /> </button>
-    </div>
-  );
-
-  const renderDaysOfWeek = () => (
-    <div className="grid grid-cols-7 gap-1 bg-gray-300">
-      {daysOfWeek.map((day) => (
-        <div key={day} className="text-center font-bold p-2">
-          {day}
+  return (
+    <div>
+      <div className="absolute shadow-xl right-[1vw] overflow-y-auto w-[83vw] p-[1vw] rounded-md top-[4vw] h-[40vw]">
+        <h1 className="text-[2vw] font-bold">Calendar for Scheduling</h1>
+        <div className="flex justify-between items-center p-5 bg-gray-400">
+          <button onClick={() => setCurrentMonth(currentMonth.subtract(1, 'month'))}>
+            <img src="public/calender/left.png" className='w-[2vw]' alt="Previous month" />
+          </button>
+          <h2 className="text-lg font-bold">{currentMonth.format('MMMM YYYY')}</h2>
+          <button onClick={() => setCurrentMonth(currentMonth.add(1, 'month'))}>
+            <img src="public/calender/right.png" className='w-[2vw]' alt="Next month" />
+          </button>
         </div>
-      ))}
-    </div>
-  );
-
-  const renderCells = () => {
-    const calendar = generateCalendar();
-    return (
-      <div className="grid grid-cols-7 gap-1 bg-gray-100 p-[1vw]">
-        {calendar.map((day) => (
-          <div
-            key={day}
-            className={`p-2 border ${day.month() === currentMonth.month() ? '' : 'text-gray-400'}`}
-            onClick={() => handleEventClick(day)}
-          >
-            <div>{day.date()}</div>
-          </div>
-        ))}
-      </div>
-    );
-  };
-
-  const renderModal = () => (
-    <div className={`fixed inset-0 bg-gray-600 bg-opacity-50 ${isModalOpen ? 'block' : 'hidden'}`}>
-      <div className="bg-white p-6 max-w-sm mx-auto mt-20 rounded shadow-lg">
-        <h2 className="text-lg mb-4">Add Event for {selectedDate?.format('YYYY-MM-DD')}</h2>
-        <input
-          type="time"
-          name="time"
-          value={eventDetails.time}
-          onChange={handleEventChange}
-          className="border p-2 w-full mb-4"
-        />
-        <input
-          type="text"
-          name="description"
-          value={eventDetails.description}
-          onChange={handleEventChange}
-          placeholder="Event description"
-          className="border p-2 w-full mb-4"
-        />
-        <div className="flex justify-end space-x-4">
-          <button onClick={() => setIsModalOpen(false)} className="bg-gray-300 p-2 rounded">Cancel</button>
-          <button onClick={handleEventSubmit} className="bg-blue-500 text-white p-2 rounded">Save</button>
+        <div className="grid grid-cols-7 gap-1 bg-gray-300">
+          {daysOfWeek.map((day) => (
+            <div key={day} className="text-center font-bold p-2">
+              {day}
+            </div>
+          ))}
         </div>
-      </div>
-    </div>
-  );
-
-  const renderEvents = () => (
-    <div className="flex flex-wrap mt-4">
-      {Object.entries(events).map(([date, eventList], dateIndex) => (
-        <div key={dateIndex} className="border p-4 m-2 w-[10vw] h-[10vw] bg-white rounded shadow relative">
-          <div className="text-sm font-bold">{dayjs(date).format('MMM DD, ddd')}</div>
-          <div className="absolute top-2 right-2">
-            <button className="text-red-500" onClick={() => handleDeleteEvent(date, dateIndex)}>✖</button>
-          </div>
-          <div className="text-xs mt-2">
-            {eventList.map((event, eventIndex) => (
-              <div key={eventIndex} className="relative">
-                {event}
-                <button
-                  className="absolute top-0 right-0 text-red-500"
-                  onClick={() => handleDeleteEvent(date, eventIndex)}
-                >
-                  ✖
-                </button>
+        <div className="grid grid-cols-7 gap-1 bg-gray-100 p-[1vw]">
+          {generateCalendar().map((day) => (
+            <div
+              key={day}
+              className={`p-2 border cursor-pointer ${day.month() === currentMonth.month() ? '' : 'text-gray-400'}`}
+              onClick={() => handleEventClick(day)}
+            >
+              <div>{day.date()}</div>
+              <div className="text-xs">
+                {events[day.format('YYYY-MM-DD')]?.map((event, index) => (
+                  <div key={index} className="mt-1 bg-blue-100 rounded p-1">
+                    {event}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-8">
+          <h2 className="text-lg font-bold mb-4">Scheduled Events</h2>
+          <div className="flex flex-wrap">
+            {Object.entries(events).map(([date, eventList]) => (
+              <div key={date} className="border p-4 m-2 w-[15vw] h-[15vw] bg-white rounded shadow relative">
+                <div className="text-sm font-bold">{dayjs(date).format('MMM DD, ddd')}</div>
+                <div className="mt-2 text-xs">
+                  {eventList.map((event, eventIndex) => (
+                    <div key={eventIndex} className="relative mb-2">
+                      {event}
+                      <button
+                        className="absolute top-0 right-0 text-black hover:text-red-500"
+                        onClick={() => handleDeleteEvent(date, eventIndex)}
+                      >
+                        ✖
+                      </button>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </div>
-      ))}
-    </div>
-  );
-
-  return (
-    <div className="absolute p-[3vw] right-[1vw] rounded-md top-[4vw] w-[85vw]">
-      <h1 className="text-[2vw] font-bold">Calendar for Scheduling</h1>
-      {renderHeader()}
-      {renderDaysOfWeek()}
-      {renderCells()}
-      {renderModal()}
-      {renderEvents()}
+      </div>
+      <div className={`fixed inset-0 bg-gray-600 bg-opacity-50 backdrop-blur-sm ${isModalOpen ? 'block' : 'hidden'}`}>
+        <div className="bg-white p-6 max-w-sm mx-auto mt-20 rounded shadow-lg">
+          <h2 className="text-lg mb-4">Add Event for {selectedDate?.format('YYYY-MM-DD')}</h2>
+          <input
+            type="time"
+            name="time"
+            value={eventDetails.time}
+            onChange={handleEventChange}
+            className="border p-2 w-full mb-4"
+          />
+          <input
+            type="text"
+            name="description"
+            value={eventDetails.description}
+            onChange={handleEventChange}
+            placeholder="Event description"
+            className="border p-2 w-full mb-4"
+          />
+          <div className="flex justify-end space-x-4">
+            <button onClick={() => setIsModalOpen(false)} className="bg-gray-300  p-2 rounded">Cancel</button>
+            <button onClick={handleEventSubmit} className="bg-[#E9278E] text-white p-2 rounded">Save</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
