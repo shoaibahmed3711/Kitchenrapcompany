@@ -355,13 +355,13 @@ const Header = () => {
               >
                 <li className="py-[0.3vw] my-[0.2vw]">
                   <Link to="/Assessment/Technicalreview" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Assessment/Technicalreview" )}`}>
-                    <img src="" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <img src="/Assessment/Technicalreview.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
                     <h1>Technical Review</h1>
                   </Link>
                 </li>
                 <li className="py-[0.3vw] my-[0.2vw]">
                   <Link to="/Assessment/SiteVisitRequest" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Assessment/SiteVisitRequest" )}`}>
-                    <img src="" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <img src="/Assessment/site.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
                     <h1>Site Visit Request</h1>
                   </Link>
                 </li>
@@ -385,7 +385,7 @@ const Header = () => {
               >
                 <li className="py-[0.3vw] my-[0.2vw]">
                   <Link to="/Inventory/Wherehouse" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Inventory/Wherehouse" )}`}>
-                    <img src="" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <img src="/Inventory/Warehouse.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
                     <h1>Wherehouse</h1>
                   </Link>
                 </li>
