@@ -33,11 +33,11 @@ const Header = () => {
   return (
     <div className="flex flex-row">
       <div className="bg-white overflow-y-auto px-[1.5vw] rounded-r-sm border-r-[0.11vw] border-[#E9278E] w-[15vw] h-[100vh]">
-        <div className="flex flex-col gap-[0.5vw]">
+        <div className="flex flex-col gap-[3vw]">
           <div className="mx-auto pt-[2vw] w-[10vw]">
             <img src="/Logo/Kitchen-white.jpg" alt="" />
           </div>
-          <div className=" flex flex-col gap-[0.5vw]">
+          <div className=" flex flex-col gap-[0.7vw]">
             <div>
               <div>
                 <div className="bg-gray-200 rounded-[0.2vw]">
@@ -258,8 +258,8 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="py-[0.3vw] my-[0.2vw]">
-                  <Link to="/CRM/CRMTutorials" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/CRM/CRMTutorials" )}`}>
-                    <img src="/CRM/pages/Estimates.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                  <Link to="/CRM/CRMTutorial" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/CRM/CRMTutorial" )}`}>
+                    <img src="/images/HRM/HRMTutorial.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
                     <h1>CRM Tutorial</h1>
                   </Link>
                 </li>
@@ -331,7 +331,7 @@ const Header = () => {
                 </li>
                 <li className="py-[0.3vw] my-[0.2vw]">
                   <Link to="/Sales/SalesTutorial" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Sales/SalesTutorial" )}`}>
-                    <img src="/Sales/Salespages/Monthly.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <img src="/images/HRM/HRMTutorial.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
                     <h1>Sales Tutorial</h1>
                   </Link>
                 </li>
@@ -362,7 +362,13 @@ const Header = () => {
                 <li className="py-[0.3vw] my-[0.2vw]">
                   <Link to="/Assessment/SiteVisitRequest" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Assessment/SiteVisitRequest" )}`}>
                     <img src="/Assessment/site.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
-                    <h1>Site Visit Request</h1>
+                    <h1>Site Visit Request </h1>
+                  </Link>
+                </li>
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Assessment/AccessmentTutorial" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Assessment/AccessmentTutorial" )}`}>
+                    <img src="/images/HRM/HRMTutorial.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Assessment Tutorial</h1>
                   </Link>
                 </li>
               </div>
@@ -389,44 +395,34 @@ const Header = () => {
                     <h1>Wherehouse</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Inventory/ProductSetting"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Inventory/ProductSetting"
-                    )}`}
-                  >
-                    Product Setting
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Inventory/ProductSetting" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Inventory/ProductSetting" )}`}>
+                    <img src="/Inventory/setting.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Product Setting</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Inventory/Products"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Inventory/Products"
-                    )}`}
-                  >
-                    Products
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Inventory/Products" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Inventory/Products" )}`}>
+                    <img src="/Inventory/product.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Products</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Inventory/Supplier"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Inventory/Supplier"
-                    )}`}
-                  >
-                    Supplier
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Inventory/Supplier" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Inventory/Supplier" )}`}>
+                    <img src="/Inventory/Supplier.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Supplier</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Inventory/InventoryReport"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Inventory/InventoryReport"
-                    )}`}
-                  >
-                    Inventory Report
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Inventory/InventoryReport" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Inventory/InventoryReport" )}`}>
+                    <img src="/Inventory/report.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Inventory Report</h1>
+                  </Link>
+                </li>
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Inventory/InventoryTutorial" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Inventory/InventoryTutorial" )}`}>
+                    <img src="/images/HRM/HRMTutorial.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Inventory Tutorial</h1>
                   </Link>
                 </li>
               </div>
@@ -447,34 +443,28 @@ const Header = () => {
                 className="flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]"
                 style={{ display: isActive("Production") }}
               >
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Production/ProjectStatus"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Production/ProjectStatus"
-                    )}`}
-                  >
-                    Project Status
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Production/ProjectStatus" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Production/ProjectStatus" )}`}>
+                    <img src="/production/status.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Project Status</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Production/InstallizationProcess"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Production/InstallizationProcess"
-                    )}`}
-                  >
-                    Installation Process
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Production/InstallizationProcess" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Production/InstallizationProcess" )}`}>
+                    <img src="/production/process.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Installation process</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Production/Warranty"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Production/Warranty"
-                    )}`}
-                  >
-                    Warranty
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Production/Warranty" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Production/Warranty" )}`}>
+                    <img src="/production/warranty.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Warranty</h1>
+                  </Link>
+                </li>
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Production/ProdictionTutorial" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Production/ProdictionTutorial" )}`}>
+                    <img src="/images/HRM/HRMTutorial.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Production Tutorial</h1>
                   </Link>
                 </li>
               </div>
@@ -495,84 +485,58 @@ const Header = () => {
                 className="flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]"
                 style={{ display: isActive("Account") }}
               >
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Account/Finance"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Account/Finance"
-                    )}`}
-                  >
-                    Finance
+                 <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Account/Finance" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Account/Finance" )}`}>
+                    <img src="/Account/Finance.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Finance</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Account/Accounting"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Account/Accounting"
-                    )}`}
-                  >
-                    Accounting
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Account/Accounting" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Account/Accounting" )}`}>
+                    <img src="/Account/Accounting.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Accounting</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Account/CheckManagement"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Account/CheckManagement"
-                    )}`}
-                  >
-                    Check Management
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Account/CheckManagement" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Account/CheckManagement" )}`}>
+                    <img src="/Account/Check.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Check Management</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Account/ManageCurrency"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Account/ManageCurrency"
-                    )}`}
-                  >
-                    Manage Currency
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Account/ManageCurrency" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Account/ManageCurrency" )}`}>
+                    <img src="/Account/currency.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Manage Currency</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Account/AccountReport"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Account/AccountReport"
-                    )}`}
-                  >
-                    Account Report
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Account/AccountReport" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Account/AccountReport" )}`}>
+                    <img src="/Account/account report.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Account Report</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Account/TaxManagement"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Account/TaxManagement"
-                    )}`}
-                  >
-                    Tax Management
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Account/TaxManagement" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Account/TaxManagement" )}`}>
+                    <img src="/Account/currency.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Tax Management</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Account/DuePayment"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Account/DuePayment"
-                    )}`}
-                  >
-                    Due Payment
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Account/DuePayment" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Account/DuePayment" )}`}>
+                    <img src="/Account/due.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Due Payment</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Account/AssestManagement"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Account/AssestManagement"
-                    )}`}
-                  >
-                    Asset Management
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Account/AssestManagement" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Account/AssestManagement" )}`}>
+                    <img src="/Account/assests.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Asset Management</h1>
+                  </Link>
+                </li>
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Account/AccountTutorial" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Account/AccountTutorial" )}`}>
+                    <img src="/images/HRM/HRMTutorial.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Account Tutorial</h1>
                   </Link>
                 </li>
               </div>
@@ -593,64 +557,46 @@ const Header = () => {
                 className="flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]"
                 style={{ display: isActive("Invoices") }}
               >
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Invoice/Purchase"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Invoice/Purchase"
-                    )}`}
-                  >
-                    Purchase
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Invoice/Purchase" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Invoice/Purchase" )}`}>
+                    <img src="/invoice/Purchase.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Purchase</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Invoice/SalesInvoice"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Invoice/SalesInvoice"
-                    )}`}
-                  >
-                    Sales Invoice
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Invoice/SalesInvoice" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Invoice/SalesInvoice" )}`}>
+                    <img src="/invoice/sales.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1> Sales Invoice</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Invoice/WherehouseInvoice"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Invoice/WherehouseInvoice"
-                    )}`}
-                  >
-                    Warehouse Invoice
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Invoice/WherehouseInvoice" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Invoice/WherehouseInvoice" )}`}>
+                    <img src="/invoice/warehouse.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1> Warehouse Invoice</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Invoice/StockManagement"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Invoice/StockManagement"
-                    )}`}
-                  >
-                    Stock Management
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Invoice/StockManagement" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Invoice/StockManagement" )}`}>
+                    <img src="/invoice/stock.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1> Stock Management</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Invoice/InvoiceReport"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Invoice/InvoiceReport"
-                    )}`}
-                  >
-                    Invoice Report
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Invoice/InvoiceReport" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Invoice/InvoiceReport" )}`}>
+                    <img src="/invoice/reprt.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Invoice Report</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Invoice/InvoiceTypes"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Invoice/InvoiceTypes"
-                    )}`}
-                  >
-                    Invoice Types
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Invoice/InvoiceTypes" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Invoice/InvoiceTypes" )}`}>
+                    <img src="/invoice/types.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Invoice Types</h1>
+                  </Link>
+                </li>
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Invoice/InvoiceTutorial" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Invoice/InvoiceTutorial" )}`}>
+                    <img src="/images/HRM/HRMTutorial.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Invoice Tutorial</h1>
                   </Link>
                 </li>
               </div>
@@ -671,35 +617,22 @@ const Header = () => {
                 className="flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]"
                 style={{ display: isActive("Hierarchy") }}
               >
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Hierarchy/BreakdownProcess"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Hierarchy/BreakdownProcess"
-                    )}`}
-                  >
-                    Breakdown Process
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Hierarchy/BreakdownProcess" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Hierarchy/BreakdownProcess" )}`}>
+                    <img src="/Hierarchy/down.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Breakdown Process</h1>
                   </Link>
                 </li>
-               
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Hierarchy/ProductionApproval"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Hierarchy/ProductionApproval"
-                    )}`}
-                  >
-                    Production Approval
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Hierarchy/ProductionApproval" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Hierarchy/ProductionApproval" )}`}>
+                    <img src="/Hierarchy/production.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Production Approval</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Hierarchy/BreakdownTutorial"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Hierarchy/BreakdownTutorial"
-                    )}`}
-                  >
-                    Breakdown Tutorial
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Hierarchy/BreakdownTutorial" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Hierarchy/BreakdownTutorial" )}`}>
+                    <img src="/Hierarchy/tutorial.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Breakdown Tutorial</h1>
                   </Link>
                 </li>
               </div>
@@ -720,76 +653,49 @@ const Header = () => {
                 className="flex flex-col mx-[.5vw] my-[0.2vw] list-none w-[15vw] rounded-sm p-[0.5vw]"
                 style={{ display: isActive("Setting") }}
               >
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Setting/Localization"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Setting/Localization"
-                    )}`}
-                  >
-                    Localization
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Setting/Localization" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Setting/Localization" )}`}>
+                    <img src="/setting/local.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Localization</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Setting/Roles"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Setting/Roles"
-                    )}`}
-                  >
-                    Roles
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Setting/Roles" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Setting/Roles" )}`}>
+                    <img src="/setting/roles.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Roles</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Setting/Alert"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Setting/Alert"
-                    )}`}
-                  >
-                    Alert
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Setting/Alert" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Setting/Alert" )}`}>
+                    <img src="/setting/alert.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Alert</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Setting/Prefix"
-                    className={` text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Setting/Prefix"
-                    )}`}
-                  >
-                    Prefix
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Setting/Prefix" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Setting/Prefix" )}`}>
+                    <img src="/setting/prefix.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Prefix</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Setting/FileManager"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Setting/FileManager"
-                    )}`}
-                  >
-                    File Manager
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Setting/FileManager" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Setting/FileManager" )}`}>
+                    <img src="/setting/file.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>File Manager</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Setting/Announcement"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Setting/Announcement"
-                    )}`}
-                  >
-                    Announcement
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Setting/Announcement" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Setting/Announcement" )}`}>
+                    <img src="/setting/announce.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1>Announcement</h1>
                   </Link>
                 </li>
-                <li className="p-[0.3vw]">
-                  <Link
-                    to="/Setting/SettingTutorial"
-                    className={`text-[1vw] hover:text-[#e9278e] ${isLinkActive(
-                      "/Setting/SettingTutorial"
-                    )}`}
-                  >
-                    Setting Tutorial
+                <li className="py-[0.3vw] my-[0.2vw]">
+                  <Link to="/Setting/SettingTutorial" className={`text-[.8vw] flex flex-row items-center gap-[0.2vw] hover:text-[#e9278e] ${isLinkActive( "/Setting/SettingTutorial" )}`}>
+                    <img src="/Hierarchy/tutorial.png" className=" pl-[0.3vw] w-[1.5vw]" alt="" />{" "}
+                    <h1> Setting Tutorial</h1>
                   </Link>
                 </li>
+                
               </div>
             </div>
           </div>

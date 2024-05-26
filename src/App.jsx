@@ -45,14 +45,17 @@ import DailySales from './pages/Sales/SalesPages/SalesReport/DailySales';
 import ReceivePayment from './pages/Sales/SalesPages/SalesReport/ReceivePayment';
 import SiteVisitRequest from './pages/Assessment/Pages/SiteVisitRequest';
 import Technicalreview from './pages/Assessment/Pages/Technicalreview';
+import AccessmentTutorial from './pages/Assessment/Pages/AccessmentTutorial';
 import Wherehouse from './pages/Inventory/pages/Wherehouse';
 import ProductSetting from './pages/Inventory/pages/ProductSetting';
 import Products from './pages/Inventory/pages/Products';
 import Supplier from './pages/Inventory/pages/Supplier';
 import InventoryReport from './pages/Inventory/pages/InventoryReport';
+import InventoryTutorial from './pages/Inventory/pages/InventoryTutorial';
 import InstallizationProcess from './pages/Production/pages/InstallizationProcess';
 import ProjectStatus from './pages/Production/pages/ProjectStatus'
 import Warranty from './pages/Production/pages/Warranty';
+import ProdictionTutorial from './pages/Production/pages/ProdictionTutorial';
 import Finance from './pages/Account/pages/Finance';
 import Accounting from './pages/Account/pages/Accounting';
 import CheckManagement from './pages/Account/pages/CheckManagement';
@@ -61,12 +64,14 @@ import AccountReport from './pages/Account/pages/AccountReport';
 import TaxManagement from './pages/Account/pages/TaxManagement';
 import DuePayment from './pages/Account/pages/DuePayment';
 import AssestManagement from './pages/Account/pages/AssestManagement';
+import AccountTutorial from './pages/Account/pages/AccountTutorial';
 import Purchase from './pages/Invoices/pages/Purchase';
 import SalesInvoice from './pages/Invoices/pages/SalesInvoice';
 import WherehouseInvoice from './pages/Invoices/pages/WherehouseInvoice';
 import StockManagement from './pages/Invoices/pages/StockManagement';
 import InvoiceReport from './pages/Invoices/pages/InvoiceReport';
 import InvoiceTypes from './pages/Invoices/pages/InvoiceTypes';
+import InvoiceTutorial from './pages/Invoices/pages/InvoiceTutorial';
 import BreakdownProcess from './pages/Hierarchy/pages/BreakdownProcess';
 import ProductionApproval from './pages/Hierarchy/pages/ProductionApproval';
 import BreakdownTutorial from './pages/Hierarchy/pages/BreakdownTutorial';
@@ -84,6 +89,26 @@ import Calendar from './components/Calender';
 function App() {
 
   const router = createBrowserRouter([
+    {
+      path: "/Invoice/InvoiceTutorial",
+      element: <><Header /><InvoiceTutorial /></>,
+    },
+    {
+      path: "/Production/ProdictionTutorial",
+      element: <><Header /><ProdictionTutorial /></>,
+    },
+    {
+      path: "/Account/AccountTutorial",
+      element: <><Header /><AccountTutorial /></>,
+    },
+    {
+      path: "/Inventory/InventoryTutorial",
+      element: <><Header /><InventoryTutorial /></>,
+    },
+    {
+      path: "/Assessment/AccessmentTutorial",
+      element: <><Header /><AccessmentTutorial /></>,
+    },
     {
       path: "/Calendar",
       element: <><Header /><Calendar /></>,
