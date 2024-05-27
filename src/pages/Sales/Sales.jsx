@@ -306,7 +306,7 @@ const Sales = () => {
             <img src="/Sales/Collected.png" alt="" />
           </div>
           <div>
-            <h1 className="font-semibold text-[1.7vw]">0.00K</h1>
+            <h1 className="font-semibold text-[1.7vw]">0.0</h1>
             <h1 className="text-[1vw]">Collected This Month</h1>{" "}
           </div>
         </div>
@@ -365,7 +365,7 @@ const Sales = () => {
         <div className="flex flex-row ">
           <div className="flex flex-row ">
             <div className="box flex flex-col w-[25vw] mt-[2vw] gap-[0.31vw] h-[20vw] border rounded-md shadow-lg mx-[2vw] bg-gray-100">
-              <div className="bg-white h-[4vw]  flex flex-row items-center justify-between px-[1vw]">
+              <div className="bg-white h-[4vw] flex flex-row items-center justify-between px-[1vw]">
                 <h1 className="text-[#e9278e] text-[1vw]">Sales Performance
                 <p className="text-[#e9278e] text-[0.8vw]">
                 Monthly
