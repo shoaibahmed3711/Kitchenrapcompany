@@ -239,7 +239,7 @@ const Dashboard = () => {
           <div
             className="flex flex-col bg-cover bg-center w-[25vw] h-[6vw] shadow-lg rounded-md pl-[1vw] p-[0.2vw]"
             style={{
-              backgroundImage: 'url("public/dashboard-image/Companies.jpg")',
+              backgroundImage: 'url("/dashboard-image/Companies.jpg")',
             }}
           >
             <h1 className="text-[2vw] ">0</h1>
