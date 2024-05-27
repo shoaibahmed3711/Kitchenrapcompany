@@ -315,8 +315,8 @@ const Sales = () => {
             <img src="/Sales/Ratio.png" alt="" />
           </div>
           <div>
-            <h1 className="font-semibold text-[1.7vw]">Conversion Ratio</h1>
-            <h1 className="text-[1vw]">29 Conversions</h1>{" "}
+            <h1 className="vfont-semibold text-[1.4vw]">0 Conversions</h1>{" "}
+            <h1 className="text-[1vw]">Conversion Ratio</h1>
           </div>
         </div>
       </div>
