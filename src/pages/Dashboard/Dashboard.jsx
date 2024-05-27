@@ -248,7 +248,7 @@ const Dashboard = () => {
           <div
             className="flex flex-col bg-cover bg-center w-[25vw]  h-[6vw] shadow-lg rounded-md pl-[1vw] p-[0.2vw]"
             style={{
-              backgroundImage: 'url("public/dashboard-image/Branches.jpg")',
+              backgroundImage: 'url("/dashboard-image/Branches.jpg")',
             }}
           >
             <h1 className="text-[2vw]">0</h1>
@@ -257,7 +257,7 @@ const Dashboard = () => {
           <div
             className="flex flex-col bg-cover bg-center w-[25vw]  h-[6vw] shadow-lg rounded-md pl-[1vw] p-[0.2vw]"
             style={{
-              backgroundImage: 'url("public/dashboard-image/Departments.jpg")',
+              backgroundImage: 'url("/dashboard-image/Departments.jpg")',
             }}
           >
             <h1 className="text-[2vw]">0</h1>
@@ -268,7 +268,7 @@ const Dashboard = () => {
           <div
             className="flex flex-col bg-cover bg-center w-[25vw]  h-[6vw] shadow-lg rounded-md pl-[1vw] p-[0.2vw]"
             style={{
-              backgroundImage: 'url("public/dashboard-image/wherehouse.jpg")',
+              backgroundImage: 'url("/dashboard-image/wherehouse.jpg")',
             }}
           >
             <h1 className="text-[2vw] ">0</h1>
@@ -277,7 +277,7 @@ const Dashboard = () => {
           <div
             className="flex flex-col bg-cover bg-center w-[25vw]  h-[6vw] shadow-lg rounded-md pl-[1vw] p-[0.2vw]"
             style={{
-              backgroundImage: 'url("public/dashboard-image/customer.jpg")',
+              backgroundImage: 'url("/dashboard-image/customer.jpg")',
             }}
           >
             <h1 className="text-[2vw]">0</h1>
@@ -286,7 +286,7 @@ const Dashboard = () => {
           <div
             className="flex flex-col bg-cover bg-center w-[25vw]  h-[6vw] shadow-lg rounded-md pl-[1vw] p-[0.2vw]"
             style={{
-              backgroundImage: 'url("public/dashboard-image/supplier.jpg")',
+              backgroundImage: 'url("/dashboard-image/supplier.jpg")',
             }}
           >
             <h1 className="text-[2vw]">0</h1>
@@ -298,7 +298,7 @@ const Dashboard = () => {
       <div className="flex flex-row  gap-[1vw] my-[2vw]  justify-center">
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/dashboard-image/TotalContract.png" alt="" />
+            <img src="/dashboard-image/TotalContract.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -307,7 +307,7 @@ const Dashboard = () => {
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/dashboard-image/closeContract.png" alt="" />
+            <img src="/dashboard-image/closeContract.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -316,7 +316,7 @@ const Dashboard = () => {
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/dashboard-image/RudeCustomer.png" alt="" />
+            <img src="/dashboard-image/RudeCustomer.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -325,7 +325,7 @@ const Dashboard = () => {
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/dashboard-image/CustomerComplained.png" alt="" />
+            <img src="/dashboard-image/CustomerComplained.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
