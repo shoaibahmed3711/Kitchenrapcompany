@@ -285,7 +285,7 @@ const Sales = () => {
       <div className="flex flex-row  gap-[1vw] my-[2vw]  justify-center">
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/dashboard-image/TotalContract.png" alt="" />
+            <img src="/dashboard-image/TotalContract.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -294,7 +294,7 @@ const Sales = () => {
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/Sales/Cart.png" alt="" />
+            <img src="/Sales/Cart.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -303,7 +303,7 @@ const Sales = () => {
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/Sales/Collected.png" alt="" />
+            <img src="/Sales/Collected.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0.00K</h1>
@@ -312,7 +312,7 @@ const Sales = () => {
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/Sales/Ratio.png" alt="" />
+            <img src="/Sales/Ratio.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">Conversion Ratio</h1>

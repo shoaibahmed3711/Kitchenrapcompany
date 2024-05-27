@@ -38,7 +38,7 @@ const HRM = () => {
               }`}
             >
               <div className="w-[3.5vw]">
-                <img src="public/HRM/Contract.png" alt="" />
+                <img src="/HRM/Contract.png" alt="" />
               </div>
               <div className="flex flex-col">
                 <h3 className="text-[1vw]">Contract</h3>
@@ -54,7 +54,7 @@ const HRM = () => {
               }`}
             >
               <div className="w-[3.5vw]">
-                <img src="public/HRM/Shifts.png" alt="" />
+                <img src="/HRM/Shifts.png" alt="" />
               </div>
               <div className="flex flex-col">
                 <h3 className="text-[1vw]">Manage Shift</h3>

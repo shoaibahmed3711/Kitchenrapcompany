@@ -279,7 +279,7 @@ const chartOptions = {
       <div className="flex flex-row  gap-[1vw] my-[2vw]  justify-center">
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/CRM/Customer.png" alt="" />
+            <img src="/CRM/Customer.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -288,7 +288,7 @@ const chartOptions = {
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/CRM/Products.png" alt="" />
+            <img src="/CRM/Products.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -297,7 +297,7 @@ const chartOptions = {
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/CRM/Supplier.png" alt="" />
+            <img src="/CRM/Supplier.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -306,7 +306,7 @@ const chartOptions = {
         </div>
         <div className="w-[19vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-gray-400 hover:bg-gray-500 shadow-lg h-[5.5vw] rounded-md">
           <div className="w-[3.5vw] ">
-            <img src="public/CRM/Sale.png" alt="" />
+            <img src="/CRM/Sale.png" alt="" />
           </div>
           <div>
             <h1 className="font-semibold text-[1.7vw]">0</h1>
