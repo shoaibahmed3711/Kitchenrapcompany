@@ -348,7 +348,7 @@ const Dashboard = () => {
             {showBar && (
               <div className="bar flex flex-row items-center rounded-md gap-[1vw] px-[1vw] py-[0.5vw] mx-[1vw] bg-[#F99AAF]">
                 <img
-                  src="public/dashboard-image/profile.png"
+                  src="/dashboard-image/profile.png"
                   alt="Shoaib"
                   className="w-[2vw] h-[2vw] rounded-full cursor-pointer"
                   onClick={toggleBar}
@@ -479,7 +479,7 @@ const Dashboard = () => {
             <div className="flex flex-row justify-center gap-[1vw] mt-[2vw]">
               <div className="w-[24vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-white hover:bg-sky-100 shadow-lg h-[5.5vw] rounded-md">
                 <div className="w-[3.5vw] ">
-                  <img src="public/dashboard-image/Totalemployee.png" alt="" />
+                  <img src="/dashboard-image/Totalemployee.png" alt="" />
                 </div>
                 <div>
                   <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -489,7 +489,7 @@ const Dashboard = () => {
 
               <div className="w-[24vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-white hover:bg-orange-100 shadow-lg h-[5.5vw] rounded-md">
                 <div className="w-[3.5vw] ">
-                  <img src="public/dashboard-image/Sickdays.png" alt="" />
+                  <img src="/dashboard-image/Sickdays.png" alt="" />
                 </div>
                 <div>
                   <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -499,7 +499,7 @@ const Dashboard = () => {
 
               <div className="w-[24vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-white hover:bg-purple-100 shadow-lg h-[5.5vw] rounded-md">
                 <div className="w-[3.5vw] ">
-                  <img src="public/dashboard-image/Leavedays.png" alt="" />
+                  <img src="/dashboard-image/Leavedays.png" alt="" />
                 </div>
                 <div>
                   <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -510,7 +510,7 @@ const Dashboard = () => {
             <div className="flex flex-row justify-center gap-[1vw] mt-[1vw]">
               <div className="w-[24vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-white hover:bg-yellow-100 shadow-lg h-[5.5vw] rounded-md">
                 <div className="w-[3.5vw] ">
-                  <img src="public/dashboard-image/return.png" alt="" />
+                  <img src="/dashboard-image/return.png" alt="" />
                 </div>
                 <div>
                   <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -520,7 +520,7 @@ const Dashboard = () => {
 
               <div className="w-[24vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-white hover:bg-green-100 shadow-lg h-[5.5vw] rounded-md">
                 <div className="w-[3.5vw] ">
-                  <img src="public/dashboard-image/Late.png" alt="" />
+                  <img src="/dashboard-image/Late.png" alt="" />
                 </div>
                 <div>
                   <h1 className="font-semibold text-[1.7vw]">0</h1>
@@ -530,7 +530,7 @@ const Dashboard = () => {
 
               <div className="w-[24vw] flex flex-row gap-[1vw] px-[2vw] items-center bg-white hover:bg-red-100 shadow-lg h-[5.5vw] rounded-md">
                 <div className="w-[3.5vw] ">
-                  <img src="public/dashboard-image/notificaion.png" alt="" />
+                  <img src="/dashboard-image/notificaion.png" alt="" />
                 </div>
                 <div>
                   <h1 className="font-semibold text-[1.7vw]">0</h1>
