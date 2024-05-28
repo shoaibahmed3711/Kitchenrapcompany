@@ -34,7 +34,7 @@ const Login = () => {
       <div className="flex flex-row justify-center gap-36 pt-10">
         <div>
           <img
-            src="public/Logo/Kitchen.png"
+            src="/Logo/Kitchen.png"
             className="w-[35vw] flex flex-col justify-center"
             alt="kitchen"
           />
@@ -42,7 +42,7 @@ const Login = () => {
         <div className="flex flex-col justify-center bg-gray-200 rounded-md px-[2vw] py-[2vw]">
           <div>
             <img
-              src="public/Logo/Kitchen-white.jpg"
+              src="/Logo/Kitchen-white.jpg"
               className="w-[20vw] mx-auto p-[1vw]"
               alt="kitchen white"
             />
