@@ -164,13 +164,13 @@ localStorage.setItem('srNo', srNo.toString());
             <option value="Inactive">Inactive</option>
           </select>
           <button className="w-[2vw] bg-orange-500 mx-[0.5vw] rounded-md" onClick={handleRefresh}>
-            <img src="public/HRM/refresh.png" alt="" />
+            <img src="/HRM/refresh.png" alt="" />
           </button>
           <button className="w-[2vw] bg-red-500 mx-[0.5vw] rounded-md" onClick={handleFilter}>
-            <img src="public/HRM/filter.png" alt="" />
+            <img src="/HRM/filter.png" alt="" />
           </button>
           <button className="w-[2vw] bg-sky-500 mx-[0.5vw] rounded-md" onClick={handleExport}>
-            <img src="public/HRM/export.png" alt="" />
+            <img src="/HRM/export.png" alt="" />
           </button>
         </div>
         <table className="w-[80vw] overflow-y-auto">
@@ -200,7 +200,7 @@ localStorage.setItem('srNo', srNo.toString());
                       className="rounded-full ml-[2vw]"
                     />
                   ) : (
-                    <img src="public/HRM/profile.png" className="w-[2vw] mx-auto" alt="" />
+                    <img src="/HRM/profile.png" className="w-[2vw] mx-auto" alt="" />
                   )}
                 </td>
                 <td className="p-[1.5vw]">{row.name}</td>
@@ -241,13 +241,13 @@ localStorage.setItem('srNo', srNo.toString());
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
                     onClick={() => handleEdit(index)}
                   >
-                    <img src="public/HRM/edit.png" className="w-[1.4vw]" alt="" />
+                    <img src="/HRM/edit.png" className="w-[1.4vw]" alt="" />
                   </button>
                   <button
                     className="hover:bg-red-500 p-2 rounded-full"
                     onClick={() => handleDelete(index)}
                   >
-                    <img src="public/HRM/Trash.png" className="w-[1.4vw]" alt="" />
+                    <img src="/HRM/Trash.png" className="w-[1.4vw]" alt="" />
                   </button>
                 </td>
               </tr>
@@ -261,7 +261,7 @@ localStorage.setItem('srNo', srNo.toString());
           <button
             className="w-[4vw] p-2 rounded "
             onClick={toggleFormVisibility}>
-              <img src="public/HRM/form.png" className='w-[2vw]' alt="" />
+              <img src="/HRM/form.png" className='w-[2vw]' alt="" />
           </button>
         </div>
       )}
@@ -273,7 +273,7 @@ localStorage.setItem('srNo', srNo.toString());
               className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white p-[0.3vw]"
               onClick={toggleFormVisibility}
             >
-              <img src="public/HRM/close.png" className='w-[2vw]' alt="" />
+              <img src="/HRM/close.png" className='w-[2vw]' alt="" />
             </button>
           </div>
           <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
