@@ -242,7 +242,7 @@ const Technicalreview = () => {
                 <div className="w-[26vw] bg-white shadow-2xl absolute right-0 z-10 top-[0vw] overflow-y-auto rounded-lg ml-4 h-[32vw]">
                     <div className="flex justify-between p-4">
                         <button
-                            className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white p-[0.3vw]"
+                            className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white"
                             onClick={toggleFormVisibility}
                         >
                             <img src="/HRM/close.png" className='w-[2vw]' alt="" />
@@ -250,89 +250,103 @@ const Technicalreview = () => {
                     </div>
                     <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
                         <div className="mb-[0.3vw]">
+                            <h1>Branch name:</h1>
                             <input
                                 type="text"
                                 name="BranchName"
                                 value={formData.BranchName}
                                 onChange={handleChange}
-                                placeholder="Branch Name"
+                                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                            <h1>Requested date:</h1>
                             <input
                                 type="date"
                                 name="RequestDate"
                                 value={formData.RequestDate}
                                 onChange={handleChange}
+                                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        <h1>Requested by:</h1>
                             <input
                                 type="text"
                                 name="Requestedby"
                                 value={formData.Requestedby}
                                 onChange={handleChange}
-                                placeholder="Requested by"
+                                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        <h1>Assign Date:</h1>
                             <input
                                 type="date"
                                 name="AssignDate"
                                 value={formData.AssignDate}
                                 onChange={handleChange}
+                                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        <h1>Assign to:</h1>
                             <input
                                 type="text"
                                 name="Assignedto"
                                 value={formData.Assignedto}
                                 onChange={handleChange}
-                                placeholder="Assigned to"
+                                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        <h1>Delivery Date:</h1>
                             <input
                                 type="date"
                                 name="Deliverydate"
                                 value={formData.Deliverydate}
                                 onChange={handleChange}
+                                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        <h1>Lead/Customer:</h1>
                             <input
                                 type="text"
                                 name="LeadCustomer"
                                 value={formData.LeadCustomer}
                                 onChange={handleChange}
-                                placeholder="Lead/Customer"
+                                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        <h1>Contact:</h1>
                             <input
                                 type="text"
                                 name="Contact"
                                 value={formData.Contact}
                                 onChange={handleChange}
-                                placeholder="Contact"
+                                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        <h1>Project:</h1>
                             <input
                                 type="text"
                                 name="Project"
                                 value={formData.Project}
                                 onChange={handleChange}
-                                placeholder="Project"
+                                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        <h1>Production Order Date:</h1>
                             <input
                                 type="date"
                                 name="ProductionOrderDate"
                                 value={formData.ProductionOrderDate}
                                 onChange={handleChange}
+                                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
                             />
                         </div>
                         <button

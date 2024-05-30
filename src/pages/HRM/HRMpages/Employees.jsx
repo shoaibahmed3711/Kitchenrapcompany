@@ -270,7 +270,7 @@ localStorage.setItem('srNo', srNo.toString());
         <div className="w-[26vw] bg-white shadow-2xl absolute right-0 z-10 top-[0vw] overflow-y-auto rounded-lg ml-4 h-[32vw]">
           <div className="flex justify-between p-4">
             <button
-              className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white p-[0.3vw]"
+              className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white "
               onClick={toggleFormVisibility}
             >
               <img src="/HRM/close.png" className='w-[2vw]' alt="" />

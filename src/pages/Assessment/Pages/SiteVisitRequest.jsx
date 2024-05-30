@@ -197,7 +197,6 @@ const SiteVisitRequest = () => {
               <th className="border p-[0.5vw] text-[1vw]">Sr no</th>
               <th className="border p-[0.5vw] text-[1vw]">Entry Date</th>
               <th className="border p-[0.5vw] text-[1vw]">Contact</th>
-              <th className="border p-[0.5vw] text-[1vw]">Customer/Lead</th>
               <th className="border p-[0.5vw] text-[1vw]">Project</th>
               <th className="border p-[0.5vw] text-[1vw]">Requested by</th>
               <th className="border p-[0.5vw] text-[1vw]">Site Inspecter</th>
@@ -214,7 +213,6 @@ const SiteVisitRequest = () => {
                 <td>{index + 1}</td>
                 <td>{row.EntryDate}</td>
                 <td>{row.Contact}</td>
-                <td>{row.CustomerLead}</td>
                 <td>{row.Project}</td>
                 <td>{row.Requestedby}</td>
                 <td>{row.SiteInspecter}</td>
@@ -262,89 +260,93 @@ const SiteVisitRequest = () => {
           </div>
           <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
             <div className="mb-[0.3vw]">
+            <h1>Entry Date:</h1>
               <input
                 type="date"
                 name="EntryDate"
                 value={formData.EntryDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Contact no:</h1>
               <input
                 type="text"
                 name="Contact"
                 value={formData.Contact}
                 onChange={handleChange}
-                placeholder="Contact"
-                className="p-[0.3vw] rounded-md"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Project name:</h1>
               <input
                 type="text"
                 name="Project"
                 value={formData.Project}
                 onChange={handleChange}
-                placeholder="Project"
-                className="p-[0.3vw] rounded-md"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+              <h1>Requested by:</h1>
               <input
                 type="text"
                 name="Requestedby"
                 value={formData.Requestedby}
                 onChange={handleChange}
-                placeholder="Requested by"
-                className="p-[0.3vw] rounded-md"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Site Inspector:</h1>
               <input
                 type="text"
                 name="SiteInspecter"
                 value={formData.SiteInspecter}
                 onChange={handleChange}
-                placeholder="Site Inspecter"
-                className="p-[0.3vw] rounded-md"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Visit Date:</h1>
               <input
                 type="date"
                 name="VisitDate"
                 value={formData.VisitDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Visit Time:</h1>
               <input
                 type="time"
                 name="VisitTime"
                 value={formData.VisitTime}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Comments:</h1>
               <input
                 type="text"
                 name="Comments"
                 value={formData.Comments}
                 onChange={handleChange}
-                placeholder="Comments"
-                className="p-[0.3vw] rounded-md"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Actual Date:</h1>
               <input
                 type="date"
                 name="ActualVisitDate"
                 value={formData.ActualVisitDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <button

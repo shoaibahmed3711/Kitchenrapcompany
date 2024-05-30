@@ -199,11 +199,11 @@ localStorage.setItem('srNo', srNo.toString());
                 <td>
                   {row.profilePic ? (
                     <img
-                      src={URL.createObjectURL(row.profilePic)}
+                      src={row.profilePic}
                       alt="Profile"
                       width={50}
                       height={50}
-                      className="rounded-full ml-[2vw]"
+                      className="rounded-full w-[3vw] h-[3vw] ml-[2vw]"
                     />
                   ) : (
                     <img src="public/HRM/profile.png" className="w-[2vw] mx-auto" alt="" />

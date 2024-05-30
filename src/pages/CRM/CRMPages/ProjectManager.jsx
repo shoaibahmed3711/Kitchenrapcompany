@@ -232,11 +232,7 @@ const ProjectManager = () => {
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
                     onClick={() => handleEdit(index)}
                   >
-                    <img
-                      src="/HRM/edit.png"
-                      className="w-[1.4vw]"
-                      alt=""
-                    />
+                    <img src="/HRM/edit.png" className="w-[1.4vw]" alt="" />
                   </button>
                   <button
                     className="hover:bg-red-500 p-2 rounded-full"
@@ -267,7 +263,7 @@ const ProjectManager = () => {
       )}
 
       {isFormVisible && (
-        <div className="w-[30vw] bg-white shadow-lg absolute right-0 z-10 top-0 overflow-y-auto rounded-lg ml-4 h-[35vw]">
+        <div className="w-[20vw] bg-white shadow-lg absolute right-0 z-10 top-0 overflow-y-auto rounded-lg ml-4 h-[35vw]">
           <div className="flex justify-between p-4">
             <button
              className="hover:bg-red-500  bg-white shadow-lg rounded-[0.7vw] text-white p-[1vw]"
@@ -282,7 +278,7 @@ const ProjectManager = () => {
                 Entry Date:
               </label>
               <input
-                type="text"
+                type="date"
                 id="EntryDate"
                 name="EntryDate"
                 value={formData.EntryDate}

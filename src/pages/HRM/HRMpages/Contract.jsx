@@ -253,8 +253,6 @@ const Contract = () => {
                       })
                     }
                   >
-                    <option value="Morning">Morning</option>
-                    <option value="Night">Night</option>
                   </select>
                 </td>
                 <td>
@@ -267,8 +265,6 @@ const Contract = () => {
                       })
                     }
                   >
-                    <option value="Permanent">Permanent</option>
-                    <option value="Temporary">Temporary</option>
                   </select>
                 </td>
                 <td className="p-[1.5vw]">{row.code}</td>
@@ -367,7 +363,7 @@ const Contract = () => {
                 Issue Date:
               </label>
               <input
-                type="text"
+                type="date"
                 id="issueDate"
                 name="issueDate"
                 value={formData.issueDate}
@@ -382,7 +378,7 @@ const Contract = () => {
                 Expiry Date:
               </label>
               <input
-                type="text"
+                type="date"
                 id="expiryDate"
                 name="expiryDate"
                 value={formData.expiryDate}
@@ -452,7 +448,7 @@ const Contract = () => {
             </div>
             <button
               type="submit"
-              className="bg-black text-white p-2 rounded w-full"
+              className="bg-[#E9278E] text-white p-2 rounded w-full"
             >
               {editIndex !== null ? "Edit Employee" : "Add Employee"}
             </button>

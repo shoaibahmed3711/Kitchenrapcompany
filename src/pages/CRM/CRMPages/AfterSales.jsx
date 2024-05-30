@@ -222,13 +222,13 @@ const AfterSales = () => {
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
                     onClick={() => handleEdit(index)}
                   >
-                    Edit
+                    <img src="/HRM/edit.png" className="w-[1.4vw]" alt="" />
                   </button>
                   <button
                     className="hover:bg-red-500 p-2 rounded-full"
                     onClick={() => handleDelete(index)}
                   >
-                    Delete
+                    <img src="/HRM/edit.png" className="w-[1.4vw]" alt="" />
                   </button>
                 </td>
               </tr>
@@ -243,19 +243,19 @@ const AfterSales = () => {
             className="w-[4vw] text-white p-2 rounded"
             onClick={toggleFormVisibility}
           >
-            Show Form
+            <img src="/HRM/form.png" alt="" />
           </button>
         </div>
       )}
 
       {isFormVisible && (
-        <div className="w-[80vw] bg-white shadow-lg absolute right-0 z-10 top-[6vw] overflow-y-auto rounded-lg ml-4 h-full">
+        <div className="w-[20vw] bg-white shadow-lg absolute right-0 z-10 top-[6vw] overflow-y-auto rounded-lg ml-4 h-full">
           <div className="flex justify-between p-4">
             <button
-              className="hover:bg-red-500 w-[1.5vw] bg-white shadow-lg rounded-[0.7vw] text-white p-[1vw]"
+              className="hover:bg-red-500 w-[2.5vw] bg-white shadow-lg rounded-[0.7vw] text-white p-[0.5vw]"
               onClick={toggleFormVisibility}
             >
-              Close
+              <img src="/HRM/close.png" className="w-[2vw]" alt="" />
             </button>
           </div>
           <form onSubmit={handleSubmit} className="overflow-y-auto p-[1vw] ">
@@ -264,7 +264,7 @@ const AfterSales = () => {
                 Complained Date:
               </label>
               <input
-                type="text"
+                type="date"
                 id="ComplainedDate"
                 name="ComplainedDate"
                 value={formData.ComplainedDate}
@@ -342,7 +342,7 @@ const AfterSales = () => {
                 End Date:
               </label>
               <input
-                type="text"
+                type="date"
                 id="EndDate"
                 name="EndDate"
                 value={formData.EndDate}

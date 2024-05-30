@@ -277,8 +277,8 @@ const Roles = () => {
               <h1>Group Policy:</h1>
               <input
                 type="text"
-                name="Type"
-                value={formData.Type}
+                name="GroupPolicy"
+                value={formData.GroupPolicy}
                 onChange={handleChange}
                 className="p-[0.3vw] rounded-md"
               />
@@ -307,7 +307,7 @@ const Roles = () => {
               <h1>Sector:</h1>
               <input
                 type="text"
-                name="Type"
+                name="Sector"
                 value={formData.Sector}
                 onChange={handleChange}
                 className="p-[0.3vw] rounded-md"
