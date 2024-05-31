@@ -314,7 +314,7 @@ const Roles = () => {
               />
             </div>
             <div className="mb-[0.3vw]">
-              <h1>Sector:</h1>
+              <h1>Branches:</h1>
               <input
                 type="text"
                 name="Branches"
