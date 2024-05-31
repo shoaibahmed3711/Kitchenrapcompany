@@ -213,20 +213,7 @@ const ProjectManager = () => {
                 <td>{row.Releatedto}</td>
                 <td>{row.CustomerLead}</td>
                 <td>{row.Contentno}</td>
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[9vw] rounded-md border"
-                    value={row.status}
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "status", value: e.target.value },
-                      })
-                    }
-                  >
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
-                  </select>
-                </td>
+                <td>{row.status} </td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
@@ -357,7 +344,7 @@ const ProjectManager = () => {
             </div>
             <button
               type="submit"
-              className="bg-black text-white p-2 rounded w-full"
+              className="bg-[#E9278E] text-white p-2 rounded w-full"
             >
               {editIndex !== null ? "Edit Employee" : "Add Employee"}
             </button>

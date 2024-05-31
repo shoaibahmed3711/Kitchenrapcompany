@@ -176,13 +176,13 @@ const SalesGoal = () => {
             <option value="Inactive">Inactive</option>
           </select>
           <button className="w-[2vw] bg-orange-500 mx-[0.5vw] rounded-md" onClick={handleRefresh}>
-            <img src="public/HRM/refresh.png" alt="" />
+            <img src="/HRM/refresh.png" alt="" />
           </button>
           <button className="w-[2vw] bg-red-500 mx-[0.5vw] rounded-md" onClick={handleFilter}>
-            <img src="public/HRM/filter.png" alt="" />
+            <img src="/HRM/filter.png" alt="" />
           </button>
           <button className="w-[2vw] bg-sky-500 mx-[0.5vw] rounded-md" onClick={handleExport}>
-            <img src="public/HRM/export.png" alt="" />
+            <img src="/HRM/export.png" alt="" />
           </button>
         </div>
         <table className="w-[80vw] overflow-y-auto">
@@ -204,28 +204,28 @@ const SalesGoal = () => {
           <tbody className="rounded-lg bg-gray-100 w-[80vw] text-center">
             {filteredRows.map((row, index) => (
               <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{row.EntryDate}</td>
+                <td className="p-[1.5vw]">{index + 1}</td>
+                <td className="p-[1.5vw]">{row.EntryDate}</td>
                 <td className="p-[1.5vw]">{row.EmployeeName}</td>
-                <td>{row.StartDate}</td>
-                <td>{row.EndDate}</td>
-                <td>{row.TotalCollection}</td>
-                <td>{row.TotalCommition}</td>
-                <td>{row.TotalPaidCommition}</td>
-                <td>{row.TotalRemainingCommition}</td>
-                <td>{row.status}</td>
+                <td className="p-[1.5vw]">{row.StartDate}</td>
+                <td className="p-[1.5vw]">{row.EndDate}</td>
+                <td className="p-[1.5vw]">{row.TotalCollection}</td>
+                <td className="p-[1.5vw]">{row.TotalCommition}</td>
+                <td className="p-[1.5vw]">{row.TotalPaidCommition}</td>
+                <td className="p-[1.5vw]">{row.TotalRemainingCommition}</td>
+                <td className="p-[1.5vw]">{row.status}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
                     onClick={() => handleEdit(index)}
                   >
-                    <img src="public/HRM/edit.png" className="w-[1.4vw]" alt="" />
+                    <img src="/HRM/edit.png" className="w-[1.4vw]" alt="" />
                   </button>
                   <button
                     className="hover:bg-red-500 p-2 rounded-full"
                     onClick={() => handleDelete(index)}
                   >
-                    <img src="public/HRM/Trash.png" className="w-[1.4vw]" alt="" />
+                    <img src="/HRM/Trash.png" className="w-[1.4vw]" alt="" />
                   </button>
                 </td>
               </tr>
@@ -239,7 +239,7 @@ const SalesGoal = () => {
           <button
             className="w-[4vw] p-2 rounded "
             onClick={toggleFormVisibility}>
-              <img src="public/HRM/form.png" className='w-[2vw]' alt="" />
+              <img src="/HRM/form.png" className='w-[2vw]' alt="" />
           </button>
         </div>
       )}
@@ -251,7 +251,7 @@ const SalesGoal = () => {
               className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white p-[0.3vw]"
               onClick={toggleFormVisibility}
             >
-              <img src="public/HRM/close.png" className='w-[2vw]' alt="" />
+              <img src="/HRM/close.png" className='w-[2vw]' alt="" />
             </button>
           </div>
           <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
@@ -265,7 +265,7 @@ const SalesGoal = () => {
                 name="EntryDate"
                 value={formData.EntryDate}
                 onChange={handleChange}
-                className="border p-[0.5vw] rounded w-[22vw] h-[2.5vw]"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -278,7 +278,7 @@ const SalesGoal = () => {
                 name="EmployeeName"
                 value={formData.EmployeeName}
                 onChange={handleChange}
-                className="border p-[0.5vw] rounded w-[22vw] h-[2.5vw]"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -291,7 +291,7 @@ const SalesGoal = () => {
                 name="StartDate"
                 value={formData.StartDate}
                 onChange={handleChange}
-                className="border p-[0.5vw] rounded w-[22vw] h-[2.5vw]"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -304,7 +304,7 @@ const SalesGoal = () => {
                 name="EndDate"
                 value={formData.EndDate}
                 onChange={handleChange}
-                className="border p-[0.5vw] rounded w-[22vw] h-[2.5vw]"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -317,7 +317,7 @@ const SalesGoal = () => {
                 name="TotalCollection"
                 value={formData.TotalCollection}
                 onChange={handleChange}
-                className="border p-[0.5vw] rounded w-[22vw] h-[2.5vw]"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -330,7 +330,7 @@ const SalesGoal = () => {
                 name="TotalCommition"
                 value={formData.TotalCommition}
                 onChange={handleChange}
-                className="border p-[0.5vw] rounded w-[22vw] h-[2.5vw]"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -343,7 +343,7 @@ const SalesGoal = () => {
                 name="TotalPaidCommition"
                 value={formData.TotalPaidCommition}
                 onChange={handleChange}
-                className="border p-[0.5vw] rounded w-[22vw] h-[2.5vw]"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -356,7 +356,7 @@ const SalesGoal = () => {
                 name="TotalRemainingCommition"
                 value={formData.TotalRemainingCommition}
                 onChange={handleChange}
-                className="border p-[0.5vw] rounded w-[22vw] h-[2.5vw]"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -364,7 +364,7 @@ const SalesGoal = () => {
                 Status:
               </label>
               <select
-                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
                 id="status"
                 name="status"
                 value={formData.status}
@@ -378,7 +378,7 @@ const SalesGoal = () => {
               type="submit"
               className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
             >
-              {editIndex !== null ? "Edit Employee" : "Add Employee"}
+              {editIndex !== null ? "Edit " : "Add "}
             </button>
           </form>
         </div>

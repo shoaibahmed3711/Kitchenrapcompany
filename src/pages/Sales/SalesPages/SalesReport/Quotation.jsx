@@ -210,16 +210,7 @@ const Quotation = () => {
                 <td>{row.TotalDiscount}</td> {/* Total discount will be shown */}
                 <td>{row.TotalTax}</td> {/* Total Tax will be shown */}
                 <td>{row.NetTotal}</td> {/* Net total will be shown */}
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[13vw] rounded-md border"
-                    value={row.status}
-                    onChange={(e) => handleChange({ target: { name: 'status', value: e.target.value } })}
-                  >
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
-                  </select>
-                </td>
+                <td>{row.status}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
@@ -380,7 +371,7 @@ const Quotation = () => {
               type="submit"
               className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
             >
-              {editIndex !== null ? "Edit Employee" : "Add Employee"}
+              {editIndex !== null ? "Edit " : "Add "}
             </button>
           </form>
         </div>

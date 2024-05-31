@@ -5,11 +5,11 @@ const SalesReport = () => {
   const location = useLocation();
 
   const menuItems = [
-    { path: "/Sales/SalesReport/Quotation", label: "Quotation", description: "Quotation Description" },
-    { path: "/Sales/SalesReport/SalesCW", label: "SalesCW", description: "SalesCW Description" },
-    { path: "/Sales/SalesReport/SalesUW", label: "SalesUW", description: "SalesUW Description" },
-    { path: "/Sales/SalesReport/DailySales", label: "Daily Sales", description: "Daily Sales Description" },
-    { path: "/Sales/SalesReport/ReceivePayment", label: "Receive Payment", description: "Receive Payment Description" }
+    { path: "/Sales/SalesReport/Quotation", label: "Quotation", description: "Quotation Description", imagePath: "/images/receive_payment.png" },
+    { path: "/Sales/SalesReport/SalesCW", label: "SalesCW", description: "SalesCW Description", imagePath: "/images/receive_payment.png" },
+    { path: "/Sales/SalesReport/SalesUW", label: "SalesUW", description: "SalesUW Description", imagePath: "/images/receive_payment.png" },
+    { path: "/Sales/SalesReport/DailySales", label: "Daily Sales", description: "Daily Sales Description", imagePath: "/images/receive_payment.png" },
+    { path: "/Sales/SalesReport/ReceivePayment", label: "Receive Payment", description: "Receive Payment Description", imagePath: "/images/receive_payment.png" }
   ];
 
   const hoverColors = {
@@ -32,7 +32,7 @@ const SalesReport = () => {
                 }`}
               >
                 <div className="w-[3.5vw]">
-                  <img src={`public/HRM/${menuItem.label}.png`} alt="" />
+                  <img src={`/HRM/${menuItem.label}.png`} alt="" />
                 </div>
                 <div className="flex flex-col justify-evenly">
                   <h3 className="text-[0.8vw]">{menuItem.label}</h3>

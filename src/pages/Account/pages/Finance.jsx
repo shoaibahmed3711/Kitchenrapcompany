@@ -74,7 +74,6 @@ const Finance = () => {
     } else {
       setRows((prevRows) => [...prevRows, formData]);
     }
-
     setFormData({
       ReceiptDate: "",
       Addedby: "",
@@ -208,16 +207,16 @@ const Finance = () => {
           <tbody className="rounded-lg bg-gray-100 w-[80vw] text-center">
             {filteredRows.map((row, index) => (
               <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{row.ReceiptDate}</td>
-                <td>{row.Addedby}</td>
-                <td>{row.BranchName}</td>
-                <td>{row.Receiptno}</td>
-                <td>{row.PaymentMethod}</td>
-                <td>{row.FromAccount}</td>
-                <td>{row.ToAccount}</td>
-                <td>{row.TotalAmount}</td>
-                <td>{row.Description}</td>
+                <td className="text-[0.8vw] p-[0.4vw]">{index + 1}</td>
+                <td className="text-[0.8vw] p-[0.4vw]">{row.ReceiptDate}</td>
+                <td className="text-[0.8vw] p-[0.4vw]">{row.Addedby}</td>
+                <td className="text-[0.8vw] p-[0.4vw]">{row.BranchName}</td>
+                <td className="text-[0.8vw] p-[0.4vw]">{row.Receiptno}</td>
+                <td className="text-[0.8vw] p-[0.4vw]">{row.PaymentMethod}</td>
+                <td className="text-[0.8vw] p-[0.4vw]">{row.FromAccount}</td>
+                <td className="text-[0.8vw] p-[0.4vw]">{row.ToAccount}</td>
+                <td className="text-[0.8vw] p-[0.4vw]">{row.TotalAmount}</td>
+                <td className="text-[0.8vw] p-[0.4vw]">{row.Description}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"

@@ -1,88 +1,78 @@
-import React, { useState, useEffect } from "react";
-import { jsPDF } from "jspdf";
+import React, { useState, useEffect } from 'react';
+import { jsPDF } from 'jspdf';
 
 const PreLeads = () => {
   const [formData, setFormData] = useState(() => {
-    const savedData = localStorage.getItem("formData");
+    const savedData = localStorage.getItem('formData');
     return savedData
       ? JSON.parse(savedData)
       : {
-          contactDate: "",
-          name: "",
-          email: "",
-          PhoneNo: "",
-          Source: "",
-          City: "",
-          Address: "",
-          BranchName: "",
-          status: "",
-        };
-  });
+    contactDate: "",
+    name: "",
+    email: "",
+    PhoneNo: "",
+    Source: "",
+    City: "",
+    Address: "",
+    BranchName: "",
+    status: "",
+  }
+});
+const [isFormVisible, setFormVisible] = useState(false);
+const [editIndex, setEditIndex] = useState(null);
+const [srNo, setSrNo] = useState(() => {
+  const savedSrNo = localStorage.getItem('srNo');
+  return savedSrNo ? parseInt(savedSrNo) : 1;
+});
+const [rows, setRows] = useState(() => {
+  const savedRows = localStorage.getItem('rows');
+  return savedRows ? JSON.parse(savedRows) : [];
+});
+const [searchTerm, setSearchTerm] = useState('');
+const [filter, setFilter] = useState('All');
 
-  const [isFormVisible, setFormVisible] = useState(false);
-  const [editIndex, setEditIndex] = useState(null);
-  const [srNo, setSrNo] = useState(() => {
-    const savedSrNo = localStorage.getItem("srNo");
-    return savedSrNo ? parseInt(savedSrNo) : 1;
-  });
-  const [rows, setRows] = useState(() => {
-    const savedRows = localStorage.getItem("rows");
-    return savedRows ? JSON.parse(savedRows) : [];
-  });
-  const [searchTerm, setSearchTerm] = useState("");
-  const [filter, setFilter] = useState("All");
+useEffect(() => {
+  localStorage.setItem('formData', JSON.stringify(formData));
+}, [formData]);
 
-  useEffect(() => {
-    localStorage.setItem("formData", JSON.stringify(formData));
-  }, [formData]);
+useEffect(() => {
+  localStorage.setItem('rows', JSON.stringify(rows));
+}, [rows]);
 
-  useEffect(() => {
-    localStorage.setItem("rows", JSON.stringify(rows));
-  }, [rows]);
+useEffect(() => {
+  localStorage.setItem('srNo', srNo.toString());
+}, [srNo]);
 
-  useEffect(() => {
-    localStorage.setItem("srNo", srNo.toString());
-  }, [srNo]);
-
-  const addEmployee = () => {
-    const newEmployee = {
-      id: srNo,
-      name: `Employee ${srNo}`,
-    };
-    setRows([...rows, newEmployee]);
-    setSrNo(srNo + 1);
+const addEmployee = () => {
+  const newEmployee = {
+    id: srNo,
+    name: `Employee ${srNo}`,
   };
+  setRows([...rows, newEmployee]);
+  setSrNo(srNo + 1);
+};
 
-  const handleIssueDate = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData((prevData) => ({
+    ...prevData,
+    [name]: value,
+  }));
+};
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: name === "code" ? value.toUpperCase().replace(/[^A-Z-]/g, "") : value,
-    }));
-  };
+const handleSubmit = (e) => {
+  e.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (editIndex !== null) {
-      setRows((prevRows) => {
-        const updatedRows = [...prevRows];
-        updatedRows[editIndex] = formData;
-        return updatedRows;
-      });
-      setEditIndex(null);
-    } else {
-      setRows((prevRows) => [...prevRows, formData]);
-    }
-
+  if (editIndex !== null) {
+    setRows((prevRows) => {
+      const updatedRows = [...prevRows];
+      updatedRows[editIndex] = formData;
+      return updatedRows;
+    });
+    setEditIndex(null);
+  } else {
+    setRows((prevRows) => [...prevRows, formData]);
+  }
     setFormData({
       contactDate: "",
       name: "",
@@ -94,7 +84,6 @@ const PreLeads = () => {
       BranchName: "",
       status: "",
     });
-
     setFormVisible(false);
   };
 
@@ -118,22 +107,20 @@ const PreLeads = () => {
   };
 
   const handleFilter = () => {
-    if (filter === "Active") {
-      setRows((prevRows) => prevRows.filter((row) => row.status === "Active"));
-    } else if (filter === "Inactive") {
-      setRows((prevRows) =>
-        prevRows.filter((row) => row.status === "Inactive")
-      );
+    if (filter === 'Active') {
+      setRows((prevRows) => prevRows.filter((row) => row.status === 'Active'));
+    } else if (filter === 'Inactive') {
+      setRows((prevRows) => prevRows.filter((row) => row.status === 'Inactive'));
     }
   };
 
   const handleExport = () => {
     const doc = new jsPDF();
     rows.forEach((row, index) => {
-      const yPos = 10 + index * 10;
+      const yPos = 10 + (index * 10);
       doc.text(`${row.name} - ${row.code}`, 10, yPos);
     });
-    doc.save("employee_table.pdf");
+    doc.save('employee_table.pdf');
   };
 
   const handleSearch = (e) => {
@@ -141,10 +128,9 @@ const PreLeads = () => {
   };
 
   const filteredRows = rows.filter((row) => {
-    // Check if row.name and row.status are defined before accessing them
-    const name = row.name ? row.name.toLowerCase() : '';
+    const Branchname = row.BranchName ? row.BranchName.toLowerCase() : '';
     const status = row.status ? row.status.toLowerCase() : '';
-  
+
     if (filter === 'All') {
       return name.includes(searchTerm.toLowerCase());
     } else {
@@ -154,16 +140,17 @@ const PreLeads = () => {
       );
     }
   });
+  
   return (
     <div className="absolute shadow-xl w-[82vw] right-[1vw] rounded-md top-[4vw] h-[40vw]">
-    <div className='flex flex-row m-[1vw] gap-[1vw] items-center image-hover-effect'>
-      <div className='w-[3vw]'>
-      <img src="/CRM/pages/prelieads.png" className="image-hover-effect" alt="Leave" />
-      </div>
-      <h1 className=' text-[2vw] text-[#E9278E]'>Pre Leads</h1>
+      <div className='flex flex-row m-[1vw] gap-[1vw] items-center image-hover-effect'>
+        <div className='w-[3vw]'>
+          <img src="/CRM/pages/prelieads.png" className="image-hover-effect" alt="Leave" />
+        </div>
+        <h1 className=' text-[2vw] text-[#E9278E]'>Pre Leads</h1>
       </div>
       <div className="h-[50vw]">
-        <div className="bg-gray-400 w-[80vw] h-[3vw]  flex flex-row overflow-y-auto px-[2vw] items-center">
+        <div className="bg-gray-400 w-[80vw] h-[3vw] flex flex-row overflow-y-auto px-[2vw] items-center">
           <input
             className="p-[0.3vw] w-[18vw] text-[1vw] rounded-md mx-[1vw]"
             type="text"
@@ -216,14 +203,14 @@ const PreLeads = () => {
             </tr>
           </thead>
           <tbody className="rounded-lg bg-gray-100 w-[80vw] text-center">
-            {filteredRows.map((row, index) => (
-              <tr className="text-[0.8vw] " key={index}>
-                <td className="text-[0.8vw] p-[0.4vw]">{index + 1}</td>
-                <td className=" text-[0.8vw] p-[0.4vw]">{row.contactDate}</td>
+            {rows.map((row, index) => (
+              <tr className="text-[0.8vw]" key={index}>
+                <td className="text-[0.8vw] p-[0.4vw]">{row.id}</td>
+                <td className="text-[0.8vw] p-[0.4vw]">{row.contactDate}</td>
                 <td className="text-[0.8vw] p-[0.4vw]">{row.name}</td>
                 <td className="text-[0.8vw] p-[0.2vw]">{row.email}</td>
                 <td className="text-[0.8vw] p-[0.2vw]">{row.PhoneNo}</td>
-                <td className=" text-[0.8vw] p-[0.2vw]">{row.Source}</td>
+                <td className="text-[0.8vw] p-[0.2vw]">{row.Source}</td>
                 <td className="text-[0.8vw] p-[0.2vw]">{row.City}</td>
                 <td className="text-[0.8vw] p-[0.2vw]">{row.Address}</td>
                 <td className="text-[0.8vw] p-[0.2vw]">{row.BranchName}</td>

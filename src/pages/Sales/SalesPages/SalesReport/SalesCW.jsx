@@ -234,50 +234,51 @@ const SalesCW = () => {
                     </div>
                     <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
                         <div className="mb-[0.3vw]">
+                        Category Name:
                             <input
-                                className="p-[0.3vw] text-[1vw] w-[24vw] rounded-md"
+                                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                                 type="text"
-                                placeholder="Category Name"
+                                
                                 name="CategoryName"
                                 value={formData.CategoryName}
                                 onChange={handleChange}
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        Product Name:
                             <input
-                                className="p-[0.3vw] text-[1vw] w-[24vw] rounded-md"
+                                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                                 type="text"
-                                placeholder="Product Name"
                                 name="ProductName"
                                 value={formData.ProductName}
                                 onChange={handleChange}
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        Model:
                             <input
-                                className="p-[0.3vw] text-[1vw] w-[24vw] rounded-md"
+                                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                                 type="text"
-                                placeholder="Model"
                                 name="Model"
                                 value={formData.Model}
                                 onChange={handleChange}
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        Quantity:
                             <input
-                                className="p-[0.3vw] text-[1vw] w-[24vw] rounded-md"
+                                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                                 type="text"
-                                placeholder="Quantity"
                                 name="Quantity"
                                 value={formData.Quantity}
                                 onChange={handleChange}
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        Amount:
                             <input
-                                className="p-[0.3vw] text-[1vw] w-[24vw] rounded-md"
+                                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                                 type="text"
-                                placeholder="Amount"
                                 name="Amount"
                                 value={formData.Amount}
                                 onChange={handleChange}
@@ -287,7 +288,7 @@ const SalesCW = () => {
                             type="submit"
                             className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
                         >
-                            {editIndex !== null ? "Edit Employee" : "Add Employee"}
+                            {editIndex !== null ? "Edit " : "Add "}
                         </button>
                     </form>
                 </div>

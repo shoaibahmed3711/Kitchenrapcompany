@@ -216,20 +216,7 @@ const Estimates = () => {
                 <td>{row.Total}</td>
                 <td>{row.EstimateDate}</td>
                 <td>{row.DueDate}</td>
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[9vw] rounded-md border"
-                    value={row.status}
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "status", value: e.target.value },
-                      })
-                    }
-                  >
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
-                  </select>
-                </td>
+                <td>{row.status}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"

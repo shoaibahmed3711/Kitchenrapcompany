@@ -239,81 +239,80 @@ const MonthlyTargetBonus = () => {
             </button>
           </div>
           <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
+          <h1>Added date:</h1>
             <div className="mb-[0.3vw]">
               <input
                 type="date"
                 name="AddedDate"
                 value={formData.AddedDate}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Branch name:</h1>
               <input
                 type="text"
                 name="BranchName"
                 value={formData.BranchName}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
-                placeholder="Branch Name"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
-              <select
+              <h1>Month name:</h1>
+              <input
                 name="Month"
                 value={formData.Month}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
-              >
-                <option value="">Select Month</option>
-                {/* Add options for months here */}
-              </select>
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
+              />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Department name:</h1>
               <input
                 type="text"
                 name="Department"
                 value={formData.Department}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
-                placeholder="Department"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Target:</h1>
               <input
                 type="text"
                 name="Target"
                 value={formData.Target}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
-                placeholder="Target"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Bonus:</h1>
               <input
                 type="text"
                 name="Bonus"
                 value={formData.Bonus}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
-                placeholder="Bonus"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Target Reached:</h1>
               <input
                 type="text"
                 name="TargetReached"
                 value={formData.TargetReached}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
-                placeholder="Target Reached"
+                className='border border-black p-[0.3vw] rounded-md w-[20vw]'
               />
             </div>
             <button
               type="submit"
               className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
             >
-              {editIndex !== null ? "Edit Employee" : "Add Employee"}
+              {editIndex !== null ? "Edit" : "Add"}
             </button>
           </form>
         </div>

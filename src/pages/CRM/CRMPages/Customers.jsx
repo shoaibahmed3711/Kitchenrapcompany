@@ -155,7 +155,7 @@ const Customers = () => {
       <h1 className=' text-[2vw] text-[#E9278E]'>Customers</h1>
       </div>
       <div className="h-[50vw]">
-        <div className="bg-gray-400 w-[80vw] h-[3vw] flex flex-row overflow-y-auto px-[2vw] items-center">
+      <div className="bg-gray-400 w-[80vw] h-[3vw] flex flex-row overflow-y-auto px-[2vw] items-center">
           <input
             className="p-[0.3vw] w-[18vw] text-[1vw] rounded-md mx-[1vw]"
             type="text"
@@ -176,19 +176,19 @@ const Customers = () => {
             className="w-[2vw] bg-orange-500 mx-[0.5vw] rounded-md"
             onClick={handleRefresh}
           >
-            Refresh
+           <img src="/HRM/refresh.png" alt="" />
           </button>
           <button
             className="w-[2vw] bg-red-500 mx-[0.5vw] rounded-md"
             onClick={handleFilter}
           >
-            Filter
+             <img src="/HRM/filter.png" alt="" />
           </button>
           <button
             className="w-[2vw] bg-sky-500 mx-[0.5vw] rounded-md"
             onClick={handleExport}
           >
-            Export
+            <img src="/HRM/export.png" alt="" />
           </button>
         </div>
         <table className="w-[80vw] overflow-y-auto">
@@ -322,7 +322,7 @@ const Customers = () => {
             </div>
             <button
               type="submit"
-              className="bg-black text-white p-2 rounded w-full"
+              className="bg-[#E9278E] text-white p-2 rounded w-full"
             >
               {editIndex !== null ? "Edit Customer" : "Add Customer"}
             </button>

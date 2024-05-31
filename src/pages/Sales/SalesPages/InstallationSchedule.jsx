@@ -181,13 +181,13 @@ const InstallationSchedule = () => {
             <option value="Inactive">Inactive</option>
           </select>
           <button className="w-[2vw] bg-orange-500 mx-[0.5vw] rounded-md" onClick={handleRefresh}>
-            <img src="public/HRM/refresh.png" alt="" />
+            <img src="/HRM/refresh.png" alt="" />
           </button>
           <button className="w-[2vw] bg-red-500 mx-[0.5vw] rounded-md" onClick={handleFilter}>
-            <img src="public/HRM/filter.png" alt="" />
+            <img src="/HRM/filter.png" alt="" />
           </button>
           <button className="w-[2vw] bg-sky-500 mx-[0.5vw] rounded-md" onClick={handleExport}>
-            <img src="public/HRM/export.png" alt="" />
+            <img src="/HRM/export.png" alt="" />
           </button>
         </div>
         <table className="w-[80vw] overflow-y-auto">
@@ -209,28 +209,28 @@ const InstallationSchedule = () => {
           <tbody className="rounded-lg bg-gray-100 w-[80vw] text-center">
             {filteredRows.map((row, index) => (
               <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{row.EntryDate}</td>
+                <td className="p-[1.5vw]">{index + 1}</td>
+                <td className="p-[1.5vw]">{row.EntryDate}</td>
                 <td className="p-[1.5vw]">{row.Jobno}</td>
-                <td>{row.CustomerName}</td>
-                <td>{row.ProjectName}</td>
-                <td>{row.Contractno}</td>
-                <td>{row.JobType}</td>
-                <td>{row.InstallationDate}</td>
-                <td>{row.Notes}</td>
-                <td>{row.status}</td>
+                <td className="p-[1.5vw]">{row.CustomerName}</td>
+                <td className="p-[1.5vw]">{row.ProjectName}</td>
+                <td className="p-[1.5vw]">{row.Contractno}</td>
+                <td className="p-[1.5vw]">{row.JobType}</td>
+                <td className="p-[1.5vw]">{row.InstallationDate}</td>
+                <td className="p-[1.5vw]">{row.Notes}</td>
+                <td className="p-[1.5vw]">{row.status}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
                     onClick={() => handleEdit(index)}
                   >
-                    <img src="public/HRM/edit.png" className="w-[1.4vw]" alt="" />
+                    <img src="/HRM/edit.png" className="w-[1.4vw]" alt="" />
                   </button>
                   <button
                     className="hover:bg-red-500 p-2 rounded-full"
                     onClick={() => handleDelete(index)}
                   >
-                    <img src="public/HRM/Trash.png" className="w-[1.4vw]" alt="" />
+                    <img src="/HRM/Trash.png" className="w-[1.4vw]" alt="" />
                   </button>
                 </td>
               </tr>
@@ -254,7 +254,7 @@ const InstallationSchedule = () => {
               className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white p-[0.3vw]"
               onClick={toggleFormVisibility}
             >
-              <img src="public/HRM/close.png" className='w-[2vw]' alt="" />
+              <img src="/HRM/close.png" className='w-[2vw]' alt="" />
             </button>
           </div>
           <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
@@ -381,7 +381,7 @@ const InstallationSchedule = () => {
               type="submit"
               className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
             >
-              {editIndex !== null ? "Edit Employee" : "Add Employee"}
+              {editIndex !== null ? "Edit" : "Add"}
             </button>
           </form>
         </div>

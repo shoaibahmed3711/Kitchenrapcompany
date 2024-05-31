@@ -147,14 +147,14 @@ const CallandMeeting = () => {
       
 
   return (
-    <div className="absolute shadow-xl w-[82vw] right-[1vw] rounded-md top-[4vw] h-[40vw]">
+    <div className="absolute shadow-xl w-[82vw] right-[1vw]   rounded-md top-[4vw] h-[40vw]">
     <div className='flex flex-row m-[1vw] gap-[1vw] items-center image-hover-effect'>
       <div className='w-[3vw]'>
       <img src="/Sales/Salespages/Callmeeting.png" className="image-hover-effect" alt="Leave" />
       </div>
       <h1 className=' text-[2vw] text-[#E9278E]'>Call and Meeting</h1>
       </div>
-      <div className="h-[50vw]">
+      <div className="h-[50vw] overflow-y-auto">
         <div className="bg-gray-400 w-[80vw] h-[3vw] flex flex-row px-[2vw] items-center"> 
           <input
             className="p-[0.3vw] w-[18vw] text-[1vw] rounded-md mx-[1vw]"
@@ -182,7 +182,7 @@ const CallandMeeting = () => {
             <img src="public/HRM/export.png" alt="" />
           </button>
         </div>
-        <table className="w-[80vw] overflow-y-auto">
+        <table className=" w-[80vw] ">
           <thead className="bg-gray-300 w-[80vw]">
             <tr className="w-[80vw]">
               <th className="border p-[0.5vw] text-[1vw]">Sr no</th>
@@ -195,16 +195,16 @@ const CallandMeeting = () => {
               <th className="border p-[0.5vw] text-[1vw]">Actions</th>
             </tr>
           </thead>
-          <tbody className="rounded-lg bg-gray-100 w-[80vw] text-center">
+          <tbody className="rounded-lg bg-gray-100 w-[80vw]  text-center ">
             {filteredRows.map((row, index) => (
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>{row.EntryDate}</td>
+              <tr key={index} >
+                <td className="p-[1.5vw]">{index + 1}</td>
+                <td className="p-[1.5vw]">{row.EntryDate}</td>
                 <td className="p-[1.5vw]">{row.name}</td>
-                <td>{row.CompanyName}</td>
-                <td>{row.CustomerName}</td>
-                <td>{row.StartTime}</td>
-                <td>{row.status}</td>
+                <td className="p-[1.5vw]">{row.CompanyName}</td>
+                <td className="p-[1.5vw]">{row.CustomerName}</td>
+                <td className="p-[1.5vw]">{row.StartTime}</td>
+                <td className="p-[1.5vw]">{row.status}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
@@ -221,6 +221,7 @@ const CallandMeeting = () => {
               </tr>
             ))}
           </tbody>
+          
         </table>
       </div>
 
