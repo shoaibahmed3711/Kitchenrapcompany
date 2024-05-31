@@ -7,7 +7,7 @@ const Contract = () => {
     return savedData
       ? JSON.parse(savedData)
       : {
-          profilePic: null,
+          profilePic: "",
           name: "",
           job: "",
           code: "",
@@ -21,7 +21,6 @@ const Contract = () => {
 
   const [isFormVisible, setFormVisible] = useState(false);
   const [editIndex, setEditIndex] = useState(null);
-  const [expiryDate, setExpiryDate] = useState("");
   const [srNo, setSrNo] = useState(() => {
     const savedSrNo = localStorage.getItem("srNo");
     return savedSrNo ? parseInt(savedSrNo) : 1;
@@ -98,7 +97,7 @@ const Contract = () => {
     }
 
     setFormData({
-      profilePic: null,
+      profilePic: "",
           name: "",
           job: "",
           code: "",
@@ -155,12 +154,15 @@ const Contract = () => {
   };
 
   const filteredRows = rows.filter((row) => {
+    const name = row.name ? row.name.toLowerCase() : '';
+    const status = row.status ? row.status.toLowerCase() : '';
+
     if (filter === 'All') {
-      return row.name?.toLowerCase().includes(searchTerm.toLowerCase());
+      return name.includes(searchTerm.toLowerCase());
     } else {
       return (
-        row.status === filter &&
-        row.name?.toLowerCase().includes(searchTerm.toLowerCase())
+        status === filter.toLowerCase() &&
+        name.includes(searchTerm.toLowerCase())
       );
     }
   });
@@ -189,19 +191,19 @@ const Contract = () => {
             className="w-[2vw] bg-orange-500 mx-[0.5vw] rounded-md"
             onClick={handleRefresh}
           >
-            <img src="public/HRM/refresh.png" alt="" />
+            <img src="/HRM/refresh.png" alt="" />
           </button>
           <button
             className="w-[2vw] bg-red-500 mx-[0.5vw] rounded-md"
             onClick={handleFilter}
           >
-            <img src="public/HRM/filter.png" alt="" />
+            <img src="/HRM/filter.png" alt="" />
           </button>
           <button
             className="w-[2vw] bg-sky-500 mx-[0.5vw] rounded-md"
             onClick={handleExport}
           >
-            <img src="public/HRM/export.png" alt="" />
+            <img src="/HRM/export.png" alt="" />
           </button>
         </div>
         <table className="w-[80vw] overflow-y-auto">
@@ -226,69 +228,30 @@ const Contract = () => {
                 <td>
                   {row.profilePic ? (
                     <img
-                      src={URL.createObjectURL(row.profilePic)}
+                      src={row.profilePic}
                       alt="Profile"
                       width={50}
                       height={50}
-                      className="rounded-full ml-[2vw]"
+                      className="w-[3vw] h-[3vw] rounded-full ml-[2vw]"
                     />
                   ) : (
-                    <img
-                      src="public/HRM/profile.png"
-                      className="w-[2vw] mx-auto"
-                      alt=""
-                    />
+                    <img src="/HRM/profile.png" className="w-[2vw] mx-auto" alt="default profile" />
                   )}
                 </td>
                 <td className="p-[1.5vw]">{row.name}</td>
                 <td className="p-[1.5vw]">{row.issueDate}</td>
                 <td className="p-[1.5vw]">{row.expiryDate}</td>
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[9vw] rounded-md border"
-                    value={row.shift}
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "shift", value: e.target.value },
-                      })
-                    }
-                  >
-                  </select>
-                </td>
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[9vw] rounded-md mx-[1vw]"
-                    value={row.department}
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "department", value: e.target.value },
-                      })
-                    }
-                  >
-                  </select>
-                </td>
+                <td className="p-[1.5vw]">{row.shift}</td>
+                <td className="p-[1.5vw]">{row.department}</td>
                 <td className="p-[1.5vw]">{row.code}</td>
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[9vw] rounded-md border"
-                    value={row.status}
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "status", value: e.target.value },
-                      })
-                    }
-                  >
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
-                  </select>
-                </td>
+                <td>{row.status}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
                     onClick={() => handleEdit(index)}
                   >
                     <img
-                      src="public/HRM/edit.png"
+                      src="/HRM/edit.png"
                       className="w-[1.4vw]"
                       alt=""
                     />
@@ -298,7 +261,7 @@ const Contract = () => {
                     onClick={() => handleDelete(index)}
                   >
                     <img
-                      src="public/HRM/Trash.png"
+                      src="/HRM/Trash.png"
                       className="w-[1.4vw]"
                       alt=""
                     />

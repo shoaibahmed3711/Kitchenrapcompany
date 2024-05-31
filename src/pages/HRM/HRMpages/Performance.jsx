@@ -5,7 +5,7 @@ const Performance = () => {
   const [formData, setFormData] = useState(() => {
     const savedData = localStorage.getItem('formData');
     return savedData ? JSON.parse(savedData) : {
-      profilePic: null,
+      profilePic:'',
       name: '',
       job: '',
       code: '',
@@ -82,7 +82,7 @@ const Performance = () => {
     }
 
     setFormData({
-      profilePic: null,
+      profilePic: '',
       name: '',
       job: '',
       code: '',
@@ -204,40 +204,19 @@ const Performance = () => {
                 <td>
                   {row.profilePic ? (
                     <img
-                      src={URL.createObjectURL(row.profilePic)}
+                      src={row.profilePic}
                       alt="Profile"
-                      width={50}
-                      height={50}
-                      className="rounded-full ml-[2vw]"
+                      className="w-[3vw] h-[3vw] rounded-full ml-[2vw]"
                     />
                   ) : (
-                    <img src="public/HRM/profile.png" className="w-[2vw] mx-auto" alt="" />
+                    <img src="/HRM/profile.png" className="w-[2vw] mx-auto" alt="default profile" />
                   )}
                 </td>
                 <td className="p-[1.5vw]">{row.name}</td>
                 <td className="p-[1.5vw]">{row.appricialMonth}</td>
                 <td className="p-[1.5vw]">{row.finalScore}</td>
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[13vw] rounded-md mx-[1vw]"
-                    value={row.notes}
-                    onChange={(e) => handleChange({ target: { name: 'notes', value: e.target.value } })}
-                  >
-                    <option value="good designer">Good Designer</option>
-                    <option value="manage your time better">Manage Your Time Better</option>
-                    <option value="poor performance">Poor Performance</option>
-                  </select>
-                </td>
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[13vw] rounded-md border"
-                    value={row.status}
-                    onChange={(e) => handleChange({ target: { name: 'status', value: e.target.value } })}
-                  >
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
-                  </select>
-                </td>
+                <td>{row.notes}</td>
+                <td>{row.status}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"

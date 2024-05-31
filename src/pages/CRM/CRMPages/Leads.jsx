@@ -207,24 +207,11 @@ const Leads = () => {
               <tr key={index}>
                 <td>{index + 1}</td>
                 <td>{row.Branch}</td>
-                <td className="p-[1.5vw]">{row.Leadname}</td>
+                <td>{row.Leadname}</td>
                 <td>{row.AssignedTo}</td>
-                <td className="p-[1.5vw]">{row.expiryDate}</td>
+                <td>{row.expiryDate}</td>
                 <td>{row.Addedby}</td>
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[9vw] rounded-md border"
-                    value={row.status}
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "status", value: e.target.value },
-                      })
-                    }
-                  >
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
-                  </select>
-                </td>
+                <td>{row.status}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
@@ -315,7 +302,7 @@ const Leads = () => {
                 Expiry Date:
               </label>
               <input
-                type="text"
+                type="date"
                 id="expiryDate"
                 name="expiryDate"
                 value={formData.expiryDate}

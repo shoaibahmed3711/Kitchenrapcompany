@@ -5,7 +5,7 @@ const Hrreport = () => {
   const [formData, setFormData] = useState(() => {
     const savedData = localStorage.getItem('formData');
     return savedData ? JSON.parse(savedData) : {
-      profilePic: null,
+      profilePic:'',
       name: '',
       job: '',
       code: '',
@@ -80,7 +80,7 @@ localStorage.setItem('srNo', srNo.toString());
     }
 
     setFormData({
-      profilePic: null,
+      profilePic: '',
       name: "",
       job: "",
       code: "",
@@ -199,49 +199,19 @@ localStorage.setItem('srNo', srNo.toString());
                 <td>
                   {row.profilePic ? (
                     <img
-                      src={URL.createObjectURL(row.profilePic)}
+                      src={row.profilePic}
                       alt="Profile"
-                      width={50}
-                      height={50}
-                      className="rounded-full ml-[2vw]"
+                      className="w-[3vw] h-[3vw] rounded-full ml-[2vw]"
                     />
                   ) : (
-                    <img src="/HRM/profile.png" className="w-[2vw] mx-auto" alt="" />
+                    <img src="/HRM/profile.png" className="w-[2vw] mx-auto" alt="default profile" />
                   )}
                 </td>
                 <td className="p-[1.5vw]">{row.name}</td>
                 <td className="p-[1.5vw]">{row.code}</td>
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[13vw] rounded-md border"
-                    value={row.shift}
-                    onChange={(e) => handleChange({ target: { name: 'shift', value: e.target.value } })}
-                  >
-                    <option value="Morning">Morning</option>
-                    <option value="Night">Night</option>
-                  </select>
-                </td>
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[13vw] rounded-md mx-[1vw]"
-                    value={row.department}
-                    onChange={(e) => handleChange({ target: { name: 'department', value: e.target.value } })}
-                  >
-                    <option value="salesman">Salesman</option>
-                    <option value="Site Inspector">Site Inspector</option>
-                    <option value="Sales Manager">Sales Manager</option>
-                  </select>
-                </td>
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[13vw] rounded-md border"
-                    value={row.status}
-                    onChange={(e) => handleChange({ target: { name: 'status', value: e.target.value } })}
-                  >
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
-                  </select>
-                </td>
+                <td className="p-[1.5vw]">{row.shift}</td>
+                <td className="p-[1.5vw]">{row.department}</td>
+                <td className="p-[1.5vw]">{row.status}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
@@ -292,7 +262,6 @@ localStorage.setItem('srNo', srNo.toString());
                 type="file"
                 id="profilePic"
                 name="profilePic"
-                accept="image/*"
                 onChange={handleFileChange}
                 className="border p-[0.5vw] rounded w-[22vw] h-[2.5vw]"
               />

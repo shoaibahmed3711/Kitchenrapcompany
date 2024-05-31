@@ -342,7 +342,7 @@ const AfterSales = () => {
                 End Date:
               </label>
               <input
-                type="date"
+                type="date  "
                 id="EndDate"
                 name="EndDate"
                 value={formData.EndDate}

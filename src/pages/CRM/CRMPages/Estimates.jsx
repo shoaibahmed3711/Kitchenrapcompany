@@ -278,7 +278,7 @@ const Estimates = () => {
                 Entry Date:
               </label>
               <input
-                type="text"
+                type="date"
                 id="EntryDate"
                 name="EntryDate"
                 value={formData.EntryDate}
@@ -335,7 +335,7 @@ const Estimates = () => {
                 Estimate Date:
               </label>
               <input
-                type="text"
+                type="date"
                 id="EstimateDate"
                 name="EstimateDate"
                 value={formData.EstimateDate}
@@ -350,7 +350,7 @@ const Estimates = () => {
                 Due Date:
               </label>
               <input
-                type="text"
+                type="date"
                 id="DueDate"
                 name="DueDate"
                 value={formData.DueDate}

@@ -219,108 +219,15 @@ const PreLeads = () => {
             {filteredRows.map((row, index) => (
               <tr className="text-[0.8vw] " key={index}>
                 <td className="text-[0.8vw] p-[0.4vw]">{index + 1}</td>
-                <td className=" text-[0.8vw] p-[0.4vw]">
-                  <input
-                    type="date"
-                    value={row.contactDate}
-                    className=" text-[0.8vw] p-[0.2vw]"
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "contactDate", value: e.target.value },
-                      })
-                    }
-                  />
-                </td>
+                <td className=" text-[0.8vw] p-[0.4vw]">{row.contactDate}</td>
                 <td className="text-[0.8vw] p-[0.4vw]">{row.name}</td>
-                <td className="text-[0.8vw] p-[0.2vw]">
-                  <input
-                    type="email"
-                    value={row.email}
-                    className=" text-[0.8vw] p-[0.2vw]"
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "email", value: e.target.value },
-                      })
-                    }
-                  />
-                </td>
-                <td className="text-[0.8vw] p-[0.2vw]">
-                  <input
-                    type="tel"
-                    value={row.PhoneNo}
-                    className=" text-[0.8vw] w-[6vw] p-[0.2vw]"
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "PhoneNo", value: e.target.value },
-                      })
-                    }
-                  />
-                </td>
-                <td className=" text-[0.8vw] p-[0.2vw]">
-                  <select
-                    value={row.Source}
-                    className=" text-[0.8vw] p-[0.2vw] "
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "Source", value: e.target.value },
-                      })
-                    }
-                  >
-                    <option value="">Select Source</option>
-                    <option value="Option 1">Option 1</option>
-                    <option value="Option 2">Option 2</option>
-                  </select>
-                </td>
-                <td className="text-[0.8vw] p-[0.2vw]">
-                  <input
-                    type="text"
-                    value={row.City}
-                    className=" text-[0.8vw] w-[5vw] p-[0.2vw]"
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "City", value: e.target.value },
-                      })
-                    }
-                  />
-                </td>
-                <td className="text-[0.8vw] p-[0.2vw]">
-                  <textarea
-                    value={row.Address}
-                    className=" text-[0.8vw] p-[0.2vw]"
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "Address", value: e.target.value },
-                      })
-                    }
-                  ></textarea>
-                </td>
-                <td className="text-[0.8vw] p-[0.2vw]">
-                  <input
-                    type="text"
-                    className=" text-[0.8vw] w-[5vw] p-[0.2vw]"
-                    value={row.BranchName}
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "BranchName", value: e.target.value },
-                      })
-                    }
-                  />
-                </td>
-                <td className="text-[0.8vw] p-[0.5vw]">
-                  <select
-                    className="p-[0.2vw] text-[0.8vw] rounded-md border"
-                    value={row.status}
-                   
-                    onChange={(e) =>
-                      handleChange({
-                        target: { name: "status", value: e.target.value },
-                      })
-                    }
-                  >
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
-                  </select>
-                </td>
+                <td className="text-[0.8vw] p-[0.2vw]">{row.email}</td>
+                <td className="text-[0.8vw] p-[0.2vw]">{row.PhoneNo}</td>
+                <td className=" text-[0.8vw] p-[0.2vw]">{row.Source}</td>
+                <td className="text-[0.8vw] p-[0.2vw]">{row.City}</td>
+                <td className="text-[0.8vw] p-[0.2vw]">{row.Address}</td>
+                <td className="text-[0.8vw] p-[0.2vw]">{row.BranchName}</td>
+                <td className="text-[0.8vw] p-[0.5vw]">{row.status}</td>
                 <td className="text-[0.8vw] p-[0.2vw]">
                   <button
                     className="hover:bg-blue-500 p-[0.3vw] rounded-full mb-2 mr-[0.2vw]"
@@ -494,7 +401,7 @@ const PreLeads = () => {
             </div>
             <button
               type="submit"
-              className="bg-black text-white p-2 rounded w-full"
+              className="bg-[#E9278E] text-white p-2 rounded w-full"
             >
               {editIndex !== null ? "Edit" : "Add"}
             </button>

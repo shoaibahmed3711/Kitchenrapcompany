@@ -3,7 +3,6 @@ import { jsPDF } from 'jspdf';
 
 const Manage = () => {
   const [formData, setFormData] = useState({
-    profilePic: null,
     name: '',
     job: '',
     code: '',

@@ -5,14 +5,8 @@ const HrSetting = () => {
   const [formData, setFormData] = useState(() => {
     const savedData = localStorage.getItem('formData');
     return savedData ? JSON.parse(savedData) : {
-      profilePic: null,
-      name: '',
-      job: '',
-      code: '',
-      shift: '',
-      department: '',
+      EntryDate: '',
       status: '',
-      entryDate: new Date().toISOString().split('T')[0], // Initialize entryDate with current date
     };
   });
 
@@ -74,14 +68,8 @@ const HrSetting = () => {
     }
 
     setFormData({
-      profilePic: null,
-      name: "",
-      job: "",
-      code: "",
-      shift: "",
-      department: "",
-      status: "",
-      entryDate: new Date().toISOString().split('T')[0], // Reset entryDate to current date after form submission
+      EntryDate: '',
+      status: '',
     });
 
     setFormVisible(false);
@@ -188,16 +176,7 @@ const HrSetting = () => {
               <tr key={index}>
                 <td>{index + 1}</td>
                 <td>{new Date(row.entryDate).toLocaleDateString()}</td> {/* Display entryDate in a readable format */}
-                <td>
-                  <select
-                    className="p-[1vw] text-[1vw] w-[13vw] rounded-md border"
-                    value={row.status}
-                    onChange={(e) => handleChange({ target: { name: 'status', value: e.target.value } })}
-                  >
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
-                  </select>
-                </td>
+                <td>{row.status}</td>
                 <td className="p-[0.1vw]">
                   <button
                     className="hover:bg-blue-500 p-2 rounded-full mb-2 mr-[0.6vw]"
