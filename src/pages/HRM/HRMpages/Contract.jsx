@@ -332,7 +332,6 @@ const Contract = () => {
                 value={formData.issueDate}
                 onChange={handleIssueDate}
                 className="border p-2 rounded w-full"
-                placeholder="MM/DD/YYYY"
               />
             </div>
 
