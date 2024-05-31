@@ -262,7 +262,7 @@ const InvoiceReport = () => {
               name="InvoiceDate"
               value={formData.InvoiceDate}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+             className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -272,7 +272,7 @@ const InvoiceReport = () => {
               name="CustomerSupplier"
               value={formData.CustomerSupplier}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+             className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -282,7 +282,7 @@ const InvoiceReport = () => {
               name="InvoiceType"
               value={formData.InvoiceType}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+             className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -292,7 +292,7 @@ const InvoiceReport = () => {
               name="InvoiceNo"
               value={formData.InvoiceNo}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+             className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -302,7 +302,7 @@ const InvoiceReport = () => {
               name="RefNo"
               value={formData.RefNo}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+             className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -312,7 +312,7 @@ const InvoiceReport = () => {
               name="GrossTotal"
               value={formData.GrossTotal}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+             className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -322,7 +322,7 @@ const InvoiceReport = () => {
               name="TotalDiscounts"
               value={formData.TotalDiscounts}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+             className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -332,7 +332,7 @@ const InvoiceReport = () => {
               name="TotalVAT"
               value={formData.TotalVAT}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+             className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -342,7 +342,7 @@ const InvoiceReport = () => {
               name="GrandTotal"
               value={formData.GrandTotal}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+             className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <button

@@ -263,7 +263,7 @@ const Finance = () => {
                 name="ReceiptDate"
                 value={formData.ReceiptDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -273,7 +273,7 @@ const Finance = () => {
                 name="Addedby"
                 value={formData.Addedby}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -283,7 +283,7 @@ const Finance = () => {
                 name="BranchName"
                 value={formData.BranchName}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -293,7 +293,7 @@ const Finance = () => {
                 name="Receiptno"
                 value={formData.Receiptno}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -302,7 +302,7 @@ const Finance = () => {
                 name="PaymentMethod"
                 value={formData.PaymentMethod}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               >
                 <option value="">Select Payment Method</option>
                 <option value="Bank Transfer">Bank Transfer</option>
@@ -317,7 +317,7 @@ const Finance = () => {
                 name="FromAccount"
                 value={formData.FromAccount}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -327,7 +327,7 @@ const Finance = () => {
                 name="ToAccount"
                 value={formData.ToAccount}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -337,7 +337,7 @@ const Finance = () => {
                 name="TotalAmount"
                 value={formData.TotalAmount}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -347,7 +347,7 @@ const Finance = () => {
                 name="Description"
                 value={formData.Description}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <button

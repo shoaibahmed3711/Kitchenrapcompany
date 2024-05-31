@@ -216,16 +216,16 @@ const Warranty = () => {
               <tr key={index}>
                 <td>{index + 1}</td>
                 <td>{row.EntryDate}</td>
-                <td>{row.Branchname}</td> {/* Display Branch name */}
-                <td>{row.ProductName}</td> {/* Display Product Name */}
-                <td>{row.CustomerName}</td> {/* Display Customer Name */}
-                <td>{row.Contract}</td> {/* Display Contract */}
-                <td>{row.Invoicerefno}</td> {/* Display Invoice ref no */}
-                <td>{row.WarrentyPolicy}</td> {/* Display Warrenty Policy */}
-                <td>{row.ActivationDate}</td> {/* Display Activation Date */}
-                <td>{row.ExpiryDate}</td> {/* Display Expiry Date */}
-                <td>{row.Extended}</td> {/* Display Extended */}
-                <td>{row.Status}</td> {/* Display Status */}
+                <td>{row.Branchname}</td> 
+                <td>{row.ProductName}</td> 
+                <td>{row.CustomerName}</td> 
+                <td>{row.Contract}</td> 
+                <td>{row.Invoicerefno}</td> 
+                <td>{row.WarrentyPolicy}</td>
+                <td>{row.ActivationDate}</td> 
+                <td>{row.ExpiryDate}</td> 
+                <td>{row.Extended}</td> 
+                <td>{row.Status}</td> 
                 <td>Progress will be shown</td>
                 <td className="p-[0.1vw]">
                   <button
@@ -273,77 +273,77 @@ const Warranty = () => {
                 name="EntryDate"
                 value={formData.EntryDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Branch name:</h1>
               <input
                 type="text"
-                placeholder="Enter Branch name"
                 name="Branchname"
                 value={formData.Branchname}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Product Name:</h1>
               <input
                 type="text"
-                placeholder="Enter Product Name"
                 name="ProductName"
                 value={formData.ProductName}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Customer name:</h1>
               <input
                 type="text"
-                placeholder="Enter Customer name"
                 name="CustomerName"
                 value={formData.CustomerName}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Contract name:</h1>
               <input
                 type="text"
-                placeholder="Enter Contract name"
                 name="Contract"
                 value={formData.Contract}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Invoice ref no:</h1>
               <input
                 type="text"
-                placeholder="Enter Invoice ref no"
                 name="Invoicerefno"
                 value={formData.Invoicerefno}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Warrenty Policy:</h1>
               <input
                 type="text"
-                placeholder="Enter Warrenty Policy"
                 name="WarrentyPolicy"
                 value={formData.WarrentyPolicy}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Sales designer name:</h1>
               <input
                 type="text"
-                placeholder="Enter Sales designer name"
                 name="SalesDesignerName"
                 value={formData.SalesDesignerName}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -353,7 +353,7 @@ const Warranty = () => {
                 name="ActivationDate"
                 value={formData.ActivationDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -363,7 +363,7 @@ const Warranty = () => {
                 name="ExpiryDate"
                 value={formData.ExpiryDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -372,7 +372,7 @@ const Warranty = () => {
                 name="Extended"
                 value={formData.Extended}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               >
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
@@ -384,7 +384,7 @@ const Warranty = () => {
                 name="Status"
                 value={formData.Status}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               >
                 <option value="Active">Active</option>
                 <option value="Inactive">Inactive</option>

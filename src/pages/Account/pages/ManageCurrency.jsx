@@ -254,7 +254,7 @@ const ManageCurrency = () => {
                 name="EntryDate"
                 value={formData.EntryDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -264,7 +264,7 @@ const ManageCurrency = () => {
                 name="EffectiveDate"
                 value={formData.EffectiveDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -274,7 +274,7 @@ const ManageCurrency = () => {
                 name="SourceCurrency"
                 value={formData.SourceCurrency}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -284,7 +284,7 @@ const ManageCurrency = () => {
                 name="Rate"
                 value={formData.Rate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -294,7 +294,7 @@ const ManageCurrency = () => {
                 name="TargetCurrency"
                 value={formData.TargetCurrency}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -304,7 +304,7 @@ const ManageCurrency = () => {
                 name="SetBy"
                 value={formData.SetBy}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <button

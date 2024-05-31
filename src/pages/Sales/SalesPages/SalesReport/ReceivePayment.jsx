@@ -236,63 +236,70 @@ const ReceivePayment = () => {
         </div>
         <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
           <div className="mb-[0.3vw]">
+            Contract Date:
             <input
               type="date"
               name="ContractDate"
               value={formData.ContractDate}
               onChange={handleChange}
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
+          Contract No:
             <input
               type="text"
               name="ContractNo"
               value={formData.ContractNo}
               onChange={handleChange}
-              placeholder="Contract No"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
+          Customer Name:
             <input
               type="text"
               name="CustomerName"
               value={formData.CustomerName}
               onChange={handleChange}
-              placeholder="Customer Name"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
+          Notes:
             <input
               type="text"
               name="Notes"
               value={formData.Notes}
               onChange={handleChange}
-              placeholder="Notes"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
+          Receive Amount:
             <input
               type="text"
               name="ReceiveAmount"
               value={formData.ReceiveAmount}
               onChange={handleChange}
-              placeholder="Receive Amount"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
+          Total Amount:
             <input
               type="text"
-              name="TotalAmount"
+              name=""
               value={formData.TotalAmount}
               onChange={handleChange}
-              placeholder="Total amount"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <button
             type="submit"
             className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
           >
-            {editIndex !== null ? "Edit Employee" : "Add Employee"}
+            {editIndex !== null ? "Edit " : "Add "}
           </button>
         </form>
       </div>

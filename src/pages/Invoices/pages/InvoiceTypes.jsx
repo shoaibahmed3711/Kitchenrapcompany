@@ -205,7 +205,7 @@ const InvoiceTypes = () => {
     )}
 
     {isFormVisible && (
-      <div className="w-[26vw] bg-white shadow-2xl absolute right-0 z-10 top-[0vw] overflow-y-auto rounded-lg ml-4 h-[32vw]">
+      <div className="w-[26vw] bg-white shadow-2xl absolute right-0 z-10 top-[5vw] overflow-y-auto rounded-lg ml-4 h-[20vw]">
         <div className="flex justify-between p-4">
           <button
             className="hover:bg-red-500  shadow-lg rounded-md text-white p-[0.3vw]"
@@ -222,7 +222,7 @@ const InvoiceTypes = () => {
   placeholder="Enter Name"
   value={formData.Name}
   onChange={handleChange}
-  className="p-[0.5vw] w-full rounded-md"
+  className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
 />
 
             </div>
@@ -231,7 +231,7 @@ const InvoiceTypes = () => {
                 name="Direction"
                 value={formData.Direction}
                 onChange={handleChange}
-                className="p-[0.5vw] w-full rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               >
                 <option value="">Select Direction</option>
                 <option value="PLUS">PLUS</option>

@@ -244,7 +244,7 @@ const WherehouseInvoice = () => {
                 name="AddedDate"
                 value={formData.AddedDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -254,7 +254,7 @@ const WherehouseInvoice = () => {
                 name="Warehouse"
                 value={formData.Warehouse}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -264,7 +264,7 @@ const WherehouseInvoice = () => {
                 name="Voucherno"
                 value={formData.Voucherno}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -274,7 +274,7 @@ const WherehouseInvoice = () => {
                 name="VoucherDate"
                 value={formData.VoucherDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -284,7 +284,7 @@ const WherehouseInvoice = () => {
                 name="Source"
                 value={formData.Source}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -294,7 +294,7 @@ const WherehouseInvoice = () => {
                 name="TotalQty"
                 value={formData.TotalQty}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -303,7 +303,7 @@ const WherehouseInvoice = () => {
                 name="EditApprovalStatus"
                 value={formData.EditApprovalStatus}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               >
                 <option value="">Select Status</option>
                 <option value="Complete">Complete</option>

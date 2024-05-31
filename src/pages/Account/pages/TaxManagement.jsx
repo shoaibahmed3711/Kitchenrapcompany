@@ -252,7 +252,7 @@ const TaskManagement = () => {
                 name="EntryDate"
                 value={formData.EntryDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -262,7 +262,7 @@ const TaskManagement = () => {
                 name="PaymentDate"
                 value={formData.PaymentDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -272,7 +272,7 @@ const TaskManagement = () => {
                 name="FromDate"
                 value={formData.FromDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -282,7 +282,7 @@ const TaskManagement = () => {
                 name="ToDate"
                 value={formData.ToDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -292,7 +292,7 @@ const TaskManagement = () => {
                 name="Amount"
                 value={formData.Amount}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -301,7 +301,7 @@ const TaskManagement = () => {
                 name="Status"
                 value={formData.Status}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               >
                 <option value="Active">Active</option>
                 <option value="Inactive">Inactive</option>

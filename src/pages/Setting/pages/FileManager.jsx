@@ -248,7 +248,7 @@ const FileManager = () => {
                 name="EntryDate"
                 value={formData.EntryDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -258,7 +258,7 @@ const FileManager = () => {
                 name="EmployeeName"
                 value={formData.EmployeeName}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -268,7 +268,7 @@ const FileManager = () => {
                 name="Valid"
                 value={formData.Valid}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -278,7 +278,7 @@ const FileManager = () => {
                 name="Expired"
                 value={formData.Expired}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
           

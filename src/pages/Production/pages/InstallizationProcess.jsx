@@ -271,101 +271,102 @@ const InstallizationProcess = () => {
           </div>
           <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
             <div className="mb-[0.3vw]">
-              <h1>Added Date:</h1>
+              <h1>Entry Date:</h1>
               <input
                 type="date"
                 name="EntryDate"
                 value={formData.EntryDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Requested By:</h1>
               <input
                 type="text"
                 name="RequestedBy"
                 value={formData.RequestedBy}
                 onChange={handleChange}
-                placeholder="Requested By"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Branch Name:</h1>
               <input
                 type="text"
                 name="BranchName"
                 value={formData.BranchName}
                 onChange={handleChange}
-                placeholder="Branch Name"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Customer Name:</h1>
               <input
                 type="text"
                 name="CustomerName"
                 value={formData.CustomerName}
                 onChange={handleChange}
-                placeholder="Customer Name"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Contract:</h1>
               <input
                 type="text"
                 name="Contract"
                 value={formData.Contract}
                 onChange={handleChange}
-                placeholder="Contract"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Job Type:</h1>
               <input
                 type="text"
                 name="JobType"
                 value={formData.JobType}
                 onChange={handleChange}
-                placeholder="Job Type"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Job no:</h1>
               <input
                 type="text"
                 name="Jobno"
                 value={formData.Jobno}
                 onChange={handleChange}
-                placeholder="Job no"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Installation Date:</h1>
               <input
                 type="date"
                 name="InstallationDate"
                 value={formData.InstallationDate}
                 onChange={handleChange}
-                placeholder="Installation Date"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Action Date:</h1>
               <input
                 type="date"
                 name="ActionDate"
                 value={formData.ActionDate}
                 onChange={handleChange}
-                placeholder="Action Date"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Production Order:</h1>
               <select
                 name="ProductionOrder"
                 value={formData.ProductionOrder}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               >
                 <option value="">Select Production Order</option>
                 <option value="No">No</option>
@@ -373,22 +374,22 @@ const InstallizationProcess = () => {
               </select>
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Production Order by:</h1>
               <input
                 type="text"
                 name="ProductionOrderby"
                 value={formData.ProductionOrderby}
                 onChange={handleChange}
-                placeholder="Production Order by"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            <h1>Notes:</h1>
               <textarea
                 name="Notes"
                 value={formData.Notes}
                 onChange={handleChange}
-                placeholder="Notes"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <button

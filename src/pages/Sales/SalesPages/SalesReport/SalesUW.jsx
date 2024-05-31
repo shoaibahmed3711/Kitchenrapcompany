@@ -220,39 +220,42 @@ const SalesUW = () => {
                             <img src="/HRM/close.png" alt="" />
                         </button>
                     </div>
-                    <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
+                    <form onSubmit={handleSubmit} className="h-fit p-[1vw] ">
                         <div className="mb-[0.3vw]">
+                        Employee name:
                             <input
                                 type="text"
                                 name="Employee"
                                 value={formData.Employee}
                                 onChange={handleChange}
-                                placeholder="Employee name"
+                                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        Total Sale:
                             <input
                                 type="text"
                                 name="TotalSale"
                                 value={formData.TotalSale}
                                 onChange={handleChange}
-                                placeholder="Total Sale"
+                                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                             />
                         </div>
                         <div className="mb-[0.3vw]">
+                        Total amount:
                             <input
                                 type="text"
                                 name="TotalAmount"
                                 value={formData.TotalAmount}
                                 onChange={handleChange}
-                                placeholder="Total amount"
+                                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                             />
                         </div>
                         <button
                             type="submit"
                             className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
                         >
-                            {editIndex !== null ? "Edit Employee" : "Add Employee"}
+                            {editIndex !== null ? "Edit " : "Add "}
                         </button>
                     </form>
                 </div>

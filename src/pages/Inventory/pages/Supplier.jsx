@@ -275,57 +275,63 @@ const Supplier = () => {
           <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
             {/* Form inputs */}
             <div className="mb-[0.3vw]">
+            Added Date:
               <input
                 type="text"
                 name="AddedDate"
                 value={formData.AddedDate}
                 onChange={handleChange}
-                placeholder="Enter Added Date"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            Supplier Name:
               <input
                 type="text"
                 name="Suppliername"
                 value={formData.Suppliername}
                 onChange={handleChange}
-                placeholder="Enter Supplier Name"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            Address:
               <input
                 type="text"
                 name="Address"
                 value={formData.Address}
                 onChange={handleChange}
-                placeholder="Enter Address"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            Mobile No:
               <input
                 type="text"
                 name="Mobileno"
                 value={formData.Mobileno}
                 onChange={handleChange}
-                placeholder="Enter Mobile No"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            Email:
               <input
                 type="text"
                 name="Email"
                 value={formData.Email}
                 onChange={handleChange}
-                placeholder="Enter Email"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            Category:
               <input
                 type="text"
                 name="Category"
                 value={formData.Category}
                 onChange={handleChange}
-                placeholder="Enter Category"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <button

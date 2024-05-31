@@ -272,7 +272,7 @@ const BreakdownProcess = () => {
         <div className="w-[26vw] bg-white shadow-2xl absolute right-0 z-10 top-[0vw] overflow-y-auto rounded-lg ml-4 h-[32vw]">
           <div className="flex justify-between p-4">
             <button
-              className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white p-[0.3vw]"
+              className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white "
               onClick={toggleFormVisibility}
             >
               <img src="/HRM/close.png" className="w-[2vw]" alt="" />
@@ -285,7 +285,7 @@ const BreakdownProcess = () => {
                 name="BranchName"
                 value={formData.BranchName}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Branch Name"
               />
             </div>
@@ -295,7 +295,7 @@ const BreakdownProcess = () => {
                 name="ContractDate"
                 value={formData.ContractDate}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Contract Date"
               />
             </div>
@@ -305,7 +305,7 @@ const BreakdownProcess = () => {
                 name="ProductionDate"
                 value={formData.ProductionDate}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Production Date"
               />
             </div>
@@ -315,7 +315,7 @@ const BreakdownProcess = () => {
                 name="InstallationDate"
                 value={formData.InstallationDate}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Installation Date"
               />
             </div>
@@ -325,7 +325,7 @@ const BreakdownProcess = () => {
                 name="Contractno"
                 value={formData.Contractno}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Contract Number"
               />
             </div>
@@ -335,7 +335,7 @@ const BreakdownProcess = () => {
                 name="Customer"
                 value={formData.Customer}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Customer"
               />
             </div>
@@ -345,7 +345,7 @@ const BreakdownProcess = () => {
                 name="Project"
                 value={formData.Project}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Project"
               />
             </div>
@@ -355,7 +355,7 @@ const BreakdownProcess = () => {
                 name="Designer"
                 value={formData.Designer}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Designer"
               />
             </div>
@@ -365,7 +365,7 @@ const BreakdownProcess = () => {
                 name="ProductionOrder"
                 value={formData.ProductionOrder}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Production Order"
               />
             </div>
@@ -375,7 +375,7 @@ const BreakdownProcess = () => {
                 name="ProductionOrdereredby"
                 value={formData.ProductionOrdereredby}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Production Ordered by"
               />
             </div>
@@ -384,7 +384,7 @@ const BreakdownProcess = () => {
                 name="status"
                 value={formData.status}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               >
                 <option value="">Select Status</option>
                 <option value="Active">Active</option>

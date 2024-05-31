@@ -274,7 +274,7 @@ const ProjectStatus = () => {
               name="AddedDate"
               value={formData.AddedDate}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -284,7 +284,7 @@ const ProjectStatus = () => {
               name="Contactno"
               value={formData.Contactno}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -294,7 +294,7 @@ const ProjectStatus = () => {
               name="ProjectName"
               value={formData.ProjectName}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -304,7 +304,7 @@ const ProjectStatus = () => {
               name="CustomerName"
               value={formData.CustomerName}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -313,7 +313,7 @@ const ProjectStatus = () => {
               name="SiteStatus"
               value={formData.SiteStatus}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             >
               <option value="No Request">No Request</option>
               <option value="Site is Ready">Site is Ready</option>
@@ -326,7 +326,7 @@ const ProjectStatus = () => {
               name="Design"
               value={formData.Design}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -336,7 +336,7 @@ const ProjectStatus = () => {
               name="SalesDesigner"
               value={formData.SalesDesigner}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -346,7 +346,7 @@ const ProjectStatus = () => {
               name="OutDate"
               value={formData.OutDate}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -356,7 +356,7 @@ const ProjectStatus = () => {
               name="ActualDate"
               value={formData.ActualDate}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -366,7 +366,7 @@ const ProjectStatus = () => {
               name="DueAmount"
               value={formData.DueAmount}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             />
           </div>
           <div className="mb-[0.3vw]">
@@ -375,7 +375,7 @@ const ProjectStatus = () => {
               name="Progress"
               value={formData.Progress}
               onChange={handleChange}
-              className="p-[0.3vw] rounded-md"
+              className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
             >
               <option value="Installed">Installed</option>
               <option value="Pending">Pending</option>

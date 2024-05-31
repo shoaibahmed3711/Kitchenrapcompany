@@ -31,7 +31,6 @@ import AfterSales from './pages/CRM/CRMPages/AfterSales';
 import CRMTutorial from './pages/CRM/CRMPages/CRMTutorial';
 import CallandMeeting from './pages/Sales/SalesPages/CallandMeeting';
 import DesignerActivities from './pages/Sales/SalesPages/DesignerActivities';
-import SalesOperation from './pages/Sales/SalesPages/SalesOperation';
 import SalesPriceList from './pages/Sales/SalesPages/SalesPriceList';
 import InstallationSchedule from './pages/Sales/SalesPages/InstallationSchedule';
 import SalesReport from './pages/Sales/SalesPages/SalesReport';
@@ -269,10 +268,6 @@ function App() {
     {
       path: "/Sales/DesignerActivities",
       element: <><Header /><DesignerActivities /></>,
-    },
-    {
-      path: "/Sales/SalesOperation",
-      element: <><Header /><SalesOperation /></>,
     },
     {
       path: "/Sales/SalesPriceList",

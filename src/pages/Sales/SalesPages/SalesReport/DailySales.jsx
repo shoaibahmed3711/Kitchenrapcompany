@@ -227,38 +227,43 @@ const DailySales = () => {
           </div>
           <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
             <div className="mb-[0.3vw]">
+            Contract Date:
               <input
                 type="date"
                 name="ContractDate"
                 value={formData.ContractDate}
                 onChange={handleChange}
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            Contract No:
               <input
                 type="text"
                 name="ContractNo"
                 value={formData.ContractNo}
                 onChange={handleChange}
-                placeholder="Contract No"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            Customer Name:
               <input
                 type="text"
                 name="CustomerName"
                 value={formData.CustomerName}
                 onChange={handleChange}
-                placeholder="Customer Name"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            Total amount
               <input
                 type="text"
                 name="TotalAmount"
                 value={formData.TotalAmount}
                 onChange={handleChange}
-                placeholder="Total amount"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <button

@@ -264,7 +264,7 @@ const DuePayment = () => {
                 name="EntryDate"
                 value={formData.EntryDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -274,7 +274,7 @@ const DuePayment = () => {
                 name="EntryDescription"
                 value={formData.EntryDescription}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -284,7 +284,7 @@ const DuePayment = () => {
                 name="Type"
                 value={formData.Type}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -294,7 +294,7 @@ const DuePayment = () => {
                 name="Approval"
                 value={formData.Approval}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -304,7 +304,7 @@ const DuePayment = () => {
                 name="Amount"
                 value={formData.Amount}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -314,7 +314,7 @@ const DuePayment = () => {
                 name="TotalPaidAmount"
                 value={formData.TotalPaidAmount}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -324,7 +324,7 @@ const DuePayment = () => {
                 name="DuePayment"
                 value={formData.DuePayment}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -333,7 +333,7 @@ const DuePayment = () => {
                 name="Status"
                 value={formData.Status}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               >
                 <option value="Active">Active</option>
                 <option value="Inactive">Inactive</option>

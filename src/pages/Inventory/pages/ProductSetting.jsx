@@ -244,7 +244,7 @@ const ProductSetting = () => {
                 name="EntryDate"
                 value={formData.EntryDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -254,7 +254,7 @@ const ProductSetting = () => {
                 name="Categoryname"
                 value={formData.Categoryname}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -264,7 +264,7 @@ const ProductSetting = () => {
                 name="Code"
                 value={formData.Code}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -273,7 +273,7 @@ const ProductSetting = () => {
                 name="Discription"
                 value={formData.Discription}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               ></textarea>
             </div>
             <button

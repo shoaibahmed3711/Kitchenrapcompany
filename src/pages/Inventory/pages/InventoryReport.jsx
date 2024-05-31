@@ -236,48 +236,54 @@ const InventoryReport = () => {
           </div>
           <form onSubmit={handleSubmit} className="overflow-y-auto  p-[1vw] ">
             <div className="mb-[0.3vw]">
+            Category Name:
               <input
                 type="text"
                 name="Category"
                 value={formData.Category}
                 onChange={handleChange}
-                placeholder="Enter Category Name"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
+                
               />
             </div>
             <div className="mb-[0.3vw]">
+            Sub-Category Name
               <input
                 type="text"
                 name="SubCategory"
                 value={formData.SubCategory}
                 onChange={handleChange}
-                placeholder="Enter Sub Category Name"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            SKU Number:
               <input
                 type="text"
                 name="SKU"
                 value={formData.SKU}
                 onChange={handleChange}
-                placeholder="Enter SKU Number"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            Barcode Number:
               <input
                 type="text"
                 name="Barcode"
                 value={formData.Barcode}
                 onChange={handleChange}
-                placeholder="Enter Barcode Number"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
+            Product Name:
               <input
                 type="text"
                 name="Productname"
                 value={formData.Productname}
                 onChange={handleChange}
-                placeholder="Enter Product Name"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             

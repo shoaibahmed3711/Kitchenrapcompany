@@ -224,7 +224,7 @@ const ProductionApproval = () => {
         <div className="w-[26vw] bg-white shadow-2xl absolute right-0 z-10 top-[0vw] overflow-y-auto rounded-lg ml-4 h-[32vw]">
           <div className="flex justify-between p-4">
             <button
-              className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white p-[0.3vw]"
+              className="hover:bg-red-500 h-[2vw] shadow-lg rounded-md text-white "
               onClick={toggleFormVisibility}
             >
               <img src="/HRM/close.png" className='w-[2vw]' alt="close" />
@@ -237,7 +237,7 @@ const ProductionApproval = () => {
                 name="RequestType"
                 value={formData.RequestType}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Request Type"
               />
             </div>
@@ -247,7 +247,7 @@ const ProductionApproval = () => {
                 name="EntryDate"
                 value={formData.EntryDate}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -256,7 +256,7 @@ const ProductionApproval = () => {
                 name="BranchName"
                 value={formData.BranchName}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Branch Name"
               />
             </div>
@@ -266,7 +266,7 @@ const ProductionApproval = () => {
                 name="ApprovalType"
                 value={formData.ApprovalType}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Approval Type"
               />
             </div>
@@ -276,7 +276,7 @@ const ProductionApproval = () => {
                 name="Project"
                 value={formData.Project}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Project"
               />
             </div>
@@ -286,7 +286,7 @@ const ProductionApproval = () => {
                 name="Reason"
                 value={formData.Reason}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Reason"
               />
             </div>
@@ -296,7 +296,7 @@ const ProductionApproval = () => {
                 name="Remark"
                 value={formData.Remark}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
                 placeholder="Remark"
               />
             </div>
@@ -306,7 +306,7 @@ const ProductionApproval = () => {
                 name="ActionDate"
                 value={formData.ActionDate}
                 onChange={handleChange}
-                className="p-[0.5vw] w-[25vw] text-[1vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <button

@@ -269,7 +269,7 @@ const Wherehouse = () => {
                 name="EntryDate"
                 value={formData.EntryDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -279,8 +279,7 @@ const Wherehouse = () => {
                 name="Wherehouse"
                 value={formData.Wherehouse}
                 onChange={handleChange}
-                placeholder="Enter Warehouse Name"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -290,8 +289,7 @@ const Wherehouse = () => {
                 name="Branchname"
                 value={formData.Branchname}
                 onChange={handleChange}
-                placeholder="Enter Branch Name"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -301,8 +299,7 @@ const Wherehouse = () => {
                 name="Country"
                 value={formData.Country}
                 onChange={handleChange}
-                placeholder="Enter Country Name"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -312,8 +309,7 @@ const Wherehouse = () => {
                 name="City"
                 value={formData.City}
                 onChange={handleChange}
-                placeholder="Enter City Name"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -323,8 +319,7 @@ const Wherehouse = () => {
                 name="Street"
                 value={formData.Street}
                 onChange={handleChange}
-                placeholder="Enter Street Number"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -334,8 +329,7 @@ const Wherehouse = () => {
                 name="Building"
                 value={formData.Building}
                 onChange={handleChange}
-                placeholder="Enter Building Name"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -345,8 +339,7 @@ const Wherehouse = () => {
                 name="Floor"
                 value={formData.Floor}
                 onChange={handleChange}
-                placeholder="Enter Floor Number"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -356,8 +349,7 @@ const Wherehouse = () => {
                 name="Officeno"
                 value={formData.Officeno}
                 onChange={handleChange}
-                placeholder="Enter Office Number"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -367,15 +359,14 @@ const Wherehouse = () => {
                 name="Landline"
                 value={formData.Landline}
                 onChange={handleChange}
-                placeholder="Enter Landline Number"
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <button
               type="submit"
               className="bg-[#E9278E] mt-[0.5vw] text-white p-2 rounded w-full"
             >
-              {editIndex !== null ? "Edit Employee" : "Add Employee"}
+              {editIndex !== null ? "Edit " : "Add "}
             </button>
           </form>
         </div>

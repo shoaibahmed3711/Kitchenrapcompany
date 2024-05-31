@@ -271,6 +271,7 @@ const CheckManagement = () => {
                 value={formData.Receiptcode}
                 onChange={handleChange}
                 placeholder="Receipt code"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -280,6 +281,7 @@ const CheckManagement = () => {
                 value={formData.PaymentMethod}
                 onChange={handleChange}
                 placeholder="Payment Method"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -289,6 +291,7 @@ const CheckManagement = () => {
                 value={formData.Contractname}
                 onChange={handleChange}
                 placeholder="Contract name"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -298,6 +301,7 @@ const CheckManagement = () => {
                 value={formData.TransactionNo}
                 onChange={handleChange}
                 placeholder="Transaction No"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -307,6 +311,7 @@ const CheckManagement = () => {
                 value={formData.ToBank}
                 onChange={handleChange}
                 placeholder="To Bank"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -316,6 +321,7 @@ const CheckManagement = () => {
                 value={formData.FromAccount}
                 onChange={handleChange}
                 placeholder="From Account"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -325,6 +331,7 @@ const CheckManagement = () => {
                 value={formData.Date}
                 onChange={handleChange}
                 placeholder="Date"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -334,6 +341,7 @@ const CheckManagement = () => {
                 value={formData.ToAccount}
                 onChange={handleChange}
                 placeholder="To Account"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -343,6 +351,7 @@ const CheckManagement = () => {
                 value={formData.Amount}
                 onChange={handleChange}
                 placeholder="Amount"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <button

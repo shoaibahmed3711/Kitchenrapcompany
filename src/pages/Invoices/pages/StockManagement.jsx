@@ -250,7 +250,7 @@ const StockManagement = () => {
                 name="AddedDate"
                 value={formData.AddedDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -260,7 +260,7 @@ const StockManagement = () => {
                 name="Warehouse"
                 value={formData.Warehouse}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -270,7 +270,7 @@ const StockManagement = () => {
                 name="VoucherNo"
                 value={formData.VoucherNo}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -280,7 +280,7 @@ const StockManagement = () => {
                 name="VoucherDate"
                 value={formData.VoucherDate}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <div className="mb-[0.3vw]">
@@ -290,7 +290,7 @@ const StockManagement = () => {
                 name="TotalVat"
                 value={formData.TotalVat}
                 onChange={handleChange}
-                className="p-[0.3vw] rounded-md"
+                className="p-[0.7vw] text-[1vw] w-[22vw] rounded-md border"
               />
             </div>
             <button
